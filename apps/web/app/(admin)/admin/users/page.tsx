@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
+import { useExtracted } from "next-intl"
 import { Button } from "@workspace/ui/components/button"
 import { Search, User, Shield, Trash2 } from "lucide-react"
 
@@ -28,6 +29,7 @@ type UserDetail = UserItem & {
 
 export default function AdminUsersPage() {
   const queryClient = useQueryClient()
+  const t = useExtracted()
   const [search, setSearch] = useState("")
   const [selectedUserId, setSelectedUserId] = useState<string | null>(null)
 
@@ -86,13 +88,13 @@ export default function AdminUsersPage() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold">Quản lý người dùng</h1>
+      <h1 className="text-2xl font-bold">{t("Quản lý người dùng")}</h1>
 
       <div className="relative">
         <Search className="text-muted-foreground absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" />
         <input
           type="text"
-          placeholder="Tìm theo tên hoặc email..."
+          placeholder={t("Tìm theo tên hoặc email...")}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="border-input bg-background h-9 w-full rounded-md border pl-9 pr-3 text-sm"
@@ -103,16 +105,16 @@ export default function AdminUsersPage() {
         {/* User list */}
         <div className="lg:col-span-2">
           {isLoading ? (
-            <div className="text-muted-foreground py-12 text-center text-sm">Đang tải...</div>
+            <div className="text-muted-foreground py-12 text-center text-sm">{t("Đang tải...")}</div>
           ) : (
             <div className="rounded-lg border">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b">
-                    <th className="px-4 py-3 text-left font-medium">Người dùng</th>
-                    <th className="px-4 py-3 text-left font-medium">Vai trò</th>
-                    <th className="px-4 py-3 text-left font-medium">Ngày tạo</th>
-                    <th className="px-4 py-3 text-right font-medium">Thao tác</th>
+                    <th className="px-4 py-3 text-left font-medium">{t("Người dùng")}</th>
+                    <th className="px-4 py-3 text-left font-medium">{t("Vai trò")}</th>
+                    <th className="px-4 py-3 text-left font-medium">{t("Ngày tạo")}</th>
+                    <th className="px-4 py-3 text-right font-medium">{t("Thao tác")}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -163,13 +165,13 @@ export default function AdminUsersPage() {
                               })
                             }
                           >
-                            {user.role === "super_admin" ? "Hạ quyền" : "Nâng quyền"}
+                            {user.role === "super_admin" ? t("Hạ quyền") : t("Nâng quyền")}
                           </Button>
                           <Button
                             variant="ghost"
                             size="icon-sm"
                             onClick={() => {
-                              if (confirm(`Xóa người dùng "${user.name}"? Thao tác không thể hoàn tác.`)) {
+                              if (confirm(t('Xóa người dùng "{userName}"? Thao tác không thể hoàn tác.', { userName: user.name }))) {
                                 deleteMutation.mutate(user.id)
                               }
                             }}
@@ -183,7 +185,7 @@ export default function AdminUsersPage() {
                   {data?.items.length === 0 && (
                     <tr>
                       <td colSpan={4} className="text-muted-foreground px-4 py-12 text-center">
-                        Không tìm thấy người dùng
+                        {t("Không tìm thấy người dùng")}
                       </td>
                     </tr>
                   )}
@@ -213,18 +215,18 @@ export default function AdminUsersPage() {
 
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Vai trò hệ thống</span>
+                  <span className="text-muted-foreground">{t("Vai trò hệ thống")}</span>
                   <span className="font-medium">{userDetail.role === "super_admin" ? "Super Admin" : "User"}</span>
                 </div>
                 {userDetail.phone && (
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Điện thoại</span>
+                    <span className="text-muted-foreground">{t("Điện thoại")}</span>
                     <span>{userDetail.phone}</span>
                   </div>
                 )}
                 {userDetail.fullNameVi && (
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Họ tên</span>
+                    <span className="text-muted-foreground">{t("Họ tên")}</span>
                     <span>{userDetail.fullNameVi}</span>
                   </div>
                 )}
@@ -232,7 +234,7 @@ export default function AdminUsersPage() {
 
               {userDetail.memberships.length > 0 && (
                 <div>
-                  <h3 className="mb-2 text-sm font-medium">Cơ sở trực thuộc</h3>
+                  <h3 className="mb-2 text-sm font-medium">{t("Cơ sở trực thuộc")}</h3>
                   <div className="space-y-2">
                     {userDetail.memberships.map((m) => (
                       <div key={m.id} className="bg-muted/50 flex items-center justify-between rounded-md px-3 py-2 text-sm">
@@ -255,7 +257,7 @@ export default function AdminUsersPage() {
             </div>
           ) : (
             <div className="text-muted-foreground flex h-40 items-center justify-center rounded-lg border text-sm">
-              Chọn người dùng để xem chi tiết
+              {t("Chọn người dùng để xem chi tiết")}
             </div>
           )}
         </div>

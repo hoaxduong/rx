@@ -3,14 +3,10 @@
 import { useEffect } from "react"
 import { useRouter, usePathname } from "next/navigation"
 import Link from "next/link"
+import { useExtracted } from "next-intl"
 import { Building2, Building, Users, LogOut, Shield } from "lucide-react"
 import { Button } from "@workspace/ui/components/button"
 import { useSession, signOut } from "@/lib/auth-client"
-
-const navItems = [
-  { href: "/admin/centers", label: "Cơ sở y tế", icon: Building },
-  { href: "/admin/users", label: "Người dùng", icon: Users },
-]
 
 export default function AdminLayout({
   children,
@@ -19,6 +15,12 @@ export default function AdminLayout({
 }) {
   const router = useRouter()
   const pathname = usePathname()
+  const t = useExtracted()
+
+  const navItems = [
+    { href: "/admin/centers", label: t("Cơ sở y tế"), icon: Building },
+    { href: "/admin/users", label: t("Người dùng"), icon: Users },
+  ]
   const { data: session, isPending } = useSession()
 
   useEffect(() => {
@@ -30,7 +32,7 @@ export default function AdminLayout({
   if (isPending) {
     return (
       <div className="flex h-svh items-center justify-center">
-        <div className="text-muted-foreground animate-pulse text-sm">Đang tải...</div>
+        <div className="text-muted-foreground animate-pulse text-sm">{t("Đang tải...")}</div>
       </div>
     )
   }
@@ -87,7 +89,7 @@ export default function AdminLayout({
         <header className="bg-card flex h-14 shrink-0 items-center justify-end border-b px-6">
           <div className="flex items-center gap-2">
             <span className="text-muted-foreground text-sm">{session.user.name}</span>
-            <Button variant="ghost" size="icon-sm" onClick={handleSignOut} title="Đăng xuất">
+            <Button variant="ghost" size="icon-sm" onClick={handleSignOut} title={t("Đăng xuất")}>
               <LogOut className="h-4 w-4" />
             </Button>
           </div>

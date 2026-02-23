@@ -3,12 +3,14 @@
 import { useEffect } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
+import { useExtracted } from "next-intl"
 import { Building2, Package, Pill, BarChart3, Shield, ArrowRight } from "lucide-react"
 import { Button } from "@workspace/ui/components/button"
 import { useSession } from "@/lib/auth-client"
 
 export default function Page() {
   const router = useRouter()
+  const t = useExtracted()
   const { data: session, isPending } = useSession()
 
   useEffect(() => {
@@ -22,7 +24,7 @@ export default function Page() {
     return (
       <div className="flex min-h-svh items-center justify-center">
         <div className="text-muted-foreground animate-pulse text-sm">
-          Đang tải...
+          {t("Đang tải...")}
         </div>
       </div>
     )
@@ -41,10 +43,10 @@ export default function Page() {
           </div>
           <div className="flex items-center gap-2">
             <Button variant="ghost" asChild>
-              <Link href="/login">Đăng nhập</Link>
+              <Link href="/login">{t("Đăng nhập")}</Link>
             </Button>
             <Button asChild>
-              <Link href="/register">Đăng ký</Link>
+              <Link href="/register">{t("Đăng ký")}</Link>
             </Button>
           </div>
         </div>
@@ -55,23 +57,22 @@ export default function Page() {
         <section className="flex flex-1 items-center justify-center px-6 py-20">
           <div className="max-w-2xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Quản lý dược phẩm
+              {t("Quản lý dược phẩm")}
               <br />
-              <span className="text-primary">hiện đại & hiệu quả</span>
+              <span className="text-primary">{t("hiện đại & hiệu quả")}</span>
             </h1>
             <p className="text-muted-foreground mx-auto mt-4 max-w-lg text-lg">
-              Theo dõi tồn kho, quản lý giao dịch, kiểm soát hạn sử dụng và
-              báo cáo thống kê cho hệ thống y tế cơ sở.
+              {t("Theo dõi tồn kho, quản lý giao dịch, kiểm soát hạn sử dụng và báo cáo thống kê cho hệ thống y tế cơ sở.")}
             </p>
             <div className="mt-8 flex items-center justify-center gap-3">
               <Button size="lg" asChild>
                 <Link href="/register">
-                  Bắt đầu sử dụng
+                  {t("Bắt đầu sử dụng")}
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link href="/login">Đăng nhập</Link>
+                <Link href="/login">{t("Đăng nhập")}</Link>
               </Button>
             </div>
           </div>
@@ -82,23 +83,23 @@ export default function Page() {
           <div className="mx-auto grid max-w-4xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <FeatureCard
               icon={Package}
-              title="Quản lý tồn kho"
-              description="Theo dõi số lượng, lô hàng và hạn sử dụng theo thời gian thực."
+              title={t("Quản lý tồn kho")}
+              description={t("Theo dõi số lượng, lô hàng và hạn sử dụng theo thời gian thực.")}
             />
             <FeatureCard
               icon={Pill}
-              title="Danh mục thuốc"
-              description="Quản lý thông tin thuốc, phân loại và quy cách đóng gói."
+              title={t("Danh mục thuốc")}
+              description={t("Quản lý thông tin thuốc, phân loại và quy cách đóng gói.")}
             />
             <FeatureCard
               icon={BarChart3}
-              title="Báo cáo thống kê"
-              description="Phân tích tiêu thụ, dự báo hết hạn và tổng hợp tồn kho."
+              title={t("Báo cáo thống kê")}
+              description={t("Phân tích tiêu thụ, dự báo hết hạn và tổng hợp tồn kho.")}
             />
             <FeatureCard
               icon={Shield}
-              title="Cảnh báo tự động"
-              description="Nhận thông báo khi thuốc sắp hết hạn hoặc tồn kho thấp."
+              title={t("Cảnh báo tự động")}
+              description={t("Nhận thông báo khi thuốc sắp hết hạn hoặc tồn kho thấp.")}
             />
           </div>
         </section>
@@ -106,7 +107,7 @@ export default function Page() {
 
       {/* Footer */}
       <footer className="text-muted-foreground border-t px-6 py-6 text-center text-sm">
-        RX Pharmacy &mdash; Hệ thống quản lý dược phẩm
+        RX Pharmacy &mdash; {t("Hệ thống quản lý dược phẩm")}
       </footer>
     </div>
   )

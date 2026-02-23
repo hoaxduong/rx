@@ -1,11 +1,14 @@
 import Link from "next/link"
 import { Building2 } from "lucide-react"
+import { getExtracted } from "next-intl/server"
 
-export default function AuthLayout({
+export default async function AuthLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const t = await getExtracted()
+
   return (
     <div className="flex min-h-svh flex-col items-center justify-center px-4 py-12">
       <Link href="/" className="mb-8 flex items-center gap-2">
@@ -16,7 +19,7 @@ export default function AuthLayout({
         {children}
       </div>
       <p className="text-muted-foreground mt-6 text-center text-xs">
-        Hệ thống quản lý dược phẩm
+        {t("Hệ thống quản lý dược phẩm")}
       </p>
     </div>
   )

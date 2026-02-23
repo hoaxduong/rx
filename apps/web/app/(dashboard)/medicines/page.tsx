@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { useQuery } from "@tanstack/react-query"
+import { useExtracted } from "next-intl"
 import { api } from "@/lib/api"
 import { Button } from "@workspace/ui/components/button"
 import { Plus, Search, Pill } from "lucide-react"
@@ -10,6 +11,7 @@ import Link from "next/link"
 export default function MedicinesPage() {
   const [search, setSearch] = useState("")
   const [page, setPage] = useState(1)
+  const t = useExtracted()
 
   const { data, isLoading } = useQuery({
     queryKey: ["medicines", search, page],
@@ -25,15 +27,15 @@ export default function MedicinesPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Danh mục thuốc</h1>
+          <h1 className="text-2xl font-bold">{t("Danh mục thuốc")}</h1>
           <p className="text-muted-foreground">
-            Quản lý danh mục thuốc và vật tư y tế
+            {t("Quản lý danh mục thuốc và vật tư y tế")}
           </p>
         </div>
         <Link href="/medicines/new">
           <Button>
             <Plus className="mr-2 h-4 w-4" />
-            Thêm thuốc
+            {t("Thêm thuốc")}
           </Button>
         </Link>
       </div>
@@ -43,7 +45,7 @@ export default function MedicinesPage() {
         <div className="relative flex-1">
           <Search className="text-muted-foreground absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" />
           <input
-            placeholder="Tìm theo tên, hoạt chất, mã vạch..."
+            placeholder={t("Tìm theo tên, hoạt chất, mã vạch...")}
             value={search}
             onChange={(e) => {
               setSearch(e.target.value)
@@ -58,7 +60,7 @@ export default function MedicinesPage() {
       <div className="rounded-lg border">
         {isLoading ? (
           <div className="p-8 text-center text-sm text-muted-foreground">
-            Đang tải...
+            {t("Đang tải...")}
           </div>
         ) : data && "data" in data && data.data.length > 0 ? (
           <>
@@ -66,12 +68,12 @@ export default function MedicinesPage() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b bg-muted/50">
-                    <th className="px-4 py-3 text-left font-medium">Tên thuốc</th>
-                    <th className="px-4 py-3 text-left font-medium">Hoạt chất</th>
-                    <th className="px-4 py-3 text-left font-medium">Dạng bào chế</th>
-                    <th className="px-4 py-3 text-left font-medium">Hàm lượng</th>
-                    <th className="px-4 py-3 text-left font-medium">Nhà SX</th>
-                    <th className="px-4 py-3 text-left font-medium">Phân loại</th>
+                    <th className="px-4 py-3 text-left font-medium">{t("Tên thuốc")}</th>
+                    <th className="px-4 py-3 text-left font-medium">{t("Hoạt chất")}</th>
+                    <th className="px-4 py-3 text-left font-medium">{t("Dạng bào chế")}</th>
+                    <th className="px-4 py-3 text-left font-medium">{t("Hàm lượng")}</th>
+                    <th className="px-4 py-3 text-left font-medium">{t("Nhà SX")}</th>
+                    <th className="px-4 py-3 text-left font-medium">{t("Phân loại")}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -98,17 +100,17 @@ export default function MedicinesPage() {
                         <div className="flex gap-1">
                           {med.isNarcotics && (
                             <span className="rounded bg-red-100 px-1.5 py-0.5 text-xs text-red-700">
-                              Ma túy
+                              {t("Ma túy")}
                             </span>
                           )}
                           {med.isPsychotropic && (
                             <span className="rounded bg-orange-100 px-1.5 py-0.5 text-xs text-orange-700">
-                              Hướng thần
+                              {t("Hướng thần")}
                             </span>
                           )}
                           {med.isPrescriptionOnly && (
                             <span className="rounded bg-blue-100 px-1.5 py-0.5 text-xs text-blue-700">
-                              Kê đơn
+                              {t("Kê đơn")}
                             </span>
                           )}
                         </div>
@@ -121,7 +123,7 @@ export default function MedicinesPage() {
             {/* Pagination */}
             <div className="flex items-center justify-between border-t p-4">
               <span className="text-muted-foreground text-sm">
-                Tổng: {data.total} thuốc
+                {t("Tổng: {count} thuốc", { count: String(data.total) })}
               </span>
               <div className="flex gap-2">
                 <Button
@@ -130,7 +132,7 @@ export default function MedicinesPage() {
                   disabled={page <= 1}
                   onClick={() => setPage(page - 1)}
                 >
-                  Trước
+                  {t("Trước")}
                 </Button>
                 <Button
                   variant="outline"
@@ -138,7 +140,7 @@ export default function MedicinesPage() {
                   disabled={page * Number(data.limit) >= data.total}
                   onClick={() => setPage(page + 1)}
                 >
-                  Sau
+                  {t("Sau")}
                 </Button>
               </div>
             </div>
@@ -146,7 +148,7 @@ export default function MedicinesPage() {
         ) : (
           <div className="flex flex-col items-center p-12">
             <Pill className="text-muted-foreground mb-4 h-12 w-12" />
-            <p className="text-muted-foreground">Chưa có thuốc nào</p>
+            <p className="text-muted-foreground">{t("Chưa có thuốc nào")}</p>
           </div>
         )}
       </div>

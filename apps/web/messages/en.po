@@ -1,0 +1,1277 @@
+msgid ""
+msgstr ""
+"Language: en\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: next-intl\n"
+"X-Crowdin-SourceKey: msgstr\n"
+
+#: app/(admin)/admin/centers/page.tsx:56
+msgid "XF7gb3"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:59
+msgid "WMmxat"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:80
+msgid "ZZE1mD"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:88
+#: app/(admin)/admin/users/page.tsx:108
+#: app/(admin)/layout.tsx:35
+#: app/(dashboard)/alerts/page.tsx:94
+#: app/(dashboard)/inventory/page.tsx:130
+#: app/(dashboard)/medicines/[id]/page.tsx:50
+#: app/(dashboard)/medicines/page.tsx:63
+#: app/(dashboard)/suppliers/page.tsx:109
+#: app/(dashboard)/transactions/page.tsx:107
+#: app/page.tsx:27
+msgid "ekm1jk"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:94
+#: app/(dashboard)/suppliers/page.tsx:115
+msgid "YCdbKA"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:95
+#: app/(admin)/admin/centers/page.tsx:263
+msgid "GHubID"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:96
+#: app/(admin)/admin/centers/page.tsx:281
+#: app/(dashboard)/medicines/[id]/page.tsx:199
+#: app/(dashboard)/settings/page.tsx:44
+#: app/(dashboard)/transactions/page.tsx:116
+msgid "OTTdny"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:97
+#: app/(admin)/admin/centers/page.tsx:292
+msgid "sbjI9v"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:98
+msgid "Nb1cb0"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:99
+#: app/(admin)/admin/users/page.tsx:117
+msgid "PsZKZm"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:126
+#: app/(admin)/admin/centers/page.tsx:287
+#: components/dashboard/header.tsx:39
+msgid "X+EMsu"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:126
+#: components/dashboard/header.tsx:39
+msgid "2VKr2I"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:138
+msgid "CSrQCz"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:138
+#: app/(admin)/admin/centers/page.tsx:159
+msgid "bBUif4"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:148
+msgid "MOmOfG"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:154
+msgid "5sm6us"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:168
+msgid "GPAY+b"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:245
+msgid "R4LaLM"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:257
+msgid "k+hNuI"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:257
+msgid "+1xoAq"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:272
+#: app/(dashboard)/settings/page.tsx:40
+msgid "rj5XsP"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:288
+msgid "MC2nPD"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:298
+#: app/(dashboard)/medicines/[id]/page.tsx:126
+#: app/(dashboard)/medicines/[id]/page.tsx:130
+#: app/(dashboard)/medicines/[id]/page.tsx:134
+#: app/(dashboard)/medicines/[id]/page.tsx:138
+msgid "JVtIrS"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:307
+#: app/(dashboard)/suppliers/page.tsx:84
+msgid "R4zdpj"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:315
+msgid "z6HcUv"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:332
+msgid "2ANUD0"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:343
+#: app/(dashboard)/medicines/new/page.tsx:263
+#: app/(dashboard)/suppliers/page.tsx:90
+#: app/(dashboard)/transactions/inward/page.tsx:232
+#: app/(dashboard)/transactions/outward/page.tsx:143
+#: app/(dashboard)/transactions/transfer/page.tsx:148
+msgid "U2JaWL"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:343
+msgid "OsHKiv"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:343
+msgid "Cbn7Np"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:346
+#: app/(dashboard)/medicines/new/page.tsx:266
+#: app/(dashboard)/suppliers/page.tsx:92
+#: app/(dashboard)/transactions/inward/page.tsx:235
+#: app/(dashboard)/transactions/outward/page.tsx:145
+#: app/(dashboard)/transactions/transfer/page.tsx:150
+msgid "eNPJPz"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:91
+msgid "9K8/4Q"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:97
+msgid "uC8/dv"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:114
+#: app/(admin)/layout.tsx:22
+#: components/dashboard/header.tsx:51
+msgid "8Cg+nB"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:115
+msgid "8QXqaW"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:116
+msgid "BmTasn"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:168
+msgid "XfwFLQ"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:168
+msgid "KcVRf4"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:174
+msgid "MVyyJk"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:188
+msgid "QdC2qc"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:218
+msgid "cLLhVD"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:223
+#: app/(dashboard)/suppliers/page.tsx:68
+msgid "rhgPEy"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:229
+msgid "D6h+3S"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:237
+msgid "nDRWqo"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:260
+msgid "CwkxFC"
+msgstr ""
+
+#: app/(admin)/layout.tsx:21
+msgid "lMnkqT"
+msgstr ""
+
+#: app/(admin)/layout.tsx:92
+#: components/dashboard/header.tsx:53
+msgid "BUTJBx"
+msgstr ""
+
+#: app/(auth)/layout.tsx:22
+#: app/(auth)/register/page.tsx:60
+#: app/page.tsx:110
+msgid "ofeDSB"
+msgstr ""
+
+#: app/(auth)/login/page.tsx:19
+#: app/(auth)/register/page.tsx:21
+msgid "whyO7G"
+msgstr ""
+
+#: app/(auth)/login/page.tsx:20
+#: app/(auth)/register/page.tsx:22
+msgid "K0J6Jd"
+msgstr ""
+
+#: app/(auth)/login/page.tsx:40
+msgid "O+Dfkd"
+msgstr ""
+
+#: app/(auth)/login/page.tsx:54
+#: app/(auth)/login/page.tsx:100
+#: app/(auth)/register/page.tsx:147
+#: app/page.tsx:46
+#: app/page.tsx:75
+msgid "SPgXZ8"
+msgstr ""
+
+#: app/(auth)/login/page.tsx:56
+msgid "+7BWoB"
+msgstr ""
+
+#: app/(auth)/login/page.tsx:85
+#: app/(auth)/register/page.tsx:105
+msgid "w7y3kr"
+msgstr ""
+
+#: app/(auth)/login/page.tsx:100
+msgid "DEiKp3"
+msgstr ""
+
+#: app/(auth)/login/page.tsx:105
+msgid "z7FpKO"
+msgstr ""
+
+#: app/(auth)/login/page.tsx:107
+#: app/(auth)/register/page.tsx:140
+#: app/page.tsx:49
+msgid "TNBn/V"
+msgstr ""
+
+#: app/(auth)/register/page.tsx:20
+msgid "386fJj"
+msgstr ""
+
+#: app/(auth)/register/page.tsx:26
+msgid "/mHtEe"
+msgstr ""
+
+#: app/(auth)/register/page.tsx:48
+msgid "d8Juod"
+msgstr ""
+
+#: app/(auth)/register/page.tsx:58
+msgid "WB/2ho"
+msgstr ""
+
+#: app/(auth)/register/page.tsx:73
+msgid "hxjpTE"
+msgstr ""
+
+#: app/(auth)/register/page.tsx:123
+msgid "gWLsdc"
+msgstr ""
+
+#: app/(auth)/register/page.tsx:140
+msgid "X7+0m1"
+msgstr ""
+
+#: app/(auth)/register/page.tsx:145
+msgid "mKmp57"
+msgstr ""
+
+#: app/(dashboard)/alerts/page.tsx:34
+#: app/(dashboard)/inventory/page.tsx:85
+msgid "LKUPtX"
+msgstr ""
+
+#: app/(dashboard)/alerts/page.tsx:35
+#: app/(dashboard)/reports/page.tsx:83
+msgid "eZKS4s"
+msgstr ""
+
+#: app/(dashboard)/alerts/page.tsx:36
+msgid "5GBQcC"
+msgstr ""
+
+#: app/(dashboard)/alerts/page.tsx:37
+msgid "OXM2/V"
+msgstr ""
+
+#: app/(dashboard)/alerts/page.tsx:38
+msgid "O17ll3"
+msgstr ""
+
+#: app/(dashboard)/alerts/page.tsx:39
+msgid "NkD5Kp"
+msgstr ""
+
+#: app/(dashboard)/alerts/page.tsx:77
+#: app/(dashboard)/inventory/page.tsx:52
+#: app/(dashboard)/reports/page.tsx:73
+#: app/(dashboard)/transactions/page.tsx:50
+#: components/dashboard/header.tsx:36
+msgid "8BZ8aR"
+msgstr ""
+
+#: app/(dashboard)/alerts/page.tsx:78
+msgid "HAP0rC"
+msgstr ""
+
+#: app/(dashboard)/alerts/page.tsx:87
+#: components/dashboard/sidebar.tsx:29
+msgid "Uqp2c9"
+msgstr ""
+
+#: app/(dashboard)/alerts/page.tsx:89
+msgid "3RWUoZ"
+msgstr ""
+
+#: app/(dashboard)/alerts/page.tsx:117
+#: app/(dashboard)/scanner/page.tsx:59
+#: app/(dashboard)/settings/page.tsx:57
+#: app/(dashboard)/transactions/inward/page.tsx:181
+#: app/(dashboard)/transactions/outward/page.tsx:113
+#: app/(dashboard)/transactions/transfer/page.tsx:118
+msgid "1M9cAK"
+msgstr ""
+
+#: app/(dashboard)/alerts/page.tsx:126
+msgid "fYJqHP"
+msgstr ""
+
+#: app/(dashboard)/alerts/page.tsx:134
+msgid "ouaWwc"
+msgstr ""
+
+#: app/(dashboard)/alerts/page.tsx:151
+msgid "jLRcF6"
+msgstr ""
+
+#: app/(dashboard)/alerts/page.tsx:152
+msgid "39m8+9"
+msgstr ""
+
+#: app/(dashboard)/inventory/page.tsx:54
+msgid "NaIxCQ"
+msgstr ""
+
+#: app/(dashboard)/inventory/page.tsx:64
+#: components/dashboard/sidebar.tsx:24
+msgid "k8wm8/"
+msgstr ""
+
+#: app/(dashboard)/inventory/page.tsx:66
+msgid "ksyWFX"
+msgstr ""
+
+#: app/(dashboard)/inventory/page.tsx:75
+#: app/(dashboard)/reports/page.tsx:116
+msgid "5F/7Ib"
+msgstr ""
+
+#: app/(dashboard)/inventory/page.tsx:95
+msgid "7boZM9"
+msgstr ""
+
+#: app/(dashboard)/inventory/page.tsx:105
+msgid "Gygd+9"
+msgstr ""
+
+#: app/(dashboard)/inventory/page.tsx:126
+msgid "cBsdrh"
+msgstr ""
+
+#: app/(dashboard)/inventory/page.tsx:137
+msgid "Dr5czD"
+msgstr ""
+
+#: app/(dashboard)/inventory/page.tsx:138
+msgid "PcZqwx"
+msgstr ""
+
+#: app/(dashboard)/inventory/page.tsx:139
+#: app/(dashboard)/medicines/[id]/page.tsx:157
+#: app/(dashboard)/medicines/[id]/page.tsx:200
+#: app/(dashboard)/transactions/inward/page.tsx:194
+msgid "T0nJr4"
+msgstr ""
+
+#: app/(dashboard)/inventory/page.tsx:140
+msgid "ZG3DRI"
+msgstr ""
+
+#: app/(dashboard)/inventory/page.tsx:141
+msgid "4WVGVw"
+msgstr ""
+
+#: app/(dashboard)/inventory/page.tsx:171
+msgid "r1u9R7"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:54
+msgid "eyedFR"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:76
+msgid "nZUmN8"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:84
+msgid "ZNdHs6"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:87
+#: app/(dashboard)/medicines/new/page.tsx:145
+#: app/(dashboard)/medicines/page.tsx:72
+msgid "i+tApd"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:91
+#: app/(dashboard)/medicines/new/page.tsx:156
+#: app/(dashboard)/medicines/page.tsx:73
+msgid "rd6vIC"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:95
+#: app/(dashboard)/medicines/new/page.tsx:167
+#: app/(dashboard)/medicines/page.tsx:74
+msgid "MZ2HQ0"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:99
+#: app/(dashboard)/medicines/new/page.tsx:197
+msgid "b2ustg"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:103
+msgid "cMl0UZ"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:107
+#: app/(dashboard)/medicines/new/page.tsx:205
+msgid "r68aYS"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:111
+msgid "W4mrDL"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:118
+msgid "7/tOvD"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:121
+msgid "mGy4cJ"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:125
+msgid "38l6Br"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:126
+#: app/(dashboard)/medicines/[id]/page.tsx:130
+#: app/(dashboard)/medicines/[id]/page.tsx:134
+#: app/(dashboard)/medicines/[id]/page.tsx:138
+msgid "F1tk89"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:129
+#: app/(dashboard)/medicines/page.tsx:108
+msgid "7QeMwp"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:133
+#: app/(dashboard)/medicines/page.tsx:113
+msgid "RpNBO6"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:137
+msgid "y1IOHW"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:149
+msgid "D2nNFq"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:158
+#: app/(dashboard)/transactions/inward/page.tsx:198
+msgid "6J5Wia"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:159
+#: app/(dashboard)/transactions/inward/page.tsx:202
+#: app/(dashboard)/transactions/outward/page.tsx:122
+#: app/(dashboard)/transactions/transfer/page.tsx:127
+msgid "RaWDY1"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:160
+#: app/(dashboard)/transactions/inward/page.tsx:207
+msgid "9jXYc4"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:181
+msgid "nJFYFT"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:191
+msgid "YKrXeN"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:197
+#: app/(dashboard)/transactions/page.tsx:117
+msgid "6TAmbO"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:198
+#: app/(dashboard)/transactions/page.tsx:115
+msgid "V9F9G6"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:201
+msgid "d/FnXN"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:202
+msgid "lScpBN"
+msgstr ""
+
+#: app/(dashboard)/medicines/[id]/page.tsx:203
+msgid "E+Z42t"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:20
+msgid "obLTsv"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:45
+msgid "bI7HLt"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:46
+#: app/(dashboard)/medicines/new/page.tsx:64
+msgid "AYLAHL"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:47
+msgid "Pu3QvC"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:48
+msgid "Z9lcmw"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:49
+msgid "1Iiteo"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:50
+msgid "DjiMNM"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:51
+msgid "inpWls"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:52
+msgid "YWoSCA"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:53
+msgid "AvIr4q"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:54
+msgid "aLjTsA"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:55
+msgid "g74UTD"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:56
+msgid "qK1K9A"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:57
+msgid "klhHEu"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:59
+msgid "83gPx3"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:63
+msgid "L95aRO"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:65
+msgid "xsQmks"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:66
+msgid "489QDW"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:67
+msgid "pYqs6I"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:68
+msgid "/gCe+Y"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:69
+msgid "Umg1ie"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:70
+msgid "aOl6kO"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:71
+msgid "q3+qrs"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:75
+msgid "sq1GFA"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:76
+msgid "1VwQFy"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:110
+msgid "KkRGYf"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:111
+msgid "zRt1O1"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:121
+msgid "5htIvS"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:127
+msgid "GsrK/z"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:130
+#: app/(dashboard)/medicines/page.tsx:71
+msgid "kXA402"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:137
+msgid "r236/S"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:141
+msgid "RbSBv5"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:153
+msgid "AVDYJy"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:158
+#: app/(dashboard)/medicines/new/page.tsx:173
+msgid "gMW39S"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:171
+msgid "dwqwxj"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:183
+msgid "r15vM+"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:186
+msgid "z14lyP"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:194
+msgid "sM0RQT"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:201
+msgid "kdY5th"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:209
+msgid "IEE4Iq"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:217
+msgid "JtB2ho"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:221
+msgid "lloWFr"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:225
+msgid "dvqK3q"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:229
+msgid "nxFGcO"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:233
+msgid "jR+wLU"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:237
+msgid "+zX/EE"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:244
+msgid "Oc6U7j"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:246
+msgid "qmQ/KF"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:253
+msgid "Jzniek"
+msgstr ""
+
+#: app/(dashboard)/medicines/new/page.tsx:263
+msgid "nFj8Ci"
+msgstr ""
+
+#: app/(dashboard)/medicines/page.tsx:30
+#: app/page.tsx:91
+#: components/dashboard/sidebar.tsx:25
+msgid "kcQPK5"
+msgstr ""
+
+#: app/(dashboard)/medicines/page.tsx:32
+msgid "KaQe4e"
+msgstr ""
+
+#: app/(dashboard)/medicines/page.tsx:38
+msgid "pBsOiE"
+msgstr ""
+
+#: app/(dashboard)/medicines/page.tsx:48
+msgid "r/56xc"
+msgstr ""
+
+#: app/(dashboard)/medicines/page.tsx:75
+msgid "8Gre7Q"
+msgstr ""
+
+#: app/(dashboard)/medicines/page.tsx:76
+msgid "jtRC1h"
+msgstr ""
+
+#: app/(dashboard)/medicines/page.tsx:103
+msgid "lxSlsz"
+msgstr ""
+
+#: app/(dashboard)/medicines/page.tsx:126
+msgid "Ed+Aw5"
+msgstr ""
+
+#: app/(dashboard)/medicines/page.tsx:135
+#: app/(dashboard)/transactions/page.tsx:170
+msgid "igz/b0"
+msgstr ""
+
+#: app/(dashboard)/medicines/page.tsx:143
+#: app/(dashboard)/transactions/page.tsx:173
+msgid "j39/j+"
+msgstr ""
+
+#: app/(dashboard)/medicines/page.tsx:151
+msgid "AtVaIt"
+msgstr ""
+
+#: app/(dashboard)/prescriptions/page.tsx:13
+msgid "rlSitP"
+msgstr ""
+
+#: app/(dashboard)/prescriptions/page.tsx:15
+msgid "EMt7vg"
+msgstr ""
+
+#: app/(dashboard)/reports/page.tsx:74
+msgid "Z8aZwt"
+msgstr ""
+
+#: app/(dashboard)/reports/page.tsx:84
+msgid "5T+ub8"
+msgstr ""
+
+#: app/(dashboard)/reports/page.tsx:85
+msgid "Ff8Kuk"
+msgstr ""
+
+#: app/(dashboard)/reports/page.tsx:86
+msgid "/wbBxO"
+msgstr ""
+
+#: app/(dashboard)/reports/page.tsx:107
+msgid "v8xrpl"
+msgstr ""
+
+#: app/(dashboard)/reports/page.tsx:108
+msgid "iTia1D"
+msgstr ""
+
+#: app/(dashboard)/reports/page.tsx:119
+msgid "/YQbND"
+msgstr ""
+
+#: app/(dashboard)/reports/page.tsx:130
+msgid "SYeBxh"
+msgstr ""
+
+#: app/(dashboard)/reports/page.tsx:153
+msgid "gSNa5k"
+msgstr ""
+
+#: app/(dashboard)/reports/page.tsx:161
+msgid "lE8CQT"
+msgstr ""
+
+#: app/(dashboard)/reports/page.tsx:179
+msgid "UwAcVz"
+msgstr ""
+
+#: app/(dashboard)/scanner/page.tsx:32
+#: components/dashboard/sidebar.tsx:31
+msgid "26htFi"
+msgstr ""
+
+#: app/(dashboard)/scanner/page.tsx:33
+msgid "iBzHmy"
+msgstr ""
+
+#: app/(dashboard)/scanner/page.tsx:38
+msgid "/WoXvV"
+msgstr ""
+
+#: app/(dashboard)/scanner/page.tsx:47
+msgid "vOFmoy"
+msgstr ""
+
+#: app/(dashboard)/scanner/page.tsx:52
+msgid "ZVJbEw"
+msgstr ""
+
+#: app/(dashboard)/scanner/page.tsx:59
+msgid "C5HX2i"
+msgstr ""
+
+#: app/(dashboard)/scanner/page.tsx:71
+msgid "OYWi3b"
+msgstr ""
+
+#: app/(dashboard)/settings/page.tsx:30
+#: components/dashboard/sidebar.tsx:35
+msgid "Bmrjqi"
+msgstr ""
+
+#: app/(dashboard)/settings/page.tsx:31
+msgid "bUgFBu"
+msgstr ""
+
+#: app/(dashboard)/settings/page.tsx:37
+msgid "v1aWDp"
+msgstr ""
+
+#: app/(dashboard)/settings/page.tsx:45
+msgid "xb5War"
+msgstr ""
+
+#: app/(dashboard)/settings/page.tsx:45
+msgid "LLpwWB"
+msgstr ""
+
+#: app/(dashboard)/settings/page.tsx:51
+msgid "n02ejn"
+msgstr ""
+
+#: app/(dashboard)/settings/page.tsx:58
+msgid "081z+T"
+msgstr ""
+
+#: app/(dashboard)/settings/page.tsx:59
+msgid "sEwjit"
+msgstr ""
+
+#: app/(dashboard)/settings/page.tsx:60
+msgid "MEaFu/"
+msgstr ""
+
+#: app/(dashboard)/settings/page.tsx:61
+msgid "ioTrt9"
+msgstr ""
+
+#: app/(dashboard)/settings/page.tsx:78
+msgid "QQ1U1z"
+msgstr ""
+
+#: app/(dashboard)/settings/page.tsx:86
+msgid "GeEKDE"
+msgstr ""
+
+#: app/(dashboard)/suppliers/page.tsx:43
+#: app/(dashboard)/transactions/inward/page.tsx:137
+#: components/dashboard/sidebar.tsx:27
+msgid "UlrbGf"
+msgstr ""
+
+#: app/(dashboard)/suppliers/page.tsx:44
+msgid "0wqyy7"
+msgstr ""
+
+#: app/(dashboard)/suppliers/page.tsx:47
+msgid "rntv1A"
+msgstr ""
+
+#: app/(dashboard)/suppliers/page.tsx:53
+msgid "TbX57r"
+msgstr ""
+
+#: app/(dashboard)/suppliers/page.tsx:56
+#: app/(dashboard)/suppliers/page.tsx:116
+msgid "Hw2kP+"
+msgstr ""
+
+#: app/(dashboard)/suppliers/page.tsx:60
+msgid "WJzG4S"
+msgstr ""
+
+#: app/(dashboard)/suppliers/page.tsx:64
+msgid "kObpk0"
+msgstr ""
+
+#: app/(dashboard)/suppliers/page.tsx:76
+msgid "W0YjUD"
+msgstr ""
+
+#: app/(dashboard)/suppliers/page.tsx:80
+msgid "iJgsdE"
+msgstr ""
+
+#: app/(dashboard)/suppliers/page.tsx:90
+msgid "oa/wrx"
+msgstr ""
+
+#: app/(dashboard)/suppliers/page.tsx:100
+msgid "sG42Ty"
+msgstr ""
+
+#: app/(dashboard)/suppliers/page.tsx:117
+msgid "I7Ox1c"
+msgstr ""
+
+#: app/(dashboard)/suppliers/page.tsx:118
+msgid "xpnuaE"
+msgstr ""
+
+#: app/(dashboard)/suppliers/page.tsx:138
+msgid "+HfCnd"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:23
+msgid "DHzbsT"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:30
+#: app/(dashboard)/transactions/outward/page.tsx:26
+#: app/(dashboard)/transactions/transfer/page.tsx:25
+msgid "x+9YNG"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:31
+msgid "m1KbJB"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:32
+msgid "5D19O1"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:33
+#: app/(dashboard)/transactions/outward/page.tsx:27
+#: app/(dashboard)/transactions/transfer/page.tsx:26
+msgid "YcwSRP"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:37
+msgid "9oHckQ"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:106
+#: app/(dashboard)/transactions/outward/page.tsx:78
+#: app/(dashboard)/transactions/transfer/page.tsx:74
+msgid "h8gxBn"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:120
+#: app/(dashboard)/transactions/page.tsx:72
+msgid "olSqsS"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:122
+msgid "sgPQrj"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:130
+msgid "Mcj512"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:139
+msgid "BpHpv2"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:152
+msgid "gK1mWS"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:156
+msgid "KrVwbW"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:164
+msgid "3wyAht"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:174
+#: app/(dashboard)/transactions/outward/page.tsx:106
+#: app/(dashboard)/transactions/transfer/page.tsx:111
+msgid "8pZWJd"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:183
+#: app/(dashboard)/transactions/outward/page.tsx:115
+#: app/(dashboard)/transactions/transfer/page.tsx:120
+msgid "1JNsCQ"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:220
+msgid "z2fFEP"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:226
+#: app/(dashboard)/transactions/outward/page.tsx:137
+#: app/(dashboard)/transactions/page.tsx:120
+#: app/(dashboard)/transactions/transfer/page.tsx:142
+msgid "dbWnqp"
+msgstr ""
+
+#: app/(dashboard)/transactions/inward/page.tsx:232
+msgid "XQA89m"
+msgstr ""
+
+#: app/(dashboard)/transactions/outward/page.tsx:88
+#: app/(dashboard)/transactions/page.tsx:76
+msgid "Ll7tOh"
+msgstr ""
+
+#: app/(dashboard)/transactions/outward/page.tsx:90
+msgid "EfNFRg"
+msgstr ""
+
+#: app/(dashboard)/transactions/outward/page.tsx:98
+#: app/(dashboard)/transactions/transfer/page.tsx:91
+msgid "Nfw2c4"
+msgstr ""
+
+#: app/(dashboard)/transactions/outward/page.tsx:104
+msgid "N0vxfI"
+msgstr ""
+
+#: app/(dashboard)/transactions/outward/page.tsx:143
+msgid "csqLUp"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:19
+msgid "TKj1V3"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:20
+msgid "VOVocu"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:21
+msgid "KkWh/f"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:22
+msgid "KqLga1"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:23
+msgid "e5jNgK"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:24
+msgid "PYrELu"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:25
+msgid "8gkkz/"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:26
+msgid "26YWbJ"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:52
+msgid "PQ/c0L"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:63
+msgid "tY6h9d"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:65
+msgid "plIAMB"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:79
+#: app/(dashboard)/transactions/transfer/page.tsx:84
+msgid "8uspEl"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:94
+msgid "lW6I86"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:118
+msgid "xZN0y0"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:119
+msgid "jycb70"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:166
+msgid "UZj5F/"
+msgstr ""
+
+#: app/(dashboard)/transactions/page.tsx:180
+msgid "w+rh2v"
+msgstr ""
+
+#: app/(dashboard)/transactions/transfer/page.tsx:22
+msgid "FA0MGW"
+msgstr ""
+
+#: app/(dashboard)/transactions/transfer/page.tsx:85
+msgid "5UctNq"
+msgstr ""
+
+#: app/(dashboard)/transactions/transfer/page.tsx:95
+msgid "zKLeyS"
+msgstr ""
+
+#: app/(dashboard)/transactions/transfer/page.tsx:97
+msgid "Btig5W"
+msgstr ""
+
+#: app/(dashboard)/transactions/transfer/page.tsx:109
+msgid "xaP4Yr"
+msgstr ""
+
+#: app/(dashboard)/transactions/transfer/page.tsx:148
+msgid "1T6zqb"
+msgstr ""
+
+#: app/page.tsx:60
+msgid "ry6tip"
+msgstr ""
+
+#: app/page.tsx:62
+msgid "KqdpIf"
+msgstr ""
+
+#: app/page.tsx:65
+msgid "aD7uQ7"
+msgstr ""
+
+#: app/page.tsx:70
+msgid "pglVH/"
+msgstr ""
+
+#: app/page.tsx:86
+msgid "wIh0kv"
+msgstr ""
+
+#: app/page.tsx:87
+msgid "cVWQPF"
+msgstr ""
+
+#: app/page.tsx:92
+msgid "FVI+yT"
+msgstr ""
+
+#: app/page.tsx:96
+msgid "gsZMyU"
+msgstr ""
+
+#: app/page.tsx:97
+msgid "lcsInk"
+msgstr ""
+
+#: app/page.tsx:101
+msgid "dMtIR0"
+msgstr ""
+
+#: app/page.tsx:102
+msgid "+bUxfO"
+msgstr ""
+
+#: components/dashboard/sidebar.tsx:26
+msgid "8sm41X"
+msgstr ""
+
+#: components/dashboard/sidebar.tsx:28
+msgid "l2mDby"
+msgstr ""
+
+#: components/dashboard/sidebar.tsx:30
+msgid "fpmxFf"
+msgstr ""

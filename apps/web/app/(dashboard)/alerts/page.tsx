@@ -1,6 +1,7 @@
 "use client"
 
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
+import { useExtracted } from "next-intl"
 import { api } from "@/lib/api"
 import { useCenter } from "@/components/center-context"
 import { Button } from "@workspace/ui/components/button"
@@ -15,15 +16,6 @@ const typeIcons: Record<string, typeof Bell> = {
   recall: AlertTriangle,
 }
 
-const typeLabels: Record<string, string> = {
-  expiry_warning: "Sắp hết hạn",
-  expired: "Đã hết hạn",
-  low_stock: "Tồn kho thấp",
-  out_of_stock: "Hết hàng",
-  overstock: "Tồn kho cao",
-  recall: "Thu hồi",
-}
-
 const typeColors: Record<string, string> = {
   expiry_warning: "text-orange-500 bg-orange-50",
   expired: "text-red-500 bg-red-50",
@@ -36,6 +28,16 @@ const typeColors: Record<string, string> = {
 export default function AlertsPage() {
   const { currentCenter } = useCenter()
   const queryClient = useQueryClient()
+  const t = useExtracted()
+
+  const typeLabels: Record<string, string> = {
+    expiry_warning: t("Sắp hết hạn"),
+    expired: t("Đã hết hạn"),
+    low_stock: t("Tồn kho thấp"),
+    out_of_stock: t("Hết hàng"),
+    overstock: t("Tồn kho cao"),
+    recall: t("Thu hồi"),
+  }
 
   const { data: alerts, isLoading } = useQuery({
     queryKey: ["alerts", currentCenter?.id],
@@ -72,8 +74,8 @@ export default function AlertsPage() {
       <div className="flex h-full items-center justify-center">
         <div className="text-center">
           <Bell className="text-muted-foreground mx-auto mb-4 h-12 w-12" />
-          <h2 className="text-lg font-semibold">Chọn cơ sở</h2>
-          <p className="text-muted-foreground mt-1">Chọn cơ sở y tế để xem cảnh báo</p>
+          <h2 className="text-lg font-semibold">{t("Chọn cơ sở")}</h2>
+          <p className="text-muted-foreground mt-1">{t("Chọn cơ sở y tế để xem cảnh báo")}</p>
         </div>
       </div>
     )
@@ -82,14 +84,14 @@ export default function AlertsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">Cảnh báo</h1>
+        <h1 className="text-2xl font-bold">{t("Cảnh báo")}</h1>
         <p className="text-muted-foreground">
-          Cảnh báo hết hạn, tồn kho thấp tại {currentCenter.name}
+          {t("Cảnh báo hết hạn, tồn kho thấp tại {centerName}", { centerName: currentCenter.name })}
         </p>
       </div>
 
       {isLoading ? (
-        <div className="p-8 text-center text-muted-foreground">Đang tải...</div>
+        <div className="p-8 text-center text-muted-foreground">{t("Đang tải...")}</div>
       ) : Array.isArray(alerts) && alerts.length > 0 ? (
         <div className="space-y-3">
           {alerts.map((alert: any) => {
@@ -112,7 +114,7 @@ export default function AlertsPage() {
                       )}
                       {alert.medicine && (
                         <p className="text-sm mt-1">
-                          Thuốc: <span className="font-medium">{alert.medicine.nameVi || alert.medicine.name}</span>
+                          {t("Thuốc")}: <span className="font-medium">{alert.medicine.nameVi || alert.medicine.name}</span>
                         </p>
                       )}
                     </div>
@@ -121,7 +123,7 @@ export default function AlertsPage() {
                         variant="ghost"
                         size="icon-sm"
                         onClick={() => acknowledgeMutation.mutate(alert.id)}
-                        title="Xác nhận"
+                        title={t("Xác nhận")}
                       >
                         <Check className="h-4 w-4 text-green-500" />
                       </Button>
@@ -129,7 +131,7 @@ export default function AlertsPage() {
                         variant="ghost"
                         size="icon-sm"
                         onClick={() => dismissMutation.mutate(alert.id)}
-                        title="Bỏ qua"
+                        title={t("Bỏ qua")}
                       >
                         <X className="h-4 w-4 text-muted-foreground" />
                       </Button>
@@ -146,8 +148,8 @@ export default function AlertsPage() {
       ) : (
         <div className="flex flex-col items-center rounded-lg border p-12">
           <Check className="text-green-500 mb-4 h-12 w-12" />
-          <p className="font-medium">Không có cảnh báo</p>
-          <p className="text-muted-foreground text-sm">Kho thuốc hoạt động bình thường</p>
+          <p className="font-medium">{t("Không có cảnh báo")}</p>
+          <p className="text-muted-foreground text-sm">{t("Kho thuốc hoạt động bình thường")}</p>
         </div>
       )}
     </div>

@@ -6,26 +6,29 @@ import Link from "next/link"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
+import { useExtracted } from "next-intl"
 import { signUp } from "@/lib/auth-client"
 import { Button } from "@workspace/ui/components/button"
 
-const registerSchema = z
-  .object({
-    name: z.string().min(1, "Tên không được để trống"),
-    email: z.string().email("Email không hợp lệ"),
-    password: z.string().min(6, "Mật khẩu phải có ít nhất 6 ký tự"),
-    confirmPassword: z.string(),
-  })
-  .refine((data) => data.password === data.confirmPassword, {
-    message: "Mật khẩu xác nhận không khớp",
-    path: ["confirmPassword"],
-  })
-
-type RegisterForm = z.infer<typeof registerSchema>
-
 export default function RegisterPage() {
   const router = useRouter()
+  const t = useExtracted()
   const [error, setError] = useState("")
+
+  const registerSchema = z
+    .object({
+      name: z.string().min(1, t("Tên không được để trống")),
+      email: z.string().email(t("Email không hợp lệ")),
+      password: z.string().min(6, t("Mật khẩu phải có ít nhất 6 ký tự")),
+      confirmPassword: z.string(),
+    })
+    .refine((data) => data.password === data.confirmPassword, {
+      message: t("Mật khẩu xác nhận không khớp"),
+      path: ["confirmPassword"],
+    })
+
+  type RegisterForm = z.infer<typeof registerSchema>
+
   const {
     register,
     handleSubmit,
@@ -42,7 +45,7 @@ export default function RegisterPage() {
       password: data.password,
     })
     if (result.error) {
-      setError(result.error.message || "Đăng ký thất bại")
+      setError(result.error.message || t("Đăng ký thất bại"))
       return
     }
     router.push("/inventory")
@@ -52,9 +55,9 @@ export default function RegisterPage() {
     <div className="flex min-h-screen items-center justify-center">
       <div className="w-full max-w-md space-y-6 rounded-lg border p-8">
         <div className="text-center">
-          <h1 className="text-2xl font-bold">Đăng ký tài khoản</h1>
+          <h1 className="text-2xl font-bold">{t("Đăng ký tài khoản")}</h1>
           <p className="text-muted-foreground mt-2">
-            Hệ thống quản lý dược phẩm
+            {t("Hệ thống quản lý dược phẩm")}
           </p>
         </div>
 
@@ -67,7 +70,7 @@ export default function RegisterPage() {
 
           <div className="space-y-2">
             <label htmlFor="name" className="text-sm font-medium">
-              Họ và tên
+              {t("Họ và tên")}
             </label>
             <input
               id="name"
@@ -99,7 +102,7 @@ export default function RegisterPage() {
 
           <div className="space-y-2">
             <label htmlFor="password" className="text-sm font-medium">
-              Mật khẩu
+              {t("Mật khẩu")}
             </label>
             <input
               id="password"
@@ -117,7 +120,7 @@ export default function RegisterPage() {
 
           <div className="space-y-2">
             <label htmlFor="confirmPassword" className="text-sm font-medium">
-              Xác nhận mật khẩu
+              {t("Xác nhận mật khẩu")}
             </label>
             <input
               id="confirmPassword"
@@ -134,14 +137,14 @@ export default function RegisterPage() {
           </div>
 
           <Button type="submit" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? "Đang đăng ký..." : "Đăng ký"}
+            {isSubmitting ? t("Đang đăng ký...") : t("Đăng ký")}
           </Button>
         </form>
 
         <p className="text-center text-sm">
-          Đã có tài khoản?{" "}
+          {t("Đã có tài khoản?")}{" "}
           <Link href="/login" className="text-primary underline">
-            Đăng nhập
+            {t("Đăng nhập")}
           </Link>
         </p>
       </div>

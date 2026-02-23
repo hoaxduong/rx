@@ -2,6 +2,7 @@
 
 import { use } from "react"
 import { useQuery } from "@tanstack/react-query"
+import { useExtracted } from "next-intl"
 import { api } from "@/lib/api"
 import { useCenter } from "@/components/center-context"
 import { Button } from "@workspace/ui/components/button"
@@ -15,6 +16,7 @@ export default function MedicineDetailPage({
 }) {
   const { id } = use(params)
   const { currentCenter } = useCenter()
+  const t = useExtracted()
 
   const { data: medicine, isLoading } = useQuery({
     queryKey: ["medicine", id],
@@ -45,11 +47,11 @@ export default function MedicineDetailPage({
   })
 
   if (isLoading) {
-    return <div className="p-8 text-center text-muted-foreground">Đang tải...</div>
+    return <div className="p-8 text-center text-muted-foreground">{t("Đang tải...")}</div>
   }
 
   if (!medicine || "error" in medicine) {
-    return <div className="p-8 text-center text-muted-foreground">Không tìm thấy thuốc</div>
+    return <div className="p-8 text-center text-muted-foreground">{t("Không tìm thấy thuốc")}</div>
   }
 
   return (
@@ -71,7 +73,7 @@ export default function MedicineDetailPage({
         <Link href={`/medicines/${id}/edit`}>
           <Button variant="outline">
             <Edit className="mr-2 h-4 w-4" />
-            Chỉnh sửa
+            {t("Chỉnh sửa")}
           </Button>
         </Link>
       </div>
@@ -79,61 +81,61 @@ export default function MedicineDetailPage({
       {/* Medicine details */}
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-4 rounded-lg border p-4">
-          <h2 className="font-semibold">Thông tin thuốc</h2>
+          <h2 className="font-semibold">{t("Thông tin thuốc")}</h2>
           <dl className="space-y-2 text-sm">
             <div className="flex justify-between">
-              <dt className="text-muted-foreground">Hoạt chất</dt>
+              <dt className="text-muted-foreground">{t("Hoạt chất")}</dt>
               <dd>{medicine.activeIngredient || "-"}</dd>
             </div>
             <div className="flex justify-between">
-              <dt className="text-muted-foreground">Dạng bào chế</dt>
+              <dt className="text-muted-foreground">{t("Dạng bào chế")}</dt>
               <dd>{medicine.dosageForm || "-"}</dd>
             </div>
             <div className="flex justify-between">
-              <dt className="text-muted-foreground">Hàm lượng</dt>
+              <dt className="text-muted-foreground">{t("Hàm lượng")}</dt>
               <dd>{medicine.strength || "-"}</dd>
             </div>
             <div className="flex justify-between">
-              <dt className="text-muted-foreground">Nhà sản xuất</dt>
+              <dt className="text-muted-foreground">{t("Nhà sản xuất")}</dt>
               <dd>{medicine.manufacturer || "-"}</dd>
             </div>
             <div className="flex justify-between">
-              <dt className="text-muted-foreground">Nước SX</dt>
+              <dt className="text-muted-foreground">{t("Nước SX")}</dt>
               <dd>{medicine.countryOfOrigin || "-"}</dd>
             </div>
             <div className="flex justify-between">
-              <dt className="text-muted-foreground">Số đăng ký</dt>
+              <dt className="text-muted-foreground">{t("Số đăng ký")}</dt>
               <dd>{medicine.registrationNumber || "-"}</dd>
             </div>
             <div className="flex justify-between">
-              <dt className="text-muted-foreground">Mã BHYT</dt>
+              <dt className="text-muted-foreground">{t("Mã BHYT")}</dt>
               <dd>{medicine.dinhMucBhyt || "-"}</dd>
             </div>
           </dl>
         </div>
 
         <div className="space-y-4 rounded-lg border p-4">
-          <h2 className="font-semibold">Phân loại & Bảo quản</h2>
+          <h2 className="font-semibold">{t("Phân loại & Bảo quản")}</h2>
           <dl className="space-y-2 text-sm">
             <div className="flex justify-between">
-              <dt className="text-muted-foreground">Bảo quản</dt>
+              <dt className="text-muted-foreground">{t("Bảo quản")}</dt>
               <dd>{medicine.storageCondition || "-"}</dd>
             </div>
             <div className="flex justify-between">
-              <dt className="text-muted-foreground">Gây nghiện</dt>
-              <dd>{medicine.isNarcotics ? "Có" : "Không"}</dd>
+              <dt className="text-muted-foreground">{t("Gây nghiện")}</dt>
+              <dd>{medicine.isNarcotics ? t("Có") : t("Không")}</dd>
             </div>
             <div className="flex justify-between">
-              <dt className="text-muted-foreground">Hướng thần</dt>
-              <dd>{medicine.isPsychotropic ? "Có" : "Không"}</dd>
+              <dt className="text-muted-foreground">{t("Hướng thần")}</dt>
+              <dd>{medicine.isPsychotropic ? t("Có") : t("Không")}</dd>
             </div>
             <div className="flex justify-between">
-              <dt className="text-muted-foreground">Kê đơn</dt>
-              <dd>{medicine.isPrescriptionOnly ? "Có" : "Không"}</dd>
+              <dt className="text-muted-foreground">{t("Kê đơn")}</dt>
+              <dd>{medicine.isPrescriptionOnly ? t("Có") : t("Không")}</dd>
             </div>
             <div className="flex justify-between">
-              <dt className="text-muted-foreground">Thiết yếu</dt>
-              <dd>{medicine.isEssentialDrug ? "Có" : "Không"}</dd>
+              <dt className="text-muted-foreground">{t("Thiết yếu")}</dt>
+              <dd>{medicine.isEssentialDrug ? t("Có") : t("Không")}</dd>
             </div>
           </dl>
         </div>
@@ -144,7 +146,7 @@ export default function MedicineDetailPage({
         <div className="rounded-lg border">
           <div className="border-b p-4">
             <h2 className="font-semibold">
-              Tồn kho tại {currentCenter.name}
+              {t("Tồn kho tại {centerName}", { centerName: currentCenter.name })}
             </h2>
           </div>
           {Array.isArray(stock) && stock.length > 0 ? (
@@ -152,10 +154,10 @@ export default function MedicineDetailPage({
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b bg-muted/50">
-                    <th className="px-4 py-3 text-left font-medium">Số lô</th>
-                    <th className="px-4 py-3 text-left font-medium">HSD</th>
-                    <th className="px-4 py-3 text-right font-medium">Số lượng</th>
-                    <th className="px-4 py-3 text-right font-medium">Đơn giá</th>
+                    <th className="px-4 py-3 text-left font-medium">{t("Số lô")}</th>
+                    <th className="px-4 py-3 text-left font-medium">{t("HSD")}</th>
+                    <th className="px-4 py-3 text-right font-medium">{t("Số lượng")}</th>
+                    <th className="px-4 py-3 text-right font-medium">{t("Đơn giá")}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -176,7 +178,7 @@ export default function MedicineDetailPage({
             </div>
           ) : (
             <div className="p-8 text-center text-sm text-muted-foreground">
-              Không có tồn kho
+              {t("Không có tồn kho")}
             </div>
           )}
         </div>
@@ -186,19 +188,19 @@ export default function MedicineDetailPage({
       {currentCenter && Array.isArray(stockCard) && stockCard.length > 0 && (
         <div className="rounded-lg border">
           <div className="border-b p-4">
-            <h2 className="font-semibold">Thẻ kho</h2>
+            <h2 className="font-semibold">{t("Thẻ kho")}</h2>
           </div>
           <div className="overflow-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b bg-muted/50">
-                  <th className="px-4 py-3 text-left font-medium">Ngày</th>
-                  <th className="px-4 py-3 text-left font-medium">Mã GD</th>
-                  <th className="px-4 py-3 text-left font-medium">Loại</th>
-                  <th className="px-4 py-3 text-left font-medium">Số lô</th>
-                  <th className="px-4 py-3 text-right font-medium">SL</th>
-                  <th className="px-4 py-3 text-right font-medium">Tồn trước</th>
-                  <th className="px-4 py-3 text-right font-medium">Tồn sau</th>
+                  <th className="px-4 py-3 text-left font-medium">{t("Ngày")}</th>
+                  <th className="px-4 py-3 text-left font-medium">{t("Mã GD")}</th>
+                  <th className="px-4 py-3 text-left font-medium">{t("Loại")}</th>
+                  <th className="px-4 py-3 text-left font-medium">{t("Số lô")}</th>
+                  <th className="px-4 py-3 text-right font-medium">{t("SL")}</th>
+                  <th className="px-4 py-3 text-right font-medium">{t("Tồn trước")}</th>
+                  <th className="px-4 py-3 text-right font-medium">{t("Tồn sau")}</th>
                 </tr>
               </thead>
               <tbody>

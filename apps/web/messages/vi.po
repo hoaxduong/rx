@@ -1,0 +1,1277 @@
+msgid ""
+msgstr ""
+"Language: vi\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: next-intl\n"
+"X-Crowdin-SourceKey: msgstr\n"
+
+#: app/(admin)/admin/centers/page.tsx:56
+msgid "XF7gb3"
+msgstr "Quản lý cơ sở y tế"
+
+#: app/(admin)/admin/centers/page.tsx:59
+msgid "WMmxat"
+msgstr "Thêm cơ sở"
+
+#: app/(admin)/admin/centers/page.tsx:80
+msgid "ZZE1mD"
+msgstr "Tìm kiếm cơ sở..."
+
+#: app/(admin)/admin/centers/page.tsx:88
+#: app/(admin)/admin/users/page.tsx:108
+#: app/(admin)/layout.tsx:35
+#: app/(dashboard)/alerts/page.tsx:94
+#: app/(dashboard)/inventory/page.tsx:130
+#: app/(dashboard)/medicines/[id]/page.tsx:50
+#: app/(dashboard)/medicines/page.tsx:63
+#: app/(dashboard)/suppliers/page.tsx:109
+#: app/(dashboard)/transactions/page.tsx:107
+#: app/page.tsx:27
+msgid "ekm1jk"
+msgstr "Đang tải..."
+
+#: app/(admin)/admin/centers/page.tsx:94
+#: app/(dashboard)/suppliers/page.tsx:115
+msgid "YCdbKA"
+msgstr "Mã"
+
+#: app/(admin)/admin/centers/page.tsx:95
+#: app/(admin)/admin/centers/page.tsx:263
+msgid "GHubID"
+msgstr "Tên cơ sở"
+
+#: app/(admin)/admin/centers/page.tsx:96
+#: app/(admin)/admin/centers/page.tsx:281
+#: app/(dashboard)/medicines/[id]/page.tsx:199
+#: app/(dashboard)/settings/page.tsx:44
+#: app/(dashboard)/transactions/page.tsx:116
+msgid "OTTdny"
+msgstr "Loại"
+
+#: app/(admin)/admin/centers/page.tsx:97
+#: app/(admin)/admin/centers/page.tsx:292
+msgid "sbjI9v"
+msgstr "Trực thuộc"
+
+#: app/(admin)/admin/centers/page.tsx:98
+msgid "Nb1cb0"
+msgstr "Trạng thái"
+
+#: app/(admin)/admin/centers/page.tsx:99
+#: app/(admin)/admin/users/page.tsx:117
+msgid "PsZKZm"
+msgstr "Thao tác"
+
+#: app/(admin)/admin/centers/page.tsx:126
+#: app/(admin)/admin/centers/page.tsx:287
+#: components/dashboard/header.tsx:39
+msgid "X+EMsu"
+msgstr "Xã"
+
+#: app/(admin)/admin/centers/page.tsx:126
+#: components/dashboard/header.tsx:39
+msgid "2VKr2I"
+msgstr "Trạm"
+
+#: app/(admin)/admin/centers/page.tsx:138
+msgid "CSrQCz"
+msgstr "Hoạt động"
+
+#: app/(admin)/admin/centers/page.tsx:138
+#: app/(admin)/admin/centers/page.tsx:159
+msgid "bBUif4"
+msgstr "Ngưng"
+
+#: app/(admin)/admin/centers/page.tsx:148
+msgid "MOmOfG"
+msgstr "Sửa"
+
+#: app/(admin)/admin/centers/page.tsx:154
+msgid "5sm6us"
+msgstr "Ngưng hoạt động cơ sở \"{centerName}\"?"
+
+#: app/(admin)/admin/centers/page.tsx:168
+msgid "GPAY+b"
+msgstr "Chưa có cơ sở nào"
+
+#: app/(admin)/admin/centers/page.tsx:245
+msgid "R4LaLM"
+msgstr "Lỗi khi lưu"
+
+#: app/(admin)/admin/centers/page.tsx:257
+msgid "k+hNuI"
+msgstr "Cập nhật cơ sở"
+
+#: app/(admin)/admin/centers/page.tsx:257
+msgid "+1xoAq"
+msgstr "Thêm cơ sở mới"
+
+#: app/(admin)/admin/centers/page.tsx:272
+#: app/(dashboard)/settings/page.tsx:40
+msgid "rj5XsP"
+msgstr "Mã cơ sở"
+
+#: app/(admin)/admin/centers/page.tsx:288
+msgid "MC2nPD"
+msgstr "Trạm vệ tinh"
+
+#: app/(admin)/admin/centers/page.tsx:298
+#: app/(dashboard)/medicines/[id]/page.tsx:126
+#: app/(dashboard)/medicines/[id]/page.tsx:130
+#: app/(dashboard)/medicines/[id]/page.tsx:134
+#: app/(dashboard)/medicines/[id]/page.tsx:138
+msgid "JVtIrS"
+msgstr "Không"
+
+#: app/(admin)/admin/centers/page.tsx:307
+#: app/(dashboard)/suppliers/page.tsx:84
+msgid "R4zdpj"
+msgstr "Địa chỉ"
+
+#: app/(admin)/admin/centers/page.tsx:315
+msgid "z6HcUv"
+msgstr "Số điện thoại"
+
+#: app/(admin)/admin/centers/page.tsx:332
+msgid "2ANUD0"
+msgstr "Số giấy phép"
+
+#: app/(admin)/admin/centers/page.tsx:343
+#: app/(dashboard)/medicines/new/page.tsx:263
+#: app/(dashboard)/suppliers/page.tsx:90
+#: app/(dashboard)/transactions/inward/page.tsx:232
+#: app/(dashboard)/transactions/outward/page.tsx:143
+#: app/(dashboard)/transactions/transfer/page.tsx:148
+msgid "U2JaWL"
+msgstr "Đang lưu..."
+
+#: app/(admin)/admin/centers/page.tsx:343
+msgid "OsHKiv"
+msgstr "Cập nhật"
+
+#: app/(admin)/admin/centers/page.tsx:343
+msgid "Cbn7Np"
+msgstr "Tạo mới"
+
+#: app/(admin)/admin/centers/page.tsx:346
+#: app/(dashboard)/medicines/new/page.tsx:266
+#: app/(dashboard)/suppliers/page.tsx:92
+#: app/(dashboard)/transactions/inward/page.tsx:235
+#: app/(dashboard)/transactions/outward/page.tsx:145
+#: app/(dashboard)/transactions/transfer/page.tsx:150
+msgid "eNPJPz"
+msgstr "Hủy"
+
+#: app/(admin)/admin/users/page.tsx:91
+msgid "9K8/4Q"
+msgstr "Quản lý người dùng"
+
+#: app/(admin)/admin/users/page.tsx:97
+msgid "uC8/dv"
+msgstr "Tìm theo tên hoặc email..."
+
+#: app/(admin)/admin/users/page.tsx:114
+#: app/(admin)/layout.tsx:22
+#: components/dashboard/header.tsx:51
+msgid "8Cg+nB"
+msgstr "Người dùng"
+
+#: app/(admin)/admin/users/page.tsx:115
+msgid "8QXqaW"
+msgstr "Vai trò"
+
+#: app/(admin)/admin/users/page.tsx:116
+msgid "BmTasn"
+msgstr "Ngày tạo"
+
+#: app/(admin)/admin/users/page.tsx:168
+msgid "XfwFLQ"
+msgstr "Hạ quyền"
+
+#: app/(admin)/admin/users/page.tsx:168
+msgid "KcVRf4"
+msgstr "Nâng quyền"
+
+#: app/(admin)/admin/users/page.tsx:174
+msgid "MVyyJk"
+msgstr "Xóa người dùng \"{userName}\"? Thao tác không thể hoàn tác."
+
+#: app/(admin)/admin/users/page.tsx:188
+msgid "QdC2qc"
+msgstr "Không tìm thấy người dùng"
+
+#: app/(admin)/admin/users/page.tsx:218
+msgid "cLLhVD"
+msgstr "Vai trò hệ thống"
+
+#: app/(admin)/admin/users/page.tsx:223
+#: app/(dashboard)/suppliers/page.tsx:68
+msgid "rhgPEy"
+msgstr "Điện thoại"
+
+#: app/(admin)/admin/users/page.tsx:229
+msgid "D6h+3S"
+msgstr "Họ tên"
+
+#: app/(admin)/admin/users/page.tsx:237
+msgid "nDRWqo"
+msgstr "Cơ sở trực thuộc"
+
+#: app/(admin)/admin/users/page.tsx:260
+msgid "CwkxFC"
+msgstr "Chọn người dùng để xem chi tiết"
+
+#: app/(admin)/layout.tsx:21
+msgid "lMnkqT"
+msgstr "Cơ sở y tế"
+
+#: app/(admin)/layout.tsx:92
+#: components/dashboard/header.tsx:53
+msgid "BUTJBx"
+msgstr "Đăng xuất"
+
+#: app/(auth)/layout.tsx:22
+#: app/(auth)/register/page.tsx:60
+#: app/page.tsx:110
+msgid "ofeDSB"
+msgstr "Hệ thống quản lý dược phẩm"
+
+#: app/(auth)/login/page.tsx:19
+#: app/(auth)/register/page.tsx:21
+msgid "whyO7G"
+msgstr "Email không hợp lệ"
+
+#: app/(auth)/login/page.tsx:20
+#: app/(auth)/register/page.tsx:22
+msgid "K0J6Jd"
+msgstr "Mật khẩu phải có ít nhất 6 ký tự"
+
+#: app/(auth)/login/page.tsx:40
+msgid "O+Dfkd"
+msgstr "Đăng nhập thất bại"
+
+#: app/(auth)/login/page.tsx:54
+#: app/(auth)/login/page.tsx:100
+#: app/(auth)/register/page.tsx:147
+#: app/page.tsx:46
+#: app/page.tsx:75
+msgid "SPgXZ8"
+msgstr "Đăng nhập"
+
+#: app/(auth)/login/page.tsx:56
+msgid "+7BWoB"
+msgstr "Nhập thông tin tài khoản của bạn"
+
+#: app/(auth)/login/page.tsx:85
+#: app/(auth)/register/page.tsx:105
+msgid "w7y3kr"
+msgstr "Mật khẩu"
+
+#: app/(auth)/login/page.tsx:100
+msgid "DEiKp3"
+msgstr "Đang đăng nhập..."
+
+#: app/(auth)/login/page.tsx:105
+msgid "z7FpKO"
+msgstr "Chưa có tài khoản?"
+
+#: app/(auth)/login/page.tsx:107
+#: app/(auth)/register/page.tsx:140
+#: app/page.tsx:49
+msgid "TNBn/V"
+msgstr "Đăng ký"
+
+#: app/(auth)/register/page.tsx:20
+msgid "386fJj"
+msgstr "Tên không được để trống"
+
+#: app/(auth)/register/page.tsx:26
+msgid "/mHtEe"
+msgstr "Mật khẩu xác nhận không khớp"
+
+#: app/(auth)/register/page.tsx:48
+msgid "d8Juod"
+msgstr "Đăng ký thất bại"
+
+#: app/(auth)/register/page.tsx:58
+msgid "WB/2ho"
+msgstr "Đăng ký tài khoản"
+
+#: app/(auth)/register/page.tsx:73
+msgid "hxjpTE"
+msgstr "Họ và tên"
+
+#: app/(auth)/register/page.tsx:123
+msgid "gWLsdc"
+msgstr "Xác nhận mật khẩu"
+
+#: app/(auth)/register/page.tsx:140
+msgid "X7+0m1"
+msgstr "Đang đăng ký..."
+
+#: app/(auth)/register/page.tsx:145
+msgid "mKmp57"
+msgstr "Đã có tài khoản?"
+
+#: app/(dashboard)/alerts/page.tsx:34
+#: app/(dashboard)/inventory/page.tsx:85
+msgid "LKUPtX"
+msgstr "Sắp hết hạn"
+
+#: app/(dashboard)/alerts/page.tsx:35
+#: app/(dashboard)/reports/page.tsx:83
+msgid "eZKS4s"
+msgstr "Đã hết hạn"
+
+#: app/(dashboard)/alerts/page.tsx:36
+msgid "5GBQcC"
+msgstr "Tồn kho thấp"
+
+#: app/(dashboard)/alerts/page.tsx:37
+msgid "OXM2/V"
+msgstr "Hết hàng"
+
+#: app/(dashboard)/alerts/page.tsx:38
+msgid "O17ll3"
+msgstr "Tồn kho cao"
+
+#: app/(dashboard)/alerts/page.tsx:39
+msgid "NkD5Kp"
+msgstr "Thu hồi"
+
+#: app/(dashboard)/alerts/page.tsx:77
+#: app/(dashboard)/inventory/page.tsx:52
+#: app/(dashboard)/reports/page.tsx:73
+#: app/(dashboard)/transactions/page.tsx:50
+#: components/dashboard/header.tsx:36
+msgid "8BZ8aR"
+msgstr "Chọn cơ sở"
+
+#: app/(dashboard)/alerts/page.tsx:78
+msgid "HAP0rC"
+msgstr "Chọn cơ sở y tế để xem cảnh báo"
+
+#: app/(dashboard)/alerts/page.tsx:87
+#: components/dashboard/sidebar.tsx:29
+msgid "Uqp2c9"
+msgstr "Cảnh báo"
+
+#: app/(dashboard)/alerts/page.tsx:89
+msgid "3RWUoZ"
+msgstr "Cảnh báo hết hạn, tồn kho thấp tại {centerName}"
+
+#: app/(dashboard)/alerts/page.tsx:117
+#: app/(dashboard)/scanner/page.tsx:59
+#: app/(dashboard)/settings/page.tsx:57
+#: app/(dashboard)/transactions/inward/page.tsx:181
+#: app/(dashboard)/transactions/outward/page.tsx:113
+#: app/(dashboard)/transactions/transfer/page.tsx:118
+msgid "1M9cAK"
+msgstr "Thuốc"
+
+#: app/(dashboard)/alerts/page.tsx:126
+msgid "fYJqHP"
+msgstr "Xác nhận"
+
+#: app/(dashboard)/alerts/page.tsx:134
+msgid "ouaWwc"
+msgstr "Bỏ qua"
+
+#: app/(dashboard)/alerts/page.tsx:151
+msgid "jLRcF6"
+msgstr "Không có cảnh báo"
+
+#: app/(dashboard)/alerts/page.tsx:152
+msgid "39m8+9"
+msgstr "Kho thuốc hoạt động bình thường"
+
+#: app/(dashboard)/inventory/page.tsx:54
+msgid "NaIxCQ"
+msgstr "Vui lòng chọn cơ sở y tế ở thanh trên để xem kho thuốc"
+
+#: app/(dashboard)/inventory/page.tsx:64
+#: components/dashboard/sidebar.tsx:24
+msgid "k8wm8/"
+msgstr "Kho thuốc"
+
+#: app/(dashboard)/inventory/page.tsx:66
+msgid "ksyWFX"
+msgstr "Quản lý tồn kho tại {centerName}"
+
+#: app/(dashboard)/inventory/page.tsx:75
+#: app/(dashboard)/reports/page.tsx:116
+msgid "5F/7Ib"
+msgstr "Tổng mặt hàng"
+
+#: app/(dashboard)/inventory/page.tsx:95
+msgid "7boZM9"
+msgstr "Dưới mức tồn kho"
+
+#: app/(dashboard)/inventory/page.tsx:105
+msgid "Gygd+9"
+msgstr "Tổng giá trị"
+
+#: app/(dashboard)/inventory/page.tsx:126
+msgid "cBsdrh"
+msgstr "Danh sách tồn kho"
+
+#: app/(dashboard)/inventory/page.tsx:137
+msgid "Dr5czD"
+msgstr "Mã thuốc"
+
+#: app/(dashboard)/inventory/page.tsx:138
+msgid "PcZqwx"
+msgstr "Tổng SL"
+
+#: app/(dashboard)/inventory/page.tsx:139
+#: app/(dashboard)/medicines/[id]/page.tsx:157
+#: app/(dashboard)/medicines/[id]/page.tsx:200
+#: app/(dashboard)/transactions/inward/page.tsx:194
+msgid "T0nJr4"
+msgstr "Số lô"
+
+#: app/(dashboard)/inventory/page.tsx:140
+msgid "ZG3DRI"
+msgstr "HSD gần nhất"
+
+#: app/(dashboard)/inventory/page.tsx:141
+msgid "4WVGVw"
+msgstr "Giá trị"
+
+#: app/(dashboard)/inventory/page.tsx:171
+msgid "r1u9R7"
+msgstr "Chưa có dữ liệu tồn kho"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:54
+msgid "eyedFR"
+msgstr "Không tìm thấy thuốc"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:76
+msgid "nZUmN8"
+msgstr "Chỉnh sửa"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:84
+msgid "ZNdHs6"
+msgstr "Thông tin thuốc"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:87
+#: app/(dashboard)/medicines/new/page.tsx:145
+#: app/(dashboard)/medicines/page.tsx:72
+msgid "i+tApd"
+msgstr "Hoạt chất"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:91
+#: app/(dashboard)/medicines/new/page.tsx:156
+#: app/(dashboard)/medicines/page.tsx:73
+msgid "rd6vIC"
+msgstr "Dạng bào chế"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:95
+#: app/(dashboard)/medicines/new/page.tsx:167
+#: app/(dashboard)/medicines/page.tsx:74
+msgid "MZ2HQ0"
+msgstr "Hàm lượng"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:99
+#: app/(dashboard)/medicines/new/page.tsx:197
+msgid "b2ustg"
+msgstr "Nhà sản xuất"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:103
+msgid "cMl0UZ"
+msgstr "Nước SX"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:107
+#: app/(dashboard)/medicines/new/page.tsx:205
+msgid "r68aYS"
+msgstr "Số đăng ký"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:111
+msgid "W4mrDL"
+msgstr "Mã BHYT"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:118
+msgid "7/tOvD"
+msgstr "Phân loại & Bảo quản"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:121
+msgid "mGy4cJ"
+msgstr "Bảo quản"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:125
+msgid "38l6Br"
+msgstr "Gây nghiện"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:126
+#: app/(dashboard)/medicines/[id]/page.tsx:130
+#: app/(dashboard)/medicines/[id]/page.tsx:134
+#: app/(dashboard)/medicines/[id]/page.tsx:138
+msgid "F1tk89"
+msgstr "Có"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:129
+#: app/(dashboard)/medicines/page.tsx:108
+msgid "7QeMwp"
+msgstr "Hướng thần"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:133
+#: app/(dashboard)/medicines/page.tsx:113
+msgid "RpNBO6"
+msgstr "Kê đơn"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:137
+msgid "y1IOHW"
+msgstr "Thiết yếu"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:149
+msgid "D2nNFq"
+msgstr "Tồn kho tại {centerName}"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:158
+#: app/(dashboard)/transactions/inward/page.tsx:198
+msgid "6J5Wia"
+msgstr "HSD"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:159
+#: app/(dashboard)/transactions/inward/page.tsx:202
+#: app/(dashboard)/transactions/outward/page.tsx:122
+#: app/(dashboard)/transactions/transfer/page.tsx:127
+msgid "RaWDY1"
+msgstr "Số lượng"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:160
+#: app/(dashboard)/transactions/inward/page.tsx:207
+msgid "9jXYc4"
+msgstr "Đơn giá"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:181
+msgid "nJFYFT"
+msgstr "Không có tồn kho"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:191
+msgid "YKrXeN"
+msgstr "Thẻ kho"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:197
+#: app/(dashboard)/transactions/page.tsx:117
+msgid "6TAmbO"
+msgstr "Ngày"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:198
+#: app/(dashboard)/transactions/page.tsx:115
+msgid "V9F9G6"
+msgstr "Mã GD"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:201
+msgid "d/FnXN"
+msgstr "SL"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:202
+msgid "lScpBN"
+msgstr "Tồn trước"
+
+#: app/(dashboard)/medicines/[id]/page.tsx:203
+msgid "E+Z42t"
+msgstr "Tồn sau"
+
+#: app/(dashboard)/medicines/new/page.tsx:20
+msgid "obLTsv"
+msgstr "Tên thuốc không được để trống"
+
+#: app/(dashboard)/medicines/new/page.tsx:45
+msgid "bI7HLt"
+msgstr "Viên nén"
+
+#: app/(dashboard)/medicines/new/page.tsx:46
+#: app/(dashboard)/medicines/new/page.tsx:64
+msgid "AYLAHL"
+msgstr "Viên nang"
+
+#: app/(dashboard)/medicines/new/page.tsx:47
+msgid "Pu3QvC"
+msgstr "Siro"
+
+#: app/(dashboard)/medicines/new/page.tsx:48
+msgid "Z9lcmw"
+msgstr "Tiêm"
+
+#: app/(dashboard)/medicines/new/page.tsx:49
+msgid "1Iiteo"
+msgstr "Kem"
+
+#: app/(dashboard)/medicines/new/page.tsx:50
+msgid "DjiMNM"
+msgstr "Mỡ"
+
+#: app/(dashboard)/medicines/new/page.tsx:51
+msgid "inpWls"
+msgstr "Nhỏ giọt"
+
+#: app/(dashboard)/medicines/new/page.tsx:52
+msgid "YWoSCA"
+msgstr "Bột"
+
+#: app/(dashboard)/medicines/new/page.tsx:53
+msgid "AvIr4q"
+msgstr "Hỗn dịch"
+
+#: app/(dashboard)/medicines/new/page.tsx:54
+msgid "aLjTsA"
+msgstr "Dung dịch"
+
+#: app/(dashboard)/medicines/new/page.tsx:55
+msgid "g74UTD"
+msgstr "Đặt"
+
+#: app/(dashboard)/medicines/new/page.tsx:56
+msgid "qK1K9A"
+msgstr "Hít"
+
+#: app/(dashboard)/medicines/new/page.tsx:57
+msgid "klhHEu"
+msgstr "Miếng dán"
+
+#: app/(dashboard)/medicines/new/page.tsx:59
+msgid "83gPx3"
+msgstr "Khác"
+
+#: app/(dashboard)/medicines/new/page.tsx:63
+msgid "L95aRO"
+msgstr "Viên"
+
+#: app/(dashboard)/medicines/new/page.tsx:65
+msgid "xsQmks"
+msgstr "Chai"
+
+#: app/(dashboard)/medicines/new/page.tsx:66
+msgid "489QDW"
+msgstr "Ống"
+
+#: app/(dashboard)/medicines/new/page.tsx:67
+msgid "pYqs6I"
+msgstr "Lọ"
+
+#: app/(dashboard)/medicines/new/page.tsx:68
+msgid "/gCe+Y"
+msgstr "Tuýp"
+
+#: app/(dashboard)/medicines/new/page.tsx:69
+msgid "Umg1ie"
+msgstr "Gói"
+
+#: app/(dashboard)/medicines/new/page.tsx:70
+msgid "aOl6kO"
+msgstr "Hộp"
+
+#: app/(dashboard)/medicines/new/page.tsx:71
+msgid "q3+qrs"
+msgstr "Vỉ"
+
+#: app/(dashboard)/medicines/new/page.tsx:75
+msgid "sq1GFA"
+msgstr "Cái"
+
+#: app/(dashboard)/medicines/new/page.tsx:76
+msgid "1VwQFy"
+msgstr "Bộ"
+
+#: app/(dashboard)/medicines/new/page.tsx:110
+msgid "KkRGYf"
+msgstr "Thêm thuốc mới"
+
+#: app/(dashboard)/medicines/new/page.tsx:111
+msgid "zRt1O1"
+msgstr "Nhập thông tin thuốc"
+
+#: app/(dashboard)/medicines/new/page.tsx:121
+msgid "5htIvS"
+msgstr "Có lỗi xảy ra khi thêm thuốc"
+
+#: app/(dashboard)/medicines/new/page.tsx:127
+msgid "GsrK/z"
+msgstr "Thông tin cơ bản"
+
+#: app/(dashboard)/medicines/new/page.tsx:130
+#: app/(dashboard)/medicines/page.tsx:71
+msgid "kXA402"
+msgstr "Tên thuốc"
+
+#: app/(dashboard)/medicines/new/page.tsx:137
+msgid "r236/S"
+msgstr "Tên tiếng Việt"
+
+#: app/(dashboard)/medicines/new/page.tsx:141
+msgid "RbSBv5"
+msgstr "Tên thương mại"
+
+#: app/(dashboard)/medicines/new/page.tsx:153
+msgid "AVDYJy"
+msgstr "Bào chế & Đóng gói"
+
+#: app/(dashboard)/medicines/new/page.tsx:158
+#: app/(dashboard)/medicines/new/page.tsx:173
+msgid "gMW39S"
+msgstr "Chọn..."
+
+#: app/(dashboard)/medicines/new/page.tsx:171
+msgid "dwqwxj"
+msgstr "Đơn vị tính"
+
+#: app/(dashboard)/medicines/new/page.tsx:183
+msgid "r15vM+"
+msgstr "Quy cách đóng gói"
+
+#: app/(dashboard)/medicines/new/page.tsx:186
+msgid "z14lyP"
+msgstr "Hộp 10 vỉ x 10 viên"
+
+#: app/(dashboard)/medicines/new/page.tsx:194
+msgid "sM0RQT"
+msgstr "Sản xuất & Đăng ký"
+
+#: app/(dashboard)/medicines/new/page.tsx:201
+msgid "kdY5th"
+msgstr "Nước sản xuất"
+
+#: app/(dashboard)/medicines/new/page.tsx:209
+msgid "IEE4Iq"
+msgstr "Mã vạch"
+
+#: app/(dashboard)/medicines/new/page.tsx:217
+msgid "JtB2ho"
+msgstr "Phân loại quản lý"
+
+#: app/(dashboard)/medicines/new/page.tsx:221
+msgid "lloWFr"
+msgstr "Thuốc gây nghiện"
+
+#: app/(dashboard)/medicines/new/page.tsx:225
+msgid "dvqK3q"
+msgstr "Thuốc hướng thần"
+
+#: app/(dashboard)/medicines/new/page.tsx:229
+msgid "nxFGcO"
+msgstr "Thuốc kê đơn"
+
+#: app/(dashboard)/medicines/new/page.tsx:233
+msgid "jR+wLU"
+msgstr "Thuốc thiết yếu"
+
+#: app/(dashboard)/medicines/new/page.tsx:237
+msgid "+zX/EE"
+msgstr "Mã BHYT (Định mức)"
+
+#: app/(dashboard)/medicines/new/page.tsx:244
+msgid "Oc6U7j"
+msgstr "Thông tin an toàn"
+
+#: app/(dashboard)/medicines/new/page.tsx:246
+msgid "qmQ/KF"
+msgstr "Chống chỉ định"
+
+#: app/(dashboard)/medicines/new/page.tsx:253
+msgid "Jzniek"
+msgstr "Tác dụng phụ"
+
+#: app/(dashboard)/medicines/new/page.tsx:263
+msgid "nFj8Ci"
+msgstr "Lưu thuốc"
+
+#: app/(dashboard)/medicines/page.tsx:30
+#: app/page.tsx:91
+#: components/dashboard/sidebar.tsx:25
+msgid "kcQPK5"
+msgstr "Danh mục thuốc"
+
+#: app/(dashboard)/medicines/page.tsx:32
+msgid "KaQe4e"
+msgstr "Quản lý danh mục thuốc và vật tư y tế"
+
+#: app/(dashboard)/medicines/page.tsx:38
+msgid "pBsOiE"
+msgstr "Thêm thuốc"
+
+#: app/(dashboard)/medicines/page.tsx:48
+msgid "r/56xc"
+msgstr "Tìm theo tên, hoạt chất, mã vạch..."
+
+#: app/(dashboard)/medicines/page.tsx:75
+msgid "8Gre7Q"
+msgstr "Nhà SX"
+
+#: app/(dashboard)/medicines/page.tsx:76
+msgid "jtRC1h"
+msgstr "Phân loại"
+
+#: app/(dashboard)/medicines/page.tsx:103
+msgid "lxSlsz"
+msgstr "Ma túy"
+
+#: app/(dashboard)/medicines/page.tsx:126
+msgid "Ed+Aw5"
+msgstr "Tổng: {count} thuốc"
+
+#: app/(dashboard)/medicines/page.tsx:135
+#: app/(dashboard)/transactions/page.tsx:170
+msgid "igz/b0"
+msgstr "Trước"
+
+#: app/(dashboard)/medicines/page.tsx:143
+#: app/(dashboard)/transactions/page.tsx:173
+msgid "j39/j+"
+msgstr "Sau"
+
+#: app/(dashboard)/medicines/page.tsx:151
+msgid "AtVaIt"
+msgstr "Chưa có thuốc nào"
+
+#: app/(dashboard)/prescriptions/page.tsx:13
+msgid "rlSitP"
+msgstr "Quản lý đơn thuốc"
+
+#: app/(dashboard)/prescriptions/page.tsx:15
+msgid "EMt7vg"
+msgstr "Module đơn thuốc sẽ được triển khai trong giai đoạn tiếp theo"
+
+#: app/(dashboard)/reports/page.tsx:74
+msgid "Z8aZwt"
+msgstr "Chọn cơ sở y tế để xem báo cáo"
+
+#: app/(dashboard)/reports/page.tsx:84
+msgid "5T+ub8"
+msgstr "30 ngày"
+
+#: app/(dashboard)/reports/page.tsx:85
+msgid "Ff8Kuk"
+msgstr "60 ngày"
+
+#: app/(dashboard)/reports/page.tsx:86
+msgid "/wbBxO"
+msgstr "90 ngày"
+
+#: app/(dashboard)/reports/page.tsx:107
+msgid "v8xrpl"
+msgstr "Báo cáo & Thống kê"
+
+#: app/(dashboard)/reports/page.tsx:108
+msgid "iTia1D"
+msgstr "Phân tích dữ liệu kho thuốc tại {centerName}"
+
+#: app/(dashboard)/reports/page.tsx:119
+msgid "/YQbND"
+msgstr "lô"
+
+#: app/(dashboard)/reports/page.tsx:130
+msgid "SYeBxh"
+msgstr "Dự báo hết hạn"
+
+#: app/(dashboard)/reports/page.tsx:153
+msgid "gSNa5k"
+msgstr "Không có dữ liệu hết hạn trong 90 ngày tới"
+
+#: app/(dashboard)/reports/page.tsx:161
+msgid "lE8CQT"
+msgstr "Top thuốc tiêu thụ"
+
+#: app/(dashboard)/reports/page.tsx:179
+msgid "UwAcVz"
+msgstr "Không có dữ liệu tiêu thụ"
+
+#: app/(dashboard)/scanner/page.tsx:32
+#: components/dashboard/sidebar.tsx:31
+msgid "26htFi"
+msgstr "Quét mã"
+
+#: app/(dashboard)/scanner/page.tsx:33
+msgid "iBzHmy"
+msgstr "Tra cứu thuốc bằng mã vạch hoặc QR code"
+
+#: app/(dashboard)/scanner/page.tsx:38
+msgid "/WoXvV"
+msgstr "Nhập hoặc quét mã vạch..."
+
+#: app/(dashboard)/scanner/page.tsx:47
+msgid "vOFmoy"
+msgstr "Tra cứu"
+
+#: app/(dashboard)/scanner/page.tsx:52
+msgid "ZVJbEw"
+msgstr "Đang tìm..."
+
+#: app/(dashboard)/scanner/page.tsx:59
+msgid "C5HX2i"
+msgstr "Lô hàng"
+
+#: app/(dashboard)/scanner/page.tsx:71
+msgid "OYWi3b"
+msgstr "Không tìm thấy kết quả cho mã này"
+
+#: app/(dashboard)/settings/page.tsx:30
+#: components/dashboard/sidebar.tsx:35
+msgid "Bmrjqi"
+msgstr "Cài đặt"
+
+#: app/(dashboard)/settings/page.tsx:31
+msgid "bUgFBu"
+msgstr "Cấu hình hệ thống và ngưỡng tồn kho"
+
+#: app/(dashboard)/settings/page.tsx:37
+msgid "v1aWDp"
+msgstr "Thông tin cơ sở:"
+
+#: app/(dashboard)/settings/page.tsx:45
+msgid "xb5War"
+msgstr "Trạm y tế xã"
+
+#: app/(dashboard)/settings/page.tsx:45
+msgid "LLpwWB"
+msgstr "Trạm y tế vệ tinh"
+
+#: app/(dashboard)/settings/page.tsx:51
+msgid "n02ejn"
+msgstr "Ngưỡng tồn kho"
+
+#: app/(dashboard)/settings/page.tsx:58
+msgid "081z+T"
+msgstr "Tối thiểu"
+
+#: app/(dashboard)/settings/page.tsx:59
+msgid "sEwjit"
+msgstr "Tối đa"
+
+#: app/(dashboard)/settings/page.tsx:60
+msgid "MEaFu/"
+msgstr "Đặt lại"
+
+#: app/(dashboard)/settings/page.tsx:61
+msgid "ioTrt9"
+msgstr "Cảnh báo HSD (ngày)"
+
+#: app/(dashboard)/settings/page.tsx:78
+msgid "QQ1U1z"
+msgstr "Chưa cấu hình ngưỡng tồn kho"
+
+#: app/(dashboard)/settings/page.tsx:86
+msgid "GeEKDE"
+msgstr "Chọn cơ sở y tế để cấu hình"
+
+#: app/(dashboard)/suppliers/page.tsx:43
+#: app/(dashboard)/transactions/inward/page.tsx:137
+#: components/dashboard/sidebar.tsx:27
+msgid "UlrbGf"
+msgstr "Nhà cung cấp"
+
+#: app/(dashboard)/suppliers/page.tsx:44
+msgid "0wqyy7"
+msgstr "Quản lý nhà cung cấp dược phẩm"
+
+#: app/(dashboard)/suppliers/page.tsx:47
+msgid "rntv1A"
+msgstr "Thêm NCC"
+
+#: app/(dashboard)/suppliers/page.tsx:53
+msgid "TbX57r"
+msgstr "Thêm nhà cung cấp mới"
+
+#: app/(dashboard)/suppliers/page.tsx:56
+#: app/(dashboard)/suppliers/page.tsx:116
+msgid "Hw2kP+"
+msgstr "Tên NCC"
+
+#: app/(dashboard)/suppliers/page.tsx:60
+msgid "WJzG4S"
+msgstr "Mã NCC"
+
+#: app/(dashboard)/suppliers/page.tsx:64
+msgid "kObpk0"
+msgstr "Người liên hệ"
+
+#: app/(dashboard)/suppliers/page.tsx:76
+msgid "W0YjUD"
+msgstr "Mã số thuế"
+
+#: app/(dashboard)/suppliers/page.tsx:80
+msgid "iJgsdE"
+msgstr "Số GDP"
+
+#: app/(dashboard)/suppliers/page.tsx:90
+msgid "oa/wrx"
+msgstr "Lưu"
+
+#: app/(dashboard)/suppliers/page.tsx:100
+msgid "sG42Ty"
+msgstr "Tìm nhà cung cấp..."
+
+#: app/(dashboard)/suppliers/page.tsx:117
+msgid "I7Ox1c"
+msgstr "Liên hệ"
+
+#: app/(dashboard)/suppliers/page.tsx:118
+msgid "xpnuaE"
+msgstr "SĐT"
+
+#: app/(dashboard)/suppliers/page.tsx:138
+msgid "+HfCnd"
+msgstr "Chưa có nhà cung cấp"
+
+#: app/(dashboard)/transactions/inward/page.tsx:23
+msgid "DHzbsT"
+msgstr "Chọn nhà cung cấp"
+
+#: app/(dashboard)/transactions/inward/page.tsx:30
+#: app/(dashboard)/transactions/outward/page.tsx:26
+#: app/(dashboard)/transactions/transfer/page.tsx:25
+msgid "x+9YNG"
+msgstr "Chọn thuốc"
+
+#: app/(dashboard)/transactions/inward/page.tsx:31
+msgid "m1KbJB"
+msgstr "Nhập số lô"
+
+#: app/(dashboard)/transactions/inward/page.tsx:32
+msgid "5D19O1"
+msgstr "Nhập HSD"
+
+#: app/(dashboard)/transactions/inward/page.tsx:33
+#: app/(dashboard)/transactions/outward/page.tsx:27
+#: app/(dashboard)/transactions/transfer/page.tsx:26
+msgid "YcwSRP"
+msgstr "SL phải > 0"
+
+#: app/(dashboard)/transactions/inward/page.tsx:37
+msgid "9oHckQ"
+msgstr "Cần ít nhất 1 dòng"
+
+#: app/(dashboard)/transactions/inward/page.tsx:106
+#: app/(dashboard)/transactions/outward/page.tsx:78
+#: app/(dashboard)/transactions/transfer/page.tsx:74
+msgid "h8gxBn"
+msgstr "Vui lòng chọn cơ sở y tế trước"
+
+#: app/(dashboard)/transactions/inward/page.tsx:120
+#: app/(dashboard)/transactions/page.tsx:72
+msgid "olSqsS"
+msgstr "Nhập kho"
+
+#: app/(dashboard)/transactions/inward/page.tsx:122
+msgid "sgPQrj"
+msgstr "Nhập thuốc từ nhà cung cấp vào {centerName}"
+
+#: app/(dashboard)/transactions/inward/page.tsx:130
+msgid "Mcj512"
+msgstr "Có lỗi xảy ra khi tạo phiếu nhập"
+
+#: app/(dashboard)/transactions/inward/page.tsx:139
+msgid "BpHpv2"
+msgstr "Chọn NCC..."
+
+#: app/(dashboard)/transactions/inward/page.tsx:152
+msgid "gK1mWS"
+msgstr "Số hóa đơn"
+
+#: app/(dashboard)/transactions/inward/page.tsx:156
+msgid "KrVwbW"
+msgstr "Ngày hóa đơn"
+
+#: app/(dashboard)/transactions/inward/page.tsx:164
+msgid "3wyAht"
+msgstr "Danh sách thuốc nhập"
+
+#: app/(dashboard)/transactions/inward/page.tsx:174
+#: app/(dashboard)/transactions/outward/page.tsx:106
+#: app/(dashboard)/transactions/transfer/page.tsx:111
+msgid "8pZWJd"
+msgstr "Thêm dòng"
+
+#: app/(dashboard)/transactions/inward/page.tsx:183
+#: app/(dashboard)/transactions/outward/page.tsx:115
+#: app/(dashboard)/transactions/transfer/page.tsx:120
+msgid "1JNsCQ"
+msgstr "Chọn thuốc..."
+
+#: app/(dashboard)/transactions/inward/page.tsx:220
+msgid "z2fFEP"
+msgstr "Kiểm tra lại thông tin"
+
+#: app/(dashboard)/transactions/inward/page.tsx:226
+#: app/(dashboard)/transactions/outward/page.tsx:137
+#: app/(dashboard)/transactions/page.tsx:120
+#: app/(dashboard)/transactions/transfer/page.tsx:142
+msgid "dbWnqp"
+msgstr "Ghi chú"
+
+#: app/(dashboard)/transactions/inward/page.tsx:232
+msgid "XQA89m"
+msgstr "Tạo phiếu nhập"
+
+#: app/(dashboard)/transactions/outward/page.tsx:88
+#: app/(dashboard)/transactions/page.tsx:76
+msgid "Ll7tOh"
+msgstr "Xuất kho"
+
+#: app/(dashboard)/transactions/outward/page.tsx:90
+msgid "EfNFRg"
+msgstr "Xuất thuốc từ {centerName} (FEFO - Hết hạn trước xuất trước)"
+
+#: app/(dashboard)/transactions/outward/page.tsx:98
+#: app/(dashboard)/transactions/transfer/page.tsx:91
+msgid "Nfw2c4"
+msgstr "Có lỗi xảy ra"
+
+#: app/(dashboard)/transactions/outward/page.tsx:104
+msgid "N0vxfI"
+msgstr "Danh sách thuốc xuất"
+
+#: app/(dashboard)/transactions/outward/page.tsx:143
+msgid "csqLUp"
+msgstr "Tạo phiếu xuất"
+
+#: app/(dashboard)/transactions/page.tsx:19
+msgid "TKj1V3"
+msgstr "Nhập NCC"
+
+#: app/(dashboard)/transactions/page.tsx:20
+msgid "VOVocu"
+msgstr "Nhập chuyển kho"
+
+#: app/(dashboard)/transactions/page.tsx:21
+msgid "KkWh/f"
+msgstr "Nhập hoàn trả"
+
+#: app/(dashboard)/transactions/page.tsx:22
+msgid "KqLga1"
+msgstr "Xuất theo đơn"
+
+#: app/(dashboard)/transactions/page.tsx:23
+msgid "e5jNgK"
+msgstr "Xuất chuyển kho"
+
+#: app/(dashboard)/transactions/page.tsx:24
+msgid "PYrELu"
+msgstr "Xuất hủy"
+
+#: app/(dashboard)/transactions/page.tsx:25
+msgid "8gkkz/"
+msgstr "Điều chỉnh tăng"
+
+#: app/(dashboard)/transactions/page.tsx:26
+msgid "26YWbJ"
+msgstr "Điều chỉnh giảm"
+
+#: app/(dashboard)/transactions/page.tsx:52
+msgid "PQ/c0L"
+msgstr "Vui lòng chọn cơ sở y tế để xem giao dịch"
+
+#: app/(dashboard)/transactions/page.tsx:63
+msgid "tY6h9d"
+msgstr "Giao dịch kho"
+
+#: app/(dashboard)/transactions/page.tsx:65
+msgid "plIAMB"
+msgstr "Lịch sử nhập - xuất - điều chỉnh tại {centerName}"
+
+#: app/(dashboard)/transactions/page.tsx:79
+#: app/(dashboard)/transactions/transfer/page.tsx:84
+msgid "8uspEl"
+msgstr "Chuyển kho"
+
+#: app/(dashboard)/transactions/page.tsx:94
+msgid "lW6I86"
+msgstr "Tất cả loại"
+
+#: app/(dashboard)/transactions/page.tsx:118
+msgid "xZN0y0"
+msgstr "Người thực hiện"
+
+#: app/(dashboard)/transactions/page.tsx:119
+msgid "jycb70"
+msgstr "Tổng tiền"
+
+#: app/(dashboard)/transactions/page.tsx:166
+msgid "UZj5F/"
+msgstr "Tổng: {count} giao dịch"
+
+#: app/(dashboard)/transactions/page.tsx:180
+msgid "w+rh2v"
+msgstr "Chưa có giao dịch nào"
+
+#: app/(dashboard)/transactions/transfer/page.tsx:22
+msgid "FA0MGW"
+msgstr "Chọn cơ sở nhận"
+
+#: app/(dashboard)/transactions/transfer/page.tsx:85
+msgid "5UctNq"
+msgstr "Chuyển thuốc từ {centerName} sang cơ sở khác"
+
+#: app/(dashboard)/transactions/transfer/page.tsx:95
+msgid "zKLeyS"
+msgstr "Cơ sở nhận"
+
+#: app/(dashboard)/transactions/transfer/page.tsx:97
+msgid "Btig5W"
+msgstr "Chọn cơ sở nhận..."
+
+#: app/(dashboard)/transactions/transfer/page.tsx:109
+msgid "xaP4Yr"
+msgstr "Danh sách thuốc chuyển"
+
+#: app/(dashboard)/transactions/transfer/page.tsx:148
+msgid "1T6zqb"
+msgstr "Tạo phiếu chuyển"
+
+#: app/page.tsx:60
+msgid "ry6tip"
+msgstr "Quản lý dược phẩm"
+
+#: app/page.tsx:62
+msgid "KqdpIf"
+msgstr "hiện đại & hiệu quả"
+
+#: app/page.tsx:65
+msgid "aD7uQ7"
+msgstr "Theo dõi tồn kho, quản lý giao dịch, kiểm soát hạn sử dụng và báo cáo thống kê cho hệ thống y tế cơ sở."
+
+#: app/page.tsx:70
+msgid "pglVH/"
+msgstr "Bắt đầu sử dụng"
+
+#: app/page.tsx:86
+msgid "wIh0kv"
+msgstr "Quản lý tồn kho"
+
+#: app/page.tsx:87
+msgid "cVWQPF"
+msgstr "Theo dõi số lượng, lô hàng và hạn sử dụng theo thời gian thực."
+
+#: app/page.tsx:92
+msgid "FVI+yT"
+msgstr "Quản lý thông tin thuốc, phân loại và quy cách đóng gói."
+
+#: app/page.tsx:96
+msgid "gsZMyU"
+msgstr "Báo cáo thống kê"
+
+#: app/page.tsx:97
+msgid "lcsInk"
+msgstr "Phân tích tiêu thụ, dự báo hết hạn và tổng hợp tồn kho."
+
+#: app/page.tsx:101
+msgid "dMtIR0"
+msgstr "Cảnh báo tự động"
+
+#: app/page.tsx:102
+msgid "+bUxfO"
+msgstr "Nhận thông báo khi thuốc sắp hết hạn hoặc tồn kho thấp."
+
+#: components/dashboard/sidebar.tsx:26
+msgid "8sm41X"
+msgstr "Giao dịch"
+
+#: components/dashboard/sidebar.tsx:28
+msgid "l2mDby"
+msgstr "Đơn thuốc"
+
+#: components/dashboard/sidebar.tsx:30
+msgid "fpmxFf"
+msgstr "Báo cáo"

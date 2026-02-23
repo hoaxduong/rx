@@ -2,12 +2,14 @@
 
 import { useState } from "react"
 import { useMutation } from "@tanstack/react-query"
+import { useExtracted } from "next-intl"
 import { api } from "@/lib/api"
 import { Button } from "@workspace/ui/components/button"
 import { ScanLine, Search } from "lucide-react"
 
 export default function ScannerPage() {
   const [code, setCode] = useState("")
+  const t = useExtracted()
 
   const lookupMutation = useMutation({
     mutationFn: async (searchCode: string) => {
@@ -27,13 +29,13 @@ export default function ScannerPage() {
   return (
     <div className="mx-auto max-w-2xl space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">Quét mã</h1>
-        <p className="text-muted-foreground">Tra cứu thuốc bằng mã vạch hoặc QR code</p>
+        <h1 className="text-2xl font-bold">{t("Quét mã")}</h1>
+        <p className="text-muted-foreground">{t("Tra cứu thuốc bằng mã vạch hoặc QR code")}</p>
       </div>
 
       <div className="flex gap-2">
         <input
-          placeholder="Nhập hoặc quét mã vạch..."
+          placeholder={t("Nhập hoặc quét mã vạch...")}
           value={code}
           onChange={(e) => setCode(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSearch()}
@@ -42,19 +44,19 @@ export default function ScannerPage() {
         />
         <Button onClick={handleSearch} disabled={lookupMutation.isPending}>
           <Search className="mr-2 h-4 w-4" />
-          Tra cứu
+          {t("Tra cứu")}
         </Button>
       </div>
 
       {lookupMutation.isPending && (
-        <div className="text-center text-muted-foreground">Đang tìm...</div>
+        <div className="text-center text-muted-foreground">{t("Đang tìm...")}</div>
       )}
 
       {lookupMutation.data && !("error" in lookupMutation.data) && (
         <div className="rounded-lg border p-4 space-y-3">
           <div className="flex items-center gap-2">
             <span className="rounded bg-primary/10 px-2 py-1 text-xs font-medium text-primary">
-              {lookupMutation.data.type === "medicine" ? "Thuốc" : "Lô hàng"}
+              {lookupMutation.data.type === "medicine" ? t("Thuốc") : t("Lô hàng")}
             </span>
           </div>
           <pre className="bg-muted rounded-md p-4 text-sm overflow-auto">
@@ -66,7 +68,7 @@ export default function ScannerPage() {
       {lookupMutation.data && "error" in lookupMutation.data && (
         <div className="rounded-lg border border-destructive/20 bg-destructive/5 p-4 text-center">
           <ScanLine className="text-muted-foreground mx-auto mb-2 h-8 w-8" />
-          <p className="text-sm">Không tìm thấy kết quả cho mã này</p>
+          <p className="text-sm">{t("Không tìm thấy kết quả cho mã này")}</p>
         </div>
       )}
     </div>

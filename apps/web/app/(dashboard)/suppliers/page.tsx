@@ -2,12 +2,14 @@
 
 import { useState } from "react"
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
+import { useExtracted } from "next-intl"
 import { api } from "@/lib/api"
 import { Button } from "@workspace/ui/components/button"
 import { Plus, Search, Truck } from "lucide-react"
 
 export default function SuppliersPage() {
   const queryClient = useQueryClient()
+  const t = useExtracted()
   const [search, setSearch] = useState("")
   const [showForm, setShowForm] = useState(false)
   const [formData, setFormData] = useState({ name: "", code: "", contactPerson: "", phone: "", email: "", address: "", taxId: "", licenseNumber: "" })
@@ -38,32 +40,32 @@ export default function SuppliersPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Nhà cung cấp</h1>
-          <p className="text-muted-foreground">Quản lý nhà cung cấp dược phẩm</p>
+          <h1 className="text-2xl font-bold">{t("Nhà cung cấp")}</h1>
+          <p className="text-muted-foreground">{t("Quản lý nhà cung cấp dược phẩm")}</p>
         </div>
         <Button onClick={() => setShowForm(!showForm)}>
-          <Plus className="mr-2 h-4 w-4" /> Thêm NCC
+          <Plus className="mr-2 h-4 w-4" /> {t("Thêm NCC")}
         </Button>
       </div>
 
       {showForm && (
         <div className="space-y-4 rounded-lg border p-4">
-          <h2 className="font-semibold">Thêm nhà cung cấp mới</h2>
+          <h2 className="font-semibold">{t("Thêm nhà cung cấp mới")}</h2>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-1">
-              <label className="text-sm font-medium">Tên NCC *</label>
+              <label className="text-sm font-medium">{t("Tên NCC")} *</label>
               <input className={inputClass} value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
             </div>
             <div className="space-y-1">
-              <label className="text-sm font-medium">Mã NCC *</label>
+              <label className="text-sm font-medium">{t("Mã NCC")} *</label>
               <input className={inputClass} value={formData.code} onChange={(e) => setFormData({ ...formData, code: e.target.value })} />
             </div>
             <div className="space-y-1">
-              <label className="text-sm font-medium">Người liên hệ</label>
+              <label className="text-sm font-medium">{t("Người liên hệ")}</label>
               <input className={inputClass} value={formData.contactPerson} onChange={(e) => setFormData({ ...formData, contactPerson: e.target.value })} />
             </div>
             <div className="space-y-1">
-              <label className="text-sm font-medium">Điện thoại</label>
+              <label className="text-sm font-medium">{t("Điện thoại")}</label>
               <input className={inputClass} value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
             </div>
             <div className="space-y-1">
@@ -71,23 +73,23 @@ export default function SuppliersPage() {
               <input className={inputClass} value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
             </div>
             <div className="space-y-1">
-              <label className="text-sm font-medium">Mã số thuế</label>
+              <label className="text-sm font-medium">{t("Mã số thuế")}</label>
               <input className={inputClass} value={formData.taxId} onChange={(e) => setFormData({ ...formData, taxId: e.target.value })} />
             </div>
             <div className="space-y-1">
-              <label className="text-sm font-medium">Số GDP</label>
+              <label className="text-sm font-medium">{t("Số GDP")}</label>
               <input className={inputClass} value={formData.licenseNumber} onChange={(e) => setFormData({ ...formData, licenseNumber: e.target.value })} />
             </div>
             <div className="space-y-1">
-              <label className="text-sm font-medium">Địa chỉ</label>
+              <label className="text-sm font-medium">{t("Địa chỉ")}</label>
               <input className={inputClass} value={formData.address} onChange={(e) => setFormData({ ...formData, address: e.target.value })} />
             </div>
           </div>
           <div className="flex gap-2">
             <Button onClick={() => createMutation.mutate()} disabled={createMutation.isPending || !formData.name || !formData.code}>
-              {createMutation.isPending ? "Đang lưu..." : "Lưu"}
+              {createMutation.isPending ? t("Đang lưu...") : t("Lưu")}
             </Button>
-            <Button variant="outline" onClick={() => setShowForm(false)}>Hủy</Button>
+            <Button variant="outline" onClick={() => setShowForm(false)}>{t("Hủy")}</Button>
           </div>
         </div>
       )}
@@ -95,7 +97,7 @@ export default function SuppliersPage() {
       <div className="relative">
         <Search className="text-muted-foreground absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" />
         <input
-          placeholder="Tìm nhà cung cấp..."
+          placeholder={t("Tìm nhà cung cấp...")}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className={`${inputClass} pl-10`}
@@ -104,16 +106,16 @@ export default function SuppliersPage() {
 
       <div className="rounded-lg border">
         {isLoading ? (
-          <div className="p-8 text-center text-sm text-muted-foreground">Đang tải...</div>
+          <div className="p-8 text-center text-sm text-muted-foreground">{t("Đang tải...")}</div>
         ) : Array.isArray(suppliers) && suppliers.length > 0 ? (
           <div className="overflow-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b bg-muted/50">
-                  <th className="px-4 py-3 text-left font-medium">Mã</th>
-                  <th className="px-4 py-3 text-left font-medium">Tên NCC</th>
-                  <th className="px-4 py-3 text-left font-medium">Liên hệ</th>
-                  <th className="px-4 py-3 text-left font-medium">SĐT</th>
+                  <th className="px-4 py-3 text-left font-medium">{t("Mã")}</th>
+                  <th className="px-4 py-3 text-left font-medium">{t("Tên NCC")}</th>
+                  <th className="px-4 py-3 text-left font-medium">{t("Liên hệ")}</th>
+                  <th className="px-4 py-3 text-left font-medium">{t("SĐT")}</th>
                   <th className="px-4 py-3 text-left font-medium">GDP</th>
                 </tr>
               </thead>
@@ -133,7 +135,7 @@ export default function SuppliersPage() {
         ) : (
           <div className="flex flex-col items-center p-12">
             <Truck className="text-muted-foreground mb-4 h-12 w-12" />
-            <p className="text-muted-foreground">Chưa có nhà cung cấp</p>
+            <p className="text-muted-foreground">{t("Chưa có nhà cung cấp")}</p>
           </div>
         )}
       </div>

@@ -1,6 +1,7 @@
 "use client"
 
 import { useQuery } from "@tanstack/react-query"
+import { useExtracted } from "next-intl"
 import { useCenter } from "@/components/center-context"
 import { api } from "@/lib/api"
 import { Package, AlertTriangle, Clock, TrendingDown } from "lucide-react"
@@ -8,6 +9,7 @@ import Link from "next/link"
 
 export default function InventoryPage() {
   const { currentCenter } = useCenter()
+  const t = useExtracted()
 
   const { data: stock, isLoading } = useQuery({
     queryKey: ["inventory", currentCenter?.id],
@@ -47,9 +49,9 @@ export default function InventoryPage() {
       <div className="flex h-full items-center justify-center">
         <div className="text-center">
           <Package className="text-muted-foreground mx-auto mb-4 h-12 w-12" />
-          <h2 className="text-lg font-semibold">Chọn cơ sở</h2>
+          <h2 className="text-lg font-semibold">{t("Chọn cơ sở")}</h2>
           <p className="text-muted-foreground mt-1">
-            Vui lòng chọn cơ sở y tế ở thanh trên để xem kho thuốc
+            {t("Vui lòng chọn cơ sở y tế ở thanh trên để xem kho thuốc")}
           </p>
         </div>
       </div>
@@ -59,9 +61,9 @@ export default function InventoryPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">Kho thuốc</h1>
+        <h1 className="text-2xl font-bold">{t("Kho thuốc")}</h1>
         <p className="text-muted-foreground">
-          Quản lý tồn kho tại {currentCenter.name}
+          {t("Quản lý tồn kho tại {centerName}", { centerName: currentCenter.name })}
         </p>
       </div>
 
@@ -70,7 +72,7 @@ export default function InventoryPage() {
         <div className="rounded-lg border p-4">
           <div className="flex items-center gap-2">
             <Package className="text-primary h-5 w-5" />
-            <span className="text-sm font-medium">Tổng mặt hàng</span>
+            <span className="text-sm font-medium">{t("Tổng mặt hàng")}</span>
           </div>
           <p className="mt-2 text-2xl font-bold">
             {Array.isArray(stock) ? stock.length : 0}
@@ -80,7 +82,7 @@ export default function InventoryPage() {
         <div className="rounded-lg border p-4">
           <div className="flex items-center gap-2">
             <Clock className="h-5 w-5 text-orange-500" />
-            <span className="text-sm font-medium">Sắp hết hạn</span>
+            <span className="text-sm font-medium">{t("Sắp hết hạn")}</span>
           </div>
           <p className="mt-2 text-2xl font-bold text-orange-500">
             {Array.isArray(expiring) ? expiring.length : 0}
@@ -90,7 +92,7 @@ export default function InventoryPage() {
         <div className="rounded-lg border p-4">
           <div className="flex items-center gap-2">
             <TrendingDown className="h-5 w-5 text-red-500" />
-            <span className="text-sm font-medium">Dưới mức tồn kho</span>
+            <span className="text-sm font-medium">{t("Dưới mức tồn kho")}</span>
           </div>
           <p className="mt-2 text-2xl font-bold text-red-500">
             {Array.isArray(lowStock) ? lowStock.length : 0}
@@ -100,7 +102,7 @@ export default function InventoryPage() {
         <div className="rounded-lg border p-4">
           <div className="flex items-center gap-2">
             <AlertTriangle className="text-muted-foreground h-5 w-5" />
-            <span className="text-sm font-medium">Tổng giá trị</span>
+            <span className="text-sm font-medium">{t("Tổng giá trị")}</span>
           </div>
           <p className="mt-2 text-2xl font-bold">
             {Array.isArray(stock)
@@ -121,22 +123,22 @@ export default function InventoryPage() {
       {/* Stock list */}
       <div className="rounded-lg border">
         <div className="border-b p-4">
-          <h2 className="font-semibold">Danh sách tồn kho</h2>
+          <h2 className="font-semibold">{t("Danh sách tồn kho")}</h2>
         </div>
         {isLoading ? (
           <div className="p-8 text-center text-sm text-muted-foreground">
-            Đang tải...
+            {t("Đang tải...")}
           </div>
         ) : Array.isArray(stock) && stock.length > 0 ? (
           <div className="overflow-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b bg-muted/50">
-                  <th className="px-4 py-3 text-left font-medium">Mã thuốc</th>
-                  <th className="px-4 py-3 text-left font-medium">Tổng SL</th>
-                  <th className="px-4 py-3 text-left font-medium">Số lô</th>
-                  <th className="px-4 py-3 text-left font-medium">HSD gần nhất</th>
-                  <th className="px-4 py-3 text-right font-medium">Giá trị</th>
+                  <th className="px-4 py-3 text-left font-medium">{t("Mã thuốc")}</th>
+                  <th className="px-4 py-3 text-left font-medium">{t("Tổng SL")}</th>
+                  <th className="px-4 py-3 text-left font-medium">{t("Số lô")}</th>
+                  <th className="px-4 py-3 text-left font-medium">{t("HSD gần nhất")}</th>
+                  <th className="px-4 py-3 text-right font-medium">{t("Giá trị")}</th>
                 </tr>
               </thead>
               <tbody>
@@ -166,7 +168,7 @@ export default function InventoryPage() {
           </div>
         ) : (
           <div className="p-8 text-center text-sm text-muted-foreground">
-            Chưa có dữ liệu tồn kho
+            {t("Chưa có dữ liệu tồn kho")}
           </div>
         )}
       </div>

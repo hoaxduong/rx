@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useExtracted } from "next-intl"
 import {
   Package,
   Pill,
@@ -15,23 +16,24 @@ import {
   Building2,
 } from "lucide-react"
 
-const navItems = [
-  { href: "/inventory", label: "Kho thuốc", icon: Package },
-  { href: "/medicines", label: "Danh mục thuốc", icon: Pill },
-  { href: "/transactions", label: "Giao dịch", icon: ArrowLeftRight },
-  { href: "/suppliers", label: "Nhà cung cấp", icon: Truck },
-  { href: "/prescriptions", label: "Đơn thuốc", icon: ClipboardList },
-  { href: "/alerts", label: "Cảnh báo", icon: Bell },
-  { href: "/reports", label: "Báo cáo", icon: BarChart3 },
-  { href: "/scanner", label: "Quét mã", icon: ScanLine },
-]
-
-const bottomItems = [
-  { href: "/settings", label: "Cài đặt", icon: Settings },
-]
-
 export function Sidebar() {
   const pathname = usePathname()
+  const t = useExtracted()
+
+  const navItems = [
+    { href: "/inventory", label: t("Kho thuốc"), icon: Package },
+    { href: "/medicines", label: t("Danh mục thuốc"), icon: Pill },
+    { href: "/transactions", label: t("Giao dịch"), icon: ArrowLeftRight },
+    { href: "/suppliers", label: t("Nhà cung cấp"), icon: Truck },
+    { href: "/prescriptions", label: t("Đơn thuốc"), icon: ClipboardList },
+    { href: "/alerts", label: t("Cảnh báo"), icon: Bell },
+    { href: "/reports", label: t("Báo cáo"), icon: BarChart3 },
+    { href: "/scanner", label: t("Quét mã"), icon: ScanLine },
+  ]
+
+  const bottomItems = [
+    { href: "/settings", label: t("Cài đặt"), icon: Settings },
+  ]
 
   return (
     <aside className="bg-card flex h-screen w-60 shrink-0 flex-col border-r">

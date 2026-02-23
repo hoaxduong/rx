@@ -5,74 +5,76 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
+import { useExtracted } from "next-intl"
 import { api } from "@/lib/api"
 import { Button } from "@workspace/ui/components/button"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 
-const medicineSchema = z.object({
-  name: z.string().min(1, "Tên thuốc không được để trống"),
-  nameVi: z.string().optional(),
-  brandName: z.string().optional(),
-  activeIngredient: z.string().optional(),
-  dosageForm: z.string().optional(),
-  strength: z.string().optional(),
-  unit: z.string().optional(),
-  packagingSpec: z.string().optional(),
-  registrationNumber: z.string().optional(),
-  manufacturer: z.string().optional(),
-  countryOfOrigin: z.string().optional(),
-  storageCondition: z.string().optional(),
-  isNarcotics: z.boolean().optional(),
-  isPsychotropic: z.boolean().optional(),
-  isPrescriptionOnly: z.boolean().optional(),
-  isEssentialDrug: z.boolean().optional(),
-  dinhMucBhyt: z.string().optional(),
-  barcode: z.string().optional(),
-  contraindications: z.string().optional(),
-  sideEffects: z.string().optional(),
-})
-
-type MedicineForm = z.infer<typeof medicineSchema>
-
-const dosageForms = [
-  { value: "tablet", label: "Viên nén" },
-  { value: "capsule", label: "Viên nang" },
-  { value: "syrup", label: "Siro" },
-  { value: "injection", label: "Tiêm" },
-  { value: "cream", label: "Kem" },
-  { value: "ointment", label: "Mỡ" },
-  { value: "drops", label: "Nhỏ giọt" },
-  { value: "powder", label: "Bột" },
-  { value: "suspension", label: "Hỗn dịch" },
-  { value: "solution", label: "Dung dịch" },
-  { value: "suppository", label: "Đặt" },
-  { value: "inhaler", label: "Hít" },
-  { value: "patch", label: "Miếng dán" },
-  { value: "gel", label: "Gel" },
-  { value: "other", label: "Khác" },
-]
-
-const units = [
-  { value: "tablet", label: "Viên" },
-  { value: "capsule", label: "Viên nang" },
-  { value: "bottle", label: "Chai" },
-  { value: "ampoule", label: "Ống" },
-  { value: "vial", label: "Lọ" },
-  { value: "tube", label: "Tuýp" },
-  { value: "sachet", label: "Gói" },
-  { value: "box", label: "Hộp" },
-  { value: "strip", label: "Vỉ" },
-  { value: "ml", label: "ml" },
-  { value: "g", label: "g" },
-  { value: "mg", label: "mg" },
-  { value: "piece", label: "Cái" },
-  { value: "set", label: "Bộ" },
-]
-
 export default function NewMedicinePage() {
   const router = useRouter()
   const queryClient = useQueryClient()
+  const t = useExtracted()
+
+  const medicineSchema = z.object({
+    name: z.string().min(1, t("Tên thuốc không được để trống")),
+    nameVi: z.string().optional(),
+    brandName: z.string().optional(),
+    activeIngredient: z.string().optional(),
+    dosageForm: z.string().optional(),
+    strength: z.string().optional(),
+    unit: z.string().optional(),
+    packagingSpec: z.string().optional(),
+    registrationNumber: z.string().optional(),
+    manufacturer: z.string().optional(),
+    countryOfOrigin: z.string().optional(),
+    storageCondition: z.string().optional(),
+    isNarcotics: z.boolean().optional(),
+    isPsychotropic: z.boolean().optional(),
+    isPrescriptionOnly: z.boolean().optional(),
+    isEssentialDrug: z.boolean().optional(),
+    dinhMucBhyt: z.string().optional(),
+    barcode: z.string().optional(),
+    contraindications: z.string().optional(),
+    sideEffects: z.string().optional(),
+  })
+
+  type MedicineForm = z.infer<typeof medicineSchema>
+
+  const dosageForms = [
+    { value: "tablet", label: t("Viên nén") },
+    { value: "capsule", label: t("Viên nang") },
+    { value: "syrup", label: t("Siro") },
+    { value: "injection", label: t("Tiêm") },
+    { value: "cream", label: t("Kem") },
+    { value: "ointment", label: t("Mỡ") },
+    { value: "drops", label: t("Nhỏ giọt") },
+    { value: "powder", label: t("Bột") },
+    { value: "suspension", label: t("Hỗn dịch") },
+    { value: "solution", label: t("Dung dịch") },
+    { value: "suppository", label: t("Đặt") },
+    { value: "inhaler", label: t("Hít") },
+    { value: "patch", label: t("Miếng dán") },
+    { value: "gel", label: "Gel" },
+    { value: "other", label: t("Khác") },
+  ]
+
+  const units = [
+    { value: "tablet", label: t("Viên") },
+    { value: "capsule", label: t("Viên nang") },
+    { value: "bottle", label: t("Chai") },
+    { value: "ampoule", label: t("Ống") },
+    { value: "vial", label: t("Lọ") },
+    { value: "tube", label: t("Tuýp") },
+    { value: "sachet", label: t("Gói") },
+    { value: "box", label: t("Hộp") },
+    { value: "strip", label: t("Vỉ") },
+    { value: "ml", label: "ml" },
+    { value: "g", label: "g" },
+    { value: "mg", label: "mg" },
+    { value: "piece", label: t("Cái") },
+    { value: "set", label: t("Bộ") },
+  ]
 
   const {
     register,
@@ -105,8 +107,8 @@ export default function NewMedicinePage() {
           </Button>
         </Link>
         <div>
-          <h1 className="text-2xl font-bold">Thêm thuốc mới</h1>
-          <p className="text-muted-foreground">Nhập thông tin thuốc</p>
+          <h1 className="text-2xl font-bold">{t("Thêm thuốc mới")}</h1>
+          <p className="text-muted-foreground">{t("Nhập thông tin thuốc")}</p>
         </div>
       </div>
 
@@ -116,31 +118,31 @@ export default function NewMedicinePage() {
       >
         {mutation.error && (
           <div className="bg-destructive/10 text-destructive rounded-md p-3 text-sm">
-            Có lỗi xảy ra khi thêm thuốc
+            {t("Có lỗi xảy ra khi thêm thuốc")}
           </div>
         )}
 
         {/* Basic info */}
         <div className="space-y-4 rounded-lg border p-4">
-          <h2 className="font-semibold">Thông tin cơ bản</h2>
+          <h2 className="font-semibold">{t("Thông tin cơ bản")}</h2>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-2">
-              <label className="text-sm font-medium">Tên thuốc *</label>
+              <label className="text-sm font-medium">{t("Tên thuốc")} *</label>
               <input className={inputClass} {...register("name")} />
               {errors.name && (
                 <p className="text-destructive text-sm">{errors.name.message}</p>
               )}
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium">Tên tiếng Việt</label>
+              <label className="text-sm font-medium">{t("Tên tiếng Việt")}</label>
               <input className={inputClass} {...register("nameVi")} />
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium">Tên thương mại</label>
+              <label className="text-sm font-medium">{t("Tên thương mại")}</label>
               <input className={inputClass} {...register("brandName")} />
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium">Hoạt chất</label>
+              <label className="text-sm font-medium">{t("Hoạt chất")}</label>
               <input className={inputClass} {...register("activeIngredient")} />
             </div>
           </div>
@@ -148,12 +150,12 @@ export default function NewMedicinePage() {
 
         {/* Formulation */}
         <div className="space-y-4 rounded-lg border p-4">
-          <h2 className="font-semibold">Bào chế & Đóng gói</h2>
+          <h2 className="font-semibold">{t("Bào chế & Đóng gói")}</h2>
           <div className="grid gap-4 md:grid-cols-3">
             <div className="space-y-2">
-              <label className="text-sm font-medium">Dạng bào chế</label>
+              <label className="text-sm font-medium">{t("Dạng bào chế")}</label>
               <select className={inputClass} {...register("dosageForm")}>
-                <option value="">Chọn...</option>
+                <option value="">{t("Chọn...")}</option>
                 {dosageForms.map((d) => (
                   <option key={d.value} value={d.value}>
                     {d.label}
@@ -162,13 +164,13 @@ export default function NewMedicinePage() {
               </select>
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium">Hàm lượng</label>
+              <label className="text-sm font-medium">{t("Hàm lượng")}</label>
               <input className={inputClass} placeholder="500mg" {...register("strength")} />
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium">Đơn vị tính</label>
+              <label className="text-sm font-medium">{t("Đơn vị tính")}</label>
               <select className={inputClass} {...register("unit")}>
-                <option value="">Chọn...</option>
+                <option value="">{t("Chọn...")}</option>
                 {units.map((u) => (
                   <option key={u.value} value={u.value}>
                     {u.label}
@@ -178,10 +180,10 @@ export default function NewMedicinePage() {
             </div>
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-medium">Quy cách đóng gói</label>
+            <label className="text-sm font-medium">{t("Quy cách đóng gói")}</label>
             <input
               className={inputClass}
-              placeholder="Hộp 10 vỉ x 10 viên"
+              placeholder={t("Hộp 10 vỉ x 10 viên")}
               {...register("packagingSpec")}
             />
           </div>
@@ -189,22 +191,22 @@ export default function NewMedicinePage() {
 
         {/* Manufacturing */}
         <div className="space-y-4 rounded-lg border p-4">
-          <h2 className="font-semibold">Sản xuất & Đăng ký</h2>
+          <h2 className="font-semibold">{t("Sản xuất & Đăng ký")}</h2>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-2">
-              <label className="text-sm font-medium">Nhà sản xuất</label>
+              <label className="text-sm font-medium">{t("Nhà sản xuất")}</label>
               <input className={inputClass} {...register("manufacturer")} />
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium">Nước sản xuất</label>
+              <label className="text-sm font-medium">{t("Nước sản xuất")}</label>
               <input className={inputClass} {...register("countryOfOrigin")} />
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium">Số đăng ký</label>
+              <label className="text-sm font-medium">{t("Số đăng ký")}</label>
               <input className={inputClass} {...register("registrationNumber")} />
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium">Mã vạch</label>
+              <label className="text-sm font-medium">{t("Mã vạch")}</label>
               <input className={inputClass} {...register("barcode")} />
             </div>
           </div>
@@ -212,43 +214,43 @@ export default function NewMedicinePage() {
 
         {/* Classification */}
         <div className="space-y-4 rounded-lg border p-4">
-          <h2 className="font-semibold">Phân loại quản lý</h2>
+          <h2 className="font-semibold">{t("Phân loại quản lý")}</h2>
           <div className="grid gap-4 md:grid-cols-2">
             <label className="flex items-center gap-2">
               <input type="checkbox" {...register("isNarcotics")} />
-              <span className="text-sm">Thuốc gây nghiện</span>
+              <span className="text-sm">{t("Thuốc gây nghiện")}</span>
             </label>
             <label className="flex items-center gap-2">
               <input type="checkbox" {...register("isPsychotropic")} />
-              <span className="text-sm">Thuốc hướng thần</span>
+              <span className="text-sm">{t("Thuốc hướng thần")}</span>
             </label>
             <label className="flex items-center gap-2">
               <input type="checkbox" {...register("isPrescriptionOnly")} />
-              <span className="text-sm">Thuốc kê đơn</span>
+              <span className="text-sm">{t("Thuốc kê đơn")}</span>
             </label>
             <label className="flex items-center gap-2">
               <input type="checkbox" {...register("isEssentialDrug")} />
-              <span className="text-sm">Thuốc thiết yếu</span>
+              <span className="text-sm">{t("Thuốc thiết yếu")}</span>
             </label>
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-medium">Mã BHYT (Định mức)</label>
+            <label className="text-sm font-medium">{t("Mã BHYT (Định mức)")}</label>
             <input className={inputClass} {...register("dinhMucBhyt")} />
           </div>
         </div>
 
         {/* Safety info */}
         <div className="space-y-4 rounded-lg border p-4">
-          <h2 className="font-semibold">Thông tin an toàn</h2>
+          <h2 className="font-semibold">{t("Thông tin an toàn")}</h2>
           <div className="space-y-2">
-            <label className="text-sm font-medium">Chống chỉ định</label>
+            <label className="text-sm font-medium">{t("Chống chỉ định")}</label>
             <textarea
               className={`${inputClass} h-20`}
               {...register("contraindications")}
             />
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-medium">Tác dụng phụ</label>
+            <label className="text-sm font-medium">{t("Tác dụng phụ")}</label>
             <textarea
               className={`${inputClass} h-20`}
               {...register("sideEffects")}
@@ -258,10 +260,10 @@ export default function NewMedicinePage() {
 
         <div className="flex gap-4">
           <Button type="submit" disabled={isSubmitting || mutation.isPending}>
-            {mutation.isPending ? "Đang lưu..." : "Lưu thuốc"}
+            {mutation.isPending ? t("Đang lưu...") : t("Lưu thuốc")}
           </Button>
           <Link href="/medicines">
-            <Button variant="outline">Hủy</Button>
+            <Button variant="outline">{t("Hủy")}</Button>
           </Link>
         </div>
       </form>

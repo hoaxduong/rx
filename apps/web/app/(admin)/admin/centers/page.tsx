@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
+import { useExtracted } from "next-intl"
 import { Button } from "@workspace/ui/components/button"
 import { Plus, Search, Building, MapPin } from "lucide-react"
 
@@ -22,6 +23,7 @@ type Center = {
 
 export default function AdminCentersPage() {
   const queryClient = useQueryClient()
+  const t = useExtracted()
   const [search, setSearch] = useState("")
   const [showForm, setShowForm] = useState(false)
   const [editingId, setEditingId] = useState<string | null>(null)
@@ -51,10 +53,10 @@ export default function AdminCentersPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Quản lý cơ sở y tế</h1>
+        <h1 className="text-2xl font-bold">{t("Quản lý cơ sở y tế")}</h1>
         <Button onClick={() => { setShowForm(true); setEditingId(null) }}>
           <Plus className="mr-1 h-4 w-4" />
-          Thêm cơ sở
+          {t("Thêm cơ sở")}
         </Button>
       </div>
 
@@ -75,7 +77,7 @@ export default function AdminCentersPage() {
         <Search className="text-muted-foreground absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" />
         <input
           type="text"
-          placeholder="Tìm kiếm cơ sở..."
+          placeholder={t("Tìm kiếm cơ sở...")}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="border-input bg-background h-9 w-full rounded-md border pl-9 pr-3 text-sm"
@@ -83,18 +85,18 @@ export default function AdminCentersPage() {
       </div>
 
       {isLoading ? (
-        <div className="text-muted-foreground py-12 text-center text-sm">Đang tải...</div>
+        <div className="text-muted-foreground py-12 text-center text-sm">{t("Đang tải...")}</div>
       ) : (
         <div className="rounded-lg border">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b">
-                <th className="px-4 py-3 text-left font-medium">Mã</th>
-                <th className="px-4 py-3 text-left font-medium">Tên cơ sở</th>
-                <th className="px-4 py-3 text-left font-medium">Loại</th>
-                <th className="px-4 py-3 text-left font-medium">Trực thuộc</th>
-                <th className="px-4 py-3 text-left font-medium">Trạng thái</th>
-                <th className="px-4 py-3 text-right font-medium">Thao tác</th>
+                <th className="px-4 py-3 text-left font-medium">{t("Mã")}</th>
+                <th className="px-4 py-3 text-left font-medium">{t("Tên cơ sở")}</th>
+                <th className="px-4 py-3 text-left font-medium">{t("Loại")}</th>
+                <th className="px-4 py-3 text-left font-medium">{t("Trực thuộc")}</th>
+                <th className="px-4 py-3 text-left font-medium">{t("Trạng thái")}</th>
+                <th className="px-4 py-3 text-right font-medium">{t("Thao tác")}</th>
               </tr>
             </thead>
             <tbody>
@@ -121,7 +123,7 @@ export default function AdminCentersPage() {
                         ? "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400"
                         : "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400"
                     }`}>
-                      {center.type === "commune" ? "Xã" : "Trạm"}
+                      {center.type === "commune" ? t("Xã") : t("Trạm")}
                     </span>
                   </td>
                   <td className="text-muted-foreground px-4 py-3 text-xs">
@@ -133,7 +135,7 @@ export default function AdminCentersPage() {
                         ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
                         : "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400"
                     }`}>
-                      {center.isActive ? "Hoạt động" : "Ngưng"}
+                      {center.isActive ? t("Hoạt động") : t("Ngưng")}
                     </span>
                   </td>
                   <td className="px-4 py-3 text-right">
@@ -143,18 +145,18 @@ export default function AdminCentersPage() {
                         size="sm"
                         onClick={() => { setEditingId(center.id); setShowForm(true) }}
                       >
-                        Sửa
+                        {t("Sửa")}
                       </Button>
                       <Button
                         variant="ghost"
                         size="sm"
                         onClick={() => {
-                          if (confirm(`Ngưng hoạt động cơ sở "${center.name}"?`)) {
+                          if (confirm(t('Ngưng hoạt động cơ sở "{centerName}"?', { centerName: center.name }))) {
                             deleteMutation.mutate(center.id)
                           }
                         }}
                       >
-                        Ngưng
+                        {t("Ngưng")}
                       </Button>
                     </div>
                   </td>
@@ -163,7 +165,7 @@ export default function AdminCentersPage() {
               {data?.items.length === 0 && (
                 <tr>
                   <td colSpan={6} className="text-muted-foreground px-4 py-12 text-center">
-                    Chưa có cơ sở nào
+                    {t("Chưa có cơ sở nào")}
                   </td>
                 </tr>
               )}
@@ -186,6 +188,7 @@ function CenterForm({
   onSuccess: () => void
   centers: Center[]
 }) {
+  const t = useExtracted()
   const [form, setForm] = useState({
     name: "",
     code: "",
@@ -239,7 +242,7 @@ function CenterForm({
       })
       if (!res.ok) {
         const data = await res.json()
-        throw new Error(data.error || "Lỗi khi lưu")
+        throw new Error(data.error || t("Lỗi khi lưu"))
       }
       onSuccess()
     } catch (err: any) {
@@ -251,13 +254,13 @@ function CenterForm({
 
   return (
     <form onSubmit={handleSubmit} className="rounded-lg border p-4 space-y-4">
-      <h2 className="font-medium">{editingId ? "Cập nhật cơ sở" : "Thêm cơ sở mới"}</h2>
+      <h2 className="font-medium">{editingId ? t("Cập nhật cơ sở") : t("Thêm cơ sở mới")}</h2>
 
       {error && <div className="text-destructive text-sm">{error}</div>}
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <div>
-          <label className="text-sm font-medium">Tên cơ sở *</label>
+          <label className="text-sm font-medium">{t("Tên cơ sở")} *</label>
           <input
             required
             value={form.name}
@@ -266,7 +269,7 @@ function CenterForm({
           />
         </div>
         <div>
-          <label className="text-sm font-medium">Mã cơ sở *</label>
+          <label className="text-sm font-medium">{t("Mã cơ sở")} *</label>
           <input
             required
             value={form.code}
@@ -275,24 +278,24 @@ function CenterForm({
           />
         </div>
         <div>
-          <label className="text-sm font-medium">Loại</label>
+          <label className="text-sm font-medium">{t("Loại")}</label>
           <select
             value={form.type}
             onChange={(e) => setForm({ ...form, type: e.target.value as any })}
             className="border-input bg-background mt-1 h-9 w-full rounded-md border px-3 text-sm"
           >
-            <option value="commune">Xã</option>
-            <option value="satellite">Trạm vệ tinh</option>
+            <option value="commune">{t("Xã")}</option>
+            <option value="satellite">{t("Trạm vệ tinh")}</option>
           </select>
         </div>
         <div>
-          <label className="text-sm font-medium">Trực thuộc</label>
+          <label className="text-sm font-medium">{t("Trực thuộc")}</label>
           <select
             value={form.parentId}
             onChange={(e) => setForm({ ...form, parentId: e.target.value })}
             className="border-input bg-background mt-1 h-9 w-full rounded-md border px-3 text-sm"
           >
-            <option value="">Không</option>
+            <option value="">{t("Không")}</option>
             {centers
               .filter((c) => c.id !== editingId && c.type === "commune")
               .map((c) => (
@@ -301,7 +304,7 @@ function CenterForm({
           </select>
         </div>
         <div>
-          <label className="text-sm font-medium">Địa chỉ</label>
+          <label className="text-sm font-medium">{t("Địa chỉ")}</label>
           <input
             value={form.address}
             onChange={(e) => setForm({ ...form, address: e.target.value })}
@@ -309,7 +312,7 @@ function CenterForm({
           />
         </div>
         <div>
-          <label className="text-sm font-medium">Số điện thoại</label>
+          <label className="text-sm font-medium">{t("Số điện thoại")}</label>
           <input
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
@@ -326,7 +329,7 @@ function CenterForm({
           />
         </div>
         <div>
-          <label className="text-sm font-medium">Số giấy phép</label>
+          <label className="text-sm font-medium">{t("Số giấy phép")}</label>
           <input
             value={form.licenseNumber}
             onChange={(e) => setForm({ ...form, licenseNumber: e.target.value })}
@@ -337,10 +340,10 @@ function CenterForm({
 
       <div className="flex gap-2">
         <Button type="submit" disabled={loading}>
-          {loading ? "Đang lưu..." : editingId ? "Cập nhật" : "Tạo mới"}
+          {loading ? t("Đang lưu...") : editingId ? t("Cập nhật") : t("Tạo mới")}
         </Button>
         <Button type="button" variant="outline" onClick={onClose}>
-          Hủy
+          {t("Hủy")}
         </Button>
       </div>
     </form>
