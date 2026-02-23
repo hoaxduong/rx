@@ -1,0 +1,16 @@
+{
+  "imports": {
+    "@workspace/db": "../../../packages/db/src/index.ts",
+    "@workspace/db/schema": "../../../packages/db/src/schema/index.ts",
+    "hono": "jsr:@hono/hono",
+    "hono/": "jsr:/@hono/hono/",
+    "@hono/zod-validator": "npm:@hono/zod-validator",
+    "@hono/node-server": "npm:@hono/node-server",
+    "drizzle-orm": "npm:drizzle-orm",
+    "drizzle-orm/": "npm:/drizzle-orm/",
+    "postgres": "npm:postgres",
+    "better-auth": "npm:better-auth",
+    "better-auth/": "npm:/better-auth/",
+    "zod": "npm:zod"
+  }
+}

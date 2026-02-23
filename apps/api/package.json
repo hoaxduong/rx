@@ -1,0 +1,27 @@
+{
+  "name": "api",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "check-types": "tsc --noEmit",
+    "create-super-admin": "tsx --env-file=.env src/scripts/create-super-admin.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.14.3",
+    "@hono/zod-validator": "^0.5.0",
+    "@workspace/db": "workspace:*",
+    "better-auth": "^1.2.8",
+    "hono": "^4.7.12",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^25.1.0",
+    "@workspace/typescript-config": "workspace:*",
+    "tsx": "^4.19.4",
+    "typescript": "^5.9.3"
+  }
+}

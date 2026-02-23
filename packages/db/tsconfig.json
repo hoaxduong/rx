@@ -1,0 +1,9 @@
+{
+  "extends": "@workspace/typescript-config/base.json",
+  "compilerOptions": {
+    "paths": {
+      "@workspace/db/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "drizzle.config.ts", "seed/**/*.ts"]
+}

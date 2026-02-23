@@ -31,6 +31,9 @@ dist
 # Debug
 npm-debug.log*
 
+# Supabase
+supabase/.temp/
+
 # Misc
 .DS_Store
 *.pem
