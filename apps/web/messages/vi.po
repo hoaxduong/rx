@@ -6,20 +6,10 @@ msgstr ""
 "X-Generator: next-intl\n"
 "X-Crowdin-SourceKey: msgstr\n"
 
-#: app/(admin)/admin/centers/page.tsx:56
-msgid "XF7gb3"
-msgstr "Quản lý cơ sở y tế"
-
-#: app/(admin)/admin/centers/page.tsx:59
-msgid "WMmxat"
-msgstr "Thêm cơ sở"
-
-#: app/(admin)/admin/centers/page.tsx:80
-msgid "ZZE1mD"
-msgstr "Tìm kiếm cơ sở..."
-
-#: app/(admin)/admin/centers/page.tsx:88
-#: app/(admin)/admin/users/page.tsx:108
+#: app/(admin)/admin/centers/[id]/page.tsx:130
+#: app/(admin)/admin/centers/[id]/page.tsx:219
+#: app/(admin)/admin/centers/page.tsx:115
+#: app/(admin)/admin/users/page.tsx:138
 #: app/(admin)/layout.tsx:35
 #: app/(dashboard)/alerts/page.tsx:94
 #: app/(dashboard)/inventory/page.tsx:130
@@ -31,92 +21,77 @@ msgstr "Tìm kiếm cơ sở..."
 msgid "ekm1jk"
 msgstr "Đang tải..."
 
-#: app/(admin)/admin/centers/page.tsx:94
-#: app/(dashboard)/suppliers/page.tsx:115
-msgid "YCdbKA"
-msgstr "Mã"
+#: app/(admin)/admin/centers/[id]/page.tsx:138
+msgid "w6c+XZ"
+msgstr "Quay lại"
 
-#: app/(admin)/admin/centers/page.tsx:95
-#: app/(admin)/admin/centers/page.tsx:263
-msgid "GHubID"
-msgstr "Tên cơ sở"
+#: app/(admin)/admin/centers/[id]/page.tsx:140
+msgid "vN2dwo"
+msgstr "Không tìm thấy cơ sở"
 
-#: app/(admin)/admin/centers/page.tsx:96
-#: app/(admin)/admin/centers/page.tsx:281
-#: app/(dashboard)/medicines/[id]/page.tsx:199
-#: app/(dashboard)/settings/page.tsx:44
-#: app/(dashboard)/transactions/page.tsx:116
-msgid "OTTdny"
-msgstr "Loại"
+#: app/(admin)/admin/centers/[id]/page.tsx:150
+msgid "/byibl"
+msgstr "Quay lại danh sách"
 
-#: app/(admin)/admin/centers/page.tsx:97
-#: app/(admin)/admin/centers/page.tsx:292
-msgid "sbjI9v"
-msgstr "Trực thuộc"
-
-#: app/(admin)/admin/centers/page.tsx:98
-msgid "Nb1cb0"
-msgstr "Trạng thái"
-
-#: app/(admin)/admin/centers/page.tsx:99
-#: app/(admin)/admin/users/page.tsx:117
-msgid "PsZKZm"
-msgstr "Thao tác"
-
-#: app/(admin)/admin/centers/page.tsx:126
-#: app/(admin)/admin/centers/page.tsx:287
+#: app/(admin)/admin/centers/[id]/page.tsx:169
+#: app/(admin)/admin/centers/page.tsx:153
+#: app/(admin)/admin/centers/page.tsx:369
 #: components/dashboard/header.tsx:39
 msgid "X+EMsu"
 msgstr "Xã"
 
-#: app/(admin)/admin/centers/page.tsx:126
+#: app/(admin)/admin/centers/[id]/page.tsx:169
+#: app/(admin)/admin/centers/page.tsx:153
 #: components/dashboard/header.tsx:39
 msgid "2VKr2I"
 msgstr "Trạm"
 
-#: app/(admin)/admin/centers/page.tsx:138
+#: app/(admin)/admin/centers/[id]/page.tsx:176
+#: app/(admin)/admin/centers/page.tsx:165
 msgid "CSrQCz"
 msgstr "Hoạt động"
 
-#: app/(admin)/admin/centers/page.tsx:138
-#: app/(admin)/admin/centers/page.tsx:159
+#: app/(admin)/admin/centers/[id]/page.tsx:176
+#: app/(admin)/admin/centers/page.tsx:165
 msgid "bBUif4"
 msgstr "Ngưng"
 
-#: app/(admin)/admin/centers/page.tsx:148
-msgid "MOmOfG"
-msgstr "Sửa"
+#: app/(admin)/admin/centers/[id]/page.tsx:198
+#: app/(admin)/admin/centers/page.tsx:124
+#: app/(admin)/admin/centers/page.tsx:374
+msgid "sbjI9v"
+msgstr "Trực thuộc"
 
-#: app/(admin)/admin/centers/page.tsx:154
-msgid "5sm6us"
-msgstr "Ngưng hoạt động cơ sở \"{centerName}\"?"
+#: app/(admin)/admin/centers/[id]/page.tsx:209
+#: app/(admin)/admin/centers/[id]/page.tsx:225
+msgid "WYLPrI"
+msgstr "Thành viên"
 
-#: app/(admin)/admin/centers/page.tsx:168
-msgid "GPAY+b"
-msgstr "Chưa có cơ sở nào"
+#: app/(admin)/admin/centers/[id]/page.tsx:214
+#: app/(admin)/admin/centers/[id]/page.tsx:289
+msgid "yDCHqf"
+msgstr "Thêm thành viên"
 
-#: app/(admin)/admin/centers/page.tsx:245
-msgid "R4LaLM"
-msgstr "Lỗi khi lưu"
+#: app/(admin)/admin/centers/[id]/page.tsx:226
+#: app/(admin)/admin/centers/[id]/page.tsx:462
+#: app/(admin)/admin/centers/[id]/page.tsx:543
+#: app/(admin)/admin/users/page.tsx:145
+#: app/(admin)/admin/users/page.tsx:424
+msgid "8QXqaW"
+msgstr "Vai trò"
 
-#: app/(admin)/admin/centers/page.tsx:257
-msgid "k+hNuI"
-msgstr "Cập nhật cơ sở"
+#: app/(admin)/admin/centers/[id]/page.tsx:227
+msgid "6hweL4"
+msgstr "Truy cập trạm con"
 
-#: app/(admin)/admin/centers/page.tsx:257
-msgid "+1xoAq"
-msgstr "Thêm cơ sở mới"
+#: app/(admin)/admin/centers/[id]/page.tsx:228
+#: app/(admin)/admin/centers/page.tsx:126
+#: app/(admin)/admin/users/page.tsx:147
+msgid "PsZKZm"
+msgstr "Thao tác"
 
-#: app/(admin)/admin/centers/page.tsx:272
-#: app/(dashboard)/settings/page.tsx:40
-msgid "rj5XsP"
-msgstr "Mã cơ sở"
-
-#: app/(admin)/admin/centers/page.tsx:288
-msgid "MC2nPD"
-msgstr "Trạm vệ tinh"
-
-#: app/(admin)/admin/centers/page.tsx:298
+#: app/(admin)/admin/centers/[id]/page.tsx:247
+#: app/(admin)/admin/centers/page.tsx:380
 #: app/(dashboard)/medicines/[id]/page.tsx:126
 #: app/(dashboard)/medicines/[id]/page.tsx:130
 #: app/(dashboard)/medicines/[id]/page.tsx:134
@@ -124,37 +99,52 @@ msgstr "Trạm vệ tinh"
 msgid "JVtIrS"
 msgstr "Không"
 
-#: app/(admin)/admin/centers/page.tsx:307
-#: app/(dashboard)/suppliers/page.tsx:84
-msgid "R4zdpj"
-msgstr "Địa chỉ"
+#: app/(admin)/admin/centers/[id]/page.tsx:247
+#: app/(dashboard)/medicines/[id]/page.tsx:126
+#: app/(dashboard)/medicines/[id]/page.tsx:130
+#: app/(dashboard)/medicines/[id]/page.tsx:134
+#: app/(dashboard)/medicines/[id]/page.tsx:138
+msgid "F1tk89"
+msgstr "Có"
 
-#: app/(admin)/admin/centers/page.tsx:315
-msgid "z6HcUv"
-msgstr "Số điện thoại"
+#: app/(admin)/admin/centers/[id]/page.tsx:256
+#: app/(admin)/admin/centers/page.tsx:174
+msgid "MOmOfG"
+msgstr "Sửa"
 
-#: app/(admin)/admin/centers/page.tsx:332
-msgid "2ANUD0"
-msgstr "Số giấy phép"
+#: app/(admin)/admin/centers/[id]/page.tsx:264
+#: app/(admin)/admin/centers/[id]/page.tsx:344
+#: app/(admin)/admin/users/page.tsx:332
+msgid "pKGIyy"
+msgstr "Xóa"
 
-#: app/(admin)/admin/centers/page.tsx:343
-#: app/(dashboard)/medicines/new/page.tsx:263
-#: app/(dashboard)/suppliers/page.tsx:90
-#: app/(dashboard)/transactions/inward/page.tsx:232
-#: app/(dashboard)/transactions/outward/page.tsx:143
-#: app/(dashboard)/transactions/transfer/page.tsx:148
-msgid "U2JaWL"
-msgstr "Đang lưu..."
+#: app/(admin)/admin/centers/[id]/page.tsx:275
+msgid "Q00ZiX"
+msgstr "Chưa có thành viên nào"
 
-#: app/(admin)/admin/centers/page.tsx:343
-msgid "OsHKiv"
-msgstr "Cập nhật"
+#: app/(admin)/admin/centers/[id]/page.tsx:290
+msgid "6KvIuW"
+msgstr "Tìm người dùng và gán vai trò tại cơ sở này"
 
-#: app/(admin)/admin/centers/page.tsx:343
-msgid "Cbn7Np"
-msgstr "Tạo mới"
+#: app/(admin)/admin/centers/[id]/page.tsx:308
+msgid "c5fvkh"
+msgstr "Cập nhật vai trò"
 
-#: app/(admin)/admin/centers/page.tsx:346
+#: app/(admin)/admin/centers/[id]/page.tsx:331
+msgid "Z3tEkl"
+msgstr "Xóa thành viên"
+
+#: app/(admin)/admin/centers/[id]/page.tsx:333
+msgid "sTzIv/"
+msgstr "Xóa \"{memberName}\" khỏi cơ sở này? Người dùng sẽ mất quyền truy cập."
+
+#: app/(admin)/admin/centers/[id]/page.tsx:339
+#: app/(admin)/admin/centers/[id]/page.tsx:487
+#: app/(admin)/admin/centers/[id]/page.tsx:567
+#: app/(admin)/admin/centers/page.tsx:243
+#: app/(admin)/admin/centers/page.tsx:425
+#: app/(admin)/admin/users/page.tsx:327
+#: app/(admin)/admin/users/page.tsx:454
 #: app/(dashboard)/medicines/new/page.tsx:266
 #: app/(dashboard)/suppliers/page.tsx:92
 #: app/(dashboard)/transactions/inward/page.tsx:235
@@ -163,64 +153,231 @@ msgstr "Tạo mới"
 msgid "eNPJPz"
 msgstr "Hủy"
 
-#: app/(admin)/admin/users/page.tsx:91
-msgid "9K8/4Q"
-msgstr "Quản lý người dùng"
+#: app/(admin)/admin/centers/[id]/page.tsx:344
+#: app/(admin)/admin/centers/page.tsx:248
+#: app/(admin)/admin/users/page.tsx:332
+msgid "rYpW3S"
+msgstr "Đang xử lý..."
 
-#: app/(admin)/admin/users/page.tsx:97
-msgid "uC8/dv"
-msgstr "Tìm theo tên hoặc email..."
+#: app/(admin)/admin/centers/[id]/page.tsx:398
+#: app/(admin)/admin/centers/[id]/page.tsx:528
+#: app/(admin)/admin/centers/page.tsx:329
+#: app/(admin)/admin/users/page.tsx:378
+msgid "R4LaLM"
+msgstr "Lỗi khi lưu"
 
-#: app/(admin)/admin/users/page.tsx:114
+#: app/(admin)/admin/centers/[id]/page.tsx:414
+#: app/(admin)/admin/users/page.tsx:144
 #: app/(admin)/layout.tsx:22
 #: components/dashboard/header.tsx:51
 msgid "8Cg+nB"
 msgstr "Người dùng"
 
-#: app/(admin)/admin/users/page.tsx:115
-msgid "8QXqaW"
-msgstr "Vai trò"
+#: app/(admin)/admin/centers/[id]/page.tsx:422
+msgid "iRTicV"
+msgstr "Đổi"
 
-#: app/(admin)/admin/users/page.tsx:116
-msgid "BmTasn"
-msgstr "Ngày tạo"
+#: app/(admin)/admin/centers/[id]/page.tsx:431
+#: app/(admin)/admin/users/page.tsx:127
+msgid "uC8/dv"
+msgstr "Tìm theo tên hoặc email..."
 
-#: app/(admin)/admin/users/page.tsx:168
-msgid "XfwFLQ"
-msgstr "Hạ quyền"
-
-#: app/(admin)/admin/users/page.tsx:168
-msgid "KcVRf4"
-msgstr "Nâng quyền"
-
-#: app/(admin)/admin/users/page.tsx:174
-msgid "MVyyJk"
-msgstr "Xóa người dùng \"{userName}\"? Thao tác không thể hoàn tác."
-
-#: app/(admin)/admin/users/page.tsx:188
+#: app/(admin)/admin/centers/[id]/page.tsx:454
+#: app/(admin)/admin/users/page.tsx:218
 msgid "QdC2qc"
 msgstr "Không tìm thấy người dùng"
 
-#: app/(admin)/admin/users/page.tsx:218
+#: app/(admin)/admin/centers/[id]/page.tsx:482
+#: app/(admin)/admin/centers/[id]/page.tsx:562
+msgid "7a2L7R"
+msgstr "Cho phép truy cập trạm con"
+
+#: app/(admin)/admin/centers/[id]/page.tsx:490
+#: app/(admin)/admin/centers/[id]/page.tsx:570
+#: app/(admin)/admin/centers/page.tsx:428
+#: app/(admin)/admin/users/page.tsx:457
+#: app/(dashboard)/medicines/new/page.tsx:263
+#: app/(dashboard)/suppliers/page.tsx:90
+#: app/(dashboard)/transactions/inward/page.tsx:232
+#: app/(dashboard)/transactions/outward/page.tsx:143
+#: app/(dashboard)/transactions/transfer/page.tsx:148
+msgid "U2JaWL"
+msgstr "Đang lưu..."
+
+#: app/(admin)/admin/centers/[id]/page.tsx:490
+msgid "V3pb63"
+msgstr "Thêm"
+
+#: app/(admin)/admin/centers/[id]/page.tsx:570
+#: app/(admin)/admin/centers/page.tsx:428
+msgid "OsHKiv"
+msgstr "Cập nhật"
+
+#: app/(admin)/admin/centers/page.tsx:96
+msgid "XF7gb3"
+msgstr "Quản lý cơ sở y tế"
+
+#: app/(admin)/admin/centers/page.tsx:99
+msgid "WMmxat"
+msgstr "Thêm cơ sở"
+
+#: app/(admin)/admin/centers/page.tsx:107
+msgid "ZZE1mD"
+msgstr "Tìm kiếm cơ sở..."
+
+#: app/(admin)/admin/centers/page.tsx:121
+#: app/(dashboard)/suppliers/page.tsx:115
+msgid "YCdbKA"
+msgstr "Mã"
+
+#: app/(admin)/admin/centers/page.tsx:122
+#: app/(admin)/admin/centers/page.tsx:345
+msgid "GHubID"
+msgstr "Tên cơ sở"
+
+#: app/(admin)/admin/centers/page.tsx:123
+#: app/(admin)/admin/centers/page.tsx:363
+#: app/(dashboard)/medicines/[id]/page.tsx:199
+#: app/(dashboard)/settings/page.tsx:44
+#: app/(dashboard)/transactions/page.tsx:116
+msgid "OTTdny"
+msgstr "Loại"
+
+#: app/(admin)/admin/centers/page.tsx:125
+msgid "Nb1cb0"
+msgstr "Trạng thái"
+
+#: app/(admin)/admin/centers/page.tsx:183
+#: app/(admin)/admin/centers/page.tsx:248
+msgid "C4LUh1"
+msgstr "Ngưng hoạt động"
+
+#: app/(admin)/admin/centers/page.tsx:195
+msgid "GPAY+b"
+msgstr "Chưa có cơ sở nào"
+
+#: app/(admin)/admin/centers/page.tsx:212
+msgid "k+hNuI"
+msgstr "Cập nhật cơ sở"
+
+#: app/(admin)/admin/centers/page.tsx:212
+msgid "+1xoAq"
+msgstr "Thêm cơ sở mới"
+
+#: app/(admin)/admin/centers/page.tsx:216
+msgid "6X/Tp6"
+msgstr "Chỉnh sửa thông tin cơ sở y tế"
+
+#: app/(admin)/admin/centers/page.tsx:217
+msgid "9hHo43"
+msgstr "Nhập thông tin cơ sở y tế mới"
+
+#: app/(admin)/admin/centers/page.tsx:235
+msgid "TrqL8/"
+msgstr "Ngưng hoạt động cơ sở"
+
+#: app/(admin)/admin/centers/page.tsx:237
+msgid "QSooDr"
+msgstr "Bạn có chắc muốn ngưng hoạt động cơ sở \"{centerName}\"? Cơ sở sẽ không còn hiển thị cho người dùng."
+
+#: app/(admin)/admin/centers/page.tsx:354
+#: app/(dashboard)/settings/page.tsx:40
+msgid "rj5XsP"
+msgstr "Mã cơ sở"
+
+#: app/(admin)/admin/centers/page.tsx:370
+msgid "MC2nPD"
+msgstr "Trạm vệ tinh"
+
+#: app/(admin)/admin/centers/page.tsx:389
+#: app/(dashboard)/suppliers/page.tsx:84
+msgid "R4zdpj"
+msgstr "Địa chỉ"
+
+#: app/(admin)/admin/centers/page.tsx:397
+#: app/(admin)/admin/users/page.tsx:435
+msgid "z6HcUv"
+msgstr "Số điện thoại"
+
+#: app/(admin)/admin/centers/page.tsx:414
+msgid "2ANUD0"
+msgstr "Số giấy phép"
+
+#: app/(admin)/admin/centers/page.tsx:428
+#: app/(admin)/admin/users/page.tsx:457
+msgid "Cbn7Np"
+msgstr "Tạo mới"
+
+#: app/(admin)/admin/users/page.tsx:116
+msgid "9K8/4Q"
+msgstr "Quản lý người dùng"
+
+#: app/(admin)/admin/users/page.tsx:119
+msgid "1RLAkW"
+msgstr "Thêm người dùng"
+
+#: app/(admin)/admin/users/page.tsx:146
+msgid "BmTasn"
+msgstr "Ngày tạo"
+
+#: app/(admin)/admin/users/page.tsx:200
+msgid "XfwFLQ"
+msgstr "Hạ quyền"
+
+#: app/(admin)/admin/users/page.tsx:200
+msgid "KcVRf4"
+msgstr "Nâng quyền"
+
+#: app/(admin)/admin/users/page.tsx:248
 msgid "cLLhVD"
 msgstr "Vai trò hệ thống"
 
-#: app/(admin)/admin/users/page.tsx:223
+#: app/(admin)/admin/users/page.tsx:253
 #: app/(dashboard)/suppliers/page.tsx:68
 msgid "rhgPEy"
 msgstr "Điện thoại"
 
-#: app/(admin)/admin/users/page.tsx:229
+#: app/(admin)/admin/users/page.tsx:259
 msgid "D6h+3S"
 msgstr "Họ tên"
 
-#: app/(admin)/admin/users/page.tsx:237
+#: app/(admin)/admin/users/page.tsx:267
 msgid "nDRWqo"
 msgstr "Cơ sở trực thuộc"
 
-#: app/(admin)/admin/users/page.tsx:260
+#: app/(admin)/admin/users/page.tsx:290
 msgid "CwkxFC"
 msgstr "Chọn người dùng để xem chi tiết"
+
+#: app/(admin)/admin/users/page.tsx:300
+msgid "RwjQzm"
+msgstr "Thêm người dùng mới"
+
+#: app/(admin)/admin/users/page.tsx:301
+msgid "xrbIhn"
+msgstr "Nhập thông tin người dùng mới"
+
+#: app/(admin)/admin/users/page.tsx:319
+msgid "k/5fPY"
+msgstr "Xóa người dùng"
+
+#: app/(admin)/admin/users/page.tsx:321
+msgid "MVyyJk"
+msgstr "Xóa người dùng \"{userName}\"? Thao tác không thể hoàn tác."
+
+#: app/(admin)/admin/users/page.tsx:394
+msgid "4ShCVD"
+msgstr "Tên"
+
+#: app/(admin)/admin/users/page.tsx:413
+#: app/(auth)/login/page.tsx:85
+#: app/(auth)/register/page.tsx:105
+msgid "w7y3kr"
+msgstr "Mật khẩu"
+
+#: app/(admin)/admin/users/page.tsx:443
+msgid "8LN49D"
+msgstr "Họ tên (tiếng Việt)"
 
 #: app/(admin)/layout.tsx:21
 msgid "lMnkqT"
@@ -262,11 +419,6 @@ msgstr "Đăng nhập"
 #: app/(auth)/login/page.tsx:56
 msgid "+7BWoB"
 msgstr "Nhập thông tin tài khoản của bạn"
-
-#: app/(auth)/login/page.tsx:85
-#: app/(auth)/register/page.tsx:105
-msgid "w7y3kr"
-msgstr "Mật khẩu"
 
 #: app/(auth)/login/page.tsx:100
 msgid "DEiKp3"
@@ -502,13 +654,6 @@ msgstr "Bảo quản"
 #: app/(dashboard)/medicines/[id]/page.tsx:125
 msgid "38l6Br"
 msgstr "Gây nghiện"
-
-#: app/(dashboard)/medicines/[id]/page.tsx:126
-#: app/(dashboard)/medicines/[id]/page.tsx:130
-#: app/(dashboard)/medicines/[id]/page.tsx:134
-#: app/(dashboard)/medicines/[id]/page.tsx:138
-msgid "F1tk89"
-msgstr "Có"
 
 #: app/(dashboard)/medicines/[id]/page.tsx:129
 #: app/(dashboard)/medicines/page.tsx:108

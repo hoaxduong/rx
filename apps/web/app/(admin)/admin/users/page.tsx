@@ -3,8 +3,27 @@
 import { useState } from "react"
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
 import { useExtracted } from "next-intl"
+import { useSession } from "@/lib/auth-client"
 import { Button } from "@workspace/ui/components/button"
-import { Search, User, Shield, Trash2 } from "lucide-react"
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@workspace/ui/components/dialog"
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@workspace/ui/components/alert-dialog"
+import { Plus, Search, User, Shield, Trash2 } from "lucide-react"
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"
 
@@ -30,8 +49,12 @@ type UserDetail = UserItem & {
 export default function AdminUsersPage() {
   const queryClient = useQueryClient()
   const t = useExtracted()
+  const session = useSession()
+  const currentUserId = session.data?.user?.id
   const [search, setSearch] = useState("")
   const [selectedUserId, setSelectedUserId] = useState<string | null>(null)
+  const [dialogOpen, setDialogOpen] = useState(false)
+  const [deleteTarget, setDeleteTarget] = useState<UserItem | null>(null)
 
   const { data, isLoading } = useQuery({
     queryKey: ["admin", "users", search],
@@ -82,13 +105,20 @@ export default function AdminUsersPage() {
     },
     onSuccess: () => {
       setSelectedUserId(null)
+      setDeleteTarget(null)
       queryClient.invalidateQueries({ queryKey: ["admin", "users"] })
     },
   })
 
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold">{t("Quản lý người dùng")}</h1>
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-bold">{t("Quản lý người dùng")}</h1>
+        <Button onClick={() => setDialogOpen(true)}>
+          <Plus className="mr-1 h-4 w-4" />
+          {t("Thêm người dùng")}
+        </Button>
+      </div>
 
       <div className="relative">
         <Search className="text-muted-foreground absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" />
@@ -155,29 +185,29 @@ export default function AdminUsersPage() {
                       </td>
                       <td className="px-4 py-3 text-right">
                         <div className="flex items-center justify-end gap-1" onClick={(e) => e.stopPropagation()}>
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            onClick={() =>
-                              toggleRoleMutation.mutate({
-                                id: user.id,
-                                role: user.role === "super_admin" ? "user" : "super_admin",
-                              })
-                            }
-                          >
-                            {user.role === "super_admin" ? t("Hạ quyền") : t("Nâng quyền")}
-                          </Button>
-                          <Button
-                            variant="ghost"
-                            size="icon-sm"
-                            onClick={() => {
-                              if (confirm(t('Xóa người dùng "{userName}"? Thao tác không thể hoàn tác.', { userName: user.name }))) {
-                                deleteMutation.mutate(user.id)
-                              }
-                            }}
-                          >
-                            <Trash2 className="h-4 w-4" />
-                          </Button>
+                          {user.id !== currentUserId && (
+                            <>
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                onClick={() =>
+                                  toggleRoleMutation.mutate({
+                                    id: user.id,
+                                    role: user.role === "super_admin" ? "user" : "super_admin",
+                                  })
+                                }
+                              >
+                                {user.role === "super_admin" ? t("Hạ quyền") : t("Nâng quyền")}
+                              </Button>
+                              <Button
+                                variant="ghost"
+                                size="icon-sm"
+                                onClick={() => setDeleteTarget(user)}
+                              >
+                                <Trash2 className="h-4 w-4" />
+                              </Button>
+                            </>
+                          )}
                         </div>
                       </td>
                     </tr>
@@ -262,6 +292,171 @@ export default function AdminUsersPage() {
           )}
         </div>
       </div>
+
+      {/* Add User Dialog */}
+      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>{t("Thêm người dùng mới")}</DialogTitle>
+            <DialogDescription>{t("Nhập thông tin người dùng mới")}</DialogDescription>
+          </DialogHeader>
+          <UserForm
+            onSuccess={() => {
+              setDialogOpen(false)
+              queryClient.invalidateQueries({ queryKey: ["admin", "users"] })
+            }}
+            onCancel={() => setDialogOpen(false)}
+          />
+        </DialogContent>
+      </Dialog>
+
+      {/* Delete Confirmation */}
+      <AlertDialog open={!!deleteTarget} onOpenChange={(open) => {
+        if (!open) setDeleteTarget(null)
+      }}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>{t("Xóa người dùng")}</AlertDialogTitle>
+            <AlertDialogDescription>
+              {t('Xóa người dùng "{userName}"? Thao tác không thể hoàn tác.', {
+                userName: deleteTarget?.name ?? "",
+              })}
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>{t("Hủy")}</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={() => deleteTarget && deleteMutation.mutate(deleteTarget.id)}
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+            >
+              {deleteMutation.isPending ? t("Đang xử lý...") : t("Xóa")}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
+  )
+}
+
+function UserForm({
+  onSuccess,
+  onCancel,
+}: {
+  onSuccess: () => void
+  onCancel: () => void
+}) {
+  const t = useExtracted()
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    password: "",
+    role: "user" as "user" | "super_admin",
+    phone: "",
+    fullNameVi: "",
+  })
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState("")
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    setLoading(true)
+    setError("")
+
+    const body: Record<string, any> = { ...form }
+    if (!body.phone) delete body.phone
+    if (!body.fullNameVi) delete body.fullNameVi
+
+    try {
+      const res = await fetch(`${apiUrl}/api/admin/users`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify(body),
+      })
+      if (!res.ok) {
+        const data = await res.json()
+        throw new Error(data.error || t("Lỗi khi lưu"))
+      }
+      onSuccess()
+    } catch (err: any) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      {error && <div className="text-destructive text-sm">{error}</div>}
+
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label className="text-sm font-medium">{t("Tên")} *</label>
+          <input
+            required
+            value={form.name}
+            onChange={(e) => setForm({ ...form, name: e.target.value })}
+            className="border-input bg-background mt-1 h-9 w-full rounded-md border px-3 text-sm"
+          />
+        </div>
+        <div>
+          <label className="text-sm font-medium">Email *</label>
+          <input
+            required
+            type="email"
+            value={form.email}
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
+            className="border-input bg-background mt-1 h-9 w-full rounded-md border px-3 text-sm"
+          />
+        </div>
+        <div>
+          <label className="text-sm font-medium">{t("Mật khẩu")} *</label>
+          <input
+            required
+            type="password"
+            minLength={6}
+            value={form.password}
+            onChange={(e) => setForm({ ...form, password: e.target.value })}
+            className="border-input bg-background mt-1 h-9 w-full rounded-md border px-3 text-sm"
+          />
+        </div>
+        <div>
+          <label className="text-sm font-medium">{t("Vai trò")}</label>
+          <select
+            value={form.role}
+            onChange={(e) => setForm({ ...form, role: e.target.value as any })}
+            className="border-input bg-background mt-1 h-9 w-full rounded-md border px-3 text-sm"
+          >
+            <option value="user">User</option>
+            <option value="super_admin">Super Admin</option>
+          </select>
+        </div>
+        <div>
+          <label className="text-sm font-medium">{t("Số điện thoại")}</label>
+          <input
+            value={form.phone}
+            onChange={(e) => setForm({ ...form, phone: e.target.value })}
+            className="border-input bg-background mt-1 h-9 w-full rounded-md border px-3 text-sm"
+          />
+        </div>
+        <div>
+          <label className="text-sm font-medium">{t("Họ tên (tiếng Việt)")}</label>
+          <input
+            value={form.fullNameVi}
+            onChange={(e) => setForm({ ...form, fullNameVi: e.target.value })}
+            className="border-input bg-background mt-1 h-9 w-full rounded-md border px-3 text-sm"
+          />
+        </div>
+      </div>
+
+      <DialogFooter>
+        <Button type="button" variant="outline" onClick={onCancel}>
+          {t("Hủy")}
+        </Button>
+        <Button type="submit" disabled={loading}>
+          {loading ? t("Đang lưu...") : t("Tạo mới")}
+        </Button>
+      </DialogFooter>
+    </form>
   )
 }

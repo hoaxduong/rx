@@ -6,20 +6,10 @@ msgstr ""
 "X-Generator: next-intl\n"
 "X-Crowdin-SourceKey: msgstr\n"
 
-#: app/(admin)/admin/centers/page.tsx:56
-msgid "XF7gb3"
-msgstr ""
-
-#: app/(admin)/admin/centers/page.tsx:59
-msgid "WMmxat"
-msgstr ""
-
-#: app/(admin)/admin/centers/page.tsx:80
-msgid "ZZE1mD"
-msgstr ""
-
-#: app/(admin)/admin/centers/page.tsx:88
-#: app/(admin)/admin/users/page.tsx:108
+#: app/(admin)/admin/centers/[id]/page.tsx:130
+#: app/(admin)/admin/centers/[id]/page.tsx:219
+#: app/(admin)/admin/centers/page.tsx:115
+#: app/(admin)/admin/users/page.tsx:138
 #: app/(admin)/layout.tsx:35
 #: app/(dashboard)/alerts/page.tsx:94
 #: app/(dashboard)/inventory/page.tsx:130
@@ -31,92 +21,77 @@ msgstr ""
 msgid "ekm1jk"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:94
-#: app/(dashboard)/suppliers/page.tsx:115
-msgid "YCdbKA"
+#: app/(admin)/admin/centers/[id]/page.tsx:138
+msgid "w6c+XZ"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:95
-#: app/(admin)/admin/centers/page.tsx:263
-msgid "GHubID"
+#: app/(admin)/admin/centers/[id]/page.tsx:140
+msgid "vN2dwo"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:96
-#: app/(admin)/admin/centers/page.tsx:281
-#: app/(dashboard)/medicines/[id]/page.tsx:199
-#: app/(dashboard)/settings/page.tsx:44
-#: app/(dashboard)/transactions/page.tsx:116
-msgid "OTTdny"
+#: app/(admin)/admin/centers/[id]/page.tsx:150
+msgid "/byibl"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:97
-#: app/(admin)/admin/centers/page.tsx:292
-msgid "sbjI9v"
-msgstr ""
-
-#: app/(admin)/admin/centers/page.tsx:98
-msgid "Nb1cb0"
-msgstr ""
-
-#: app/(admin)/admin/centers/page.tsx:99
-#: app/(admin)/admin/users/page.tsx:117
-msgid "PsZKZm"
-msgstr ""
-
-#: app/(admin)/admin/centers/page.tsx:126
-#: app/(admin)/admin/centers/page.tsx:287
+#: app/(admin)/admin/centers/[id]/page.tsx:169
+#: app/(admin)/admin/centers/page.tsx:153
+#: app/(admin)/admin/centers/page.tsx:369
 #: components/dashboard/header.tsx:39
 msgid "X+EMsu"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:126
+#: app/(admin)/admin/centers/[id]/page.tsx:169
+#: app/(admin)/admin/centers/page.tsx:153
 #: components/dashboard/header.tsx:39
 msgid "2VKr2I"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:138
+#: app/(admin)/admin/centers/[id]/page.tsx:176
+#: app/(admin)/admin/centers/page.tsx:165
 msgid "CSrQCz"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:138
-#: app/(admin)/admin/centers/page.tsx:159
+#: app/(admin)/admin/centers/[id]/page.tsx:176
+#: app/(admin)/admin/centers/page.tsx:165
 msgid "bBUif4"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:148
-msgid "MOmOfG"
+#: app/(admin)/admin/centers/[id]/page.tsx:198
+#: app/(admin)/admin/centers/page.tsx:124
+#: app/(admin)/admin/centers/page.tsx:374
+msgid "sbjI9v"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:154
-msgid "5sm6us"
+#: app/(admin)/admin/centers/[id]/page.tsx:209
+#: app/(admin)/admin/centers/[id]/page.tsx:225
+msgid "WYLPrI"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:168
-msgid "GPAY+b"
+#: app/(admin)/admin/centers/[id]/page.tsx:214
+#: app/(admin)/admin/centers/[id]/page.tsx:289
+msgid "yDCHqf"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:245
-msgid "R4LaLM"
+#: app/(admin)/admin/centers/[id]/page.tsx:226
+#: app/(admin)/admin/centers/[id]/page.tsx:462
+#: app/(admin)/admin/centers/[id]/page.tsx:543
+#: app/(admin)/admin/users/page.tsx:145
+#: app/(admin)/admin/users/page.tsx:424
+msgid "8QXqaW"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:257
-msgid "k+hNuI"
+#: app/(admin)/admin/centers/[id]/page.tsx:227
+msgid "6hweL4"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:257
-msgid "+1xoAq"
+#: app/(admin)/admin/centers/[id]/page.tsx:228
+#: app/(admin)/admin/centers/page.tsx:126
+#: app/(admin)/admin/users/page.tsx:147
+msgid "PsZKZm"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:272
-#: app/(dashboard)/settings/page.tsx:40
-msgid "rj5XsP"
-msgstr ""
-
-#: app/(admin)/admin/centers/page.tsx:288
-msgid "MC2nPD"
-msgstr ""
-
-#: app/(admin)/admin/centers/page.tsx:298
+#: app/(admin)/admin/centers/[id]/page.tsx:247
+#: app/(admin)/admin/centers/page.tsx:380
 #: app/(dashboard)/medicines/[id]/page.tsx:126
 #: app/(dashboard)/medicines/[id]/page.tsx:130
 #: app/(dashboard)/medicines/[id]/page.tsx:134
@@ -124,37 +99,52 @@ msgstr ""
 msgid "JVtIrS"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:307
-#: app/(dashboard)/suppliers/page.tsx:84
-msgid "R4zdpj"
+#: app/(admin)/admin/centers/[id]/page.tsx:247
+#: app/(dashboard)/medicines/[id]/page.tsx:126
+#: app/(dashboard)/medicines/[id]/page.tsx:130
+#: app/(dashboard)/medicines/[id]/page.tsx:134
+#: app/(dashboard)/medicines/[id]/page.tsx:138
+msgid "F1tk89"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:315
-msgid "z6HcUv"
+#: app/(admin)/admin/centers/[id]/page.tsx:256
+#: app/(admin)/admin/centers/page.tsx:174
+msgid "MOmOfG"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:332
-msgid "2ANUD0"
+#: app/(admin)/admin/centers/[id]/page.tsx:264
+#: app/(admin)/admin/centers/[id]/page.tsx:344
+#: app/(admin)/admin/users/page.tsx:332
+msgid "pKGIyy"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:343
-#: app/(dashboard)/medicines/new/page.tsx:263
-#: app/(dashboard)/suppliers/page.tsx:90
-#: app/(dashboard)/transactions/inward/page.tsx:232
-#: app/(dashboard)/transactions/outward/page.tsx:143
-#: app/(dashboard)/transactions/transfer/page.tsx:148
-msgid "U2JaWL"
+#: app/(admin)/admin/centers/[id]/page.tsx:275
+msgid "Q00ZiX"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:343
-msgid "OsHKiv"
+#: app/(admin)/admin/centers/[id]/page.tsx:290
+msgid "6KvIuW"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:343
-msgid "Cbn7Np"
+#: app/(admin)/admin/centers/[id]/page.tsx:308
+msgid "c5fvkh"
 msgstr ""
 
-#: app/(admin)/admin/centers/page.tsx:346
+#: app/(admin)/admin/centers/[id]/page.tsx:331
+msgid "Z3tEkl"
+msgstr ""
+
+#: app/(admin)/admin/centers/[id]/page.tsx:333
+msgid "sTzIv/"
+msgstr ""
+
+#: app/(admin)/admin/centers/[id]/page.tsx:339
+#: app/(admin)/admin/centers/[id]/page.tsx:487
+#: app/(admin)/admin/centers/[id]/page.tsx:567
+#: app/(admin)/admin/centers/page.tsx:243
+#: app/(admin)/admin/centers/page.tsx:425
+#: app/(admin)/admin/users/page.tsx:327
+#: app/(admin)/admin/users/page.tsx:454
 #: app/(dashboard)/medicines/new/page.tsx:266
 #: app/(dashboard)/suppliers/page.tsx:92
 #: app/(dashboard)/transactions/inward/page.tsx:235
@@ -163,63 +153,230 @@ msgstr ""
 msgid "eNPJPz"
 msgstr ""
 
-#: app/(admin)/admin/users/page.tsx:91
-msgid "9K8/4Q"
+#: app/(admin)/admin/centers/[id]/page.tsx:344
+#: app/(admin)/admin/centers/page.tsx:248
+#: app/(admin)/admin/users/page.tsx:332
+msgid "rYpW3S"
 msgstr ""
 
-#: app/(admin)/admin/users/page.tsx:97
-msgid "uC8/dv"
+#: app/(admin)/admin/centers/[id]/page.tsx:398
+#: app/(admin)/admin/centers/[id]/page.tsx:528
+#: app/(admin)/admin/centers/page.tsx:329
+#: app/(admin)/admin/users/page.tsx:378
+msgid "R4LaLM"
 msgstr ""
 
-#: app/(admin)/admin/users/page.tsx:114
+#: app/(admin)/admin/centers/[id]/page.tsx:414
+#: app/(admin)/admin/users/page.tsx:144
 #: app/(admin)/layout.tsx:22
 #: components/dashboard/header.tsx:51
 msgid "8Cg+nB"
 msgstr ""
 
-#: app/(admin)/admin/users/page.tsx:115
-msgid "8QXqaW"
+#: app/(admin)/admin/centers/[id]/page.tsx:422
+msgid "iRTicV"
 msgstr ""
 
-#: app/(admin)/admin/users/page.tsx:116
-msgid "BmTasn"
+#: app/(admin)/admin/centers/[id]/page.tsx:431
+#: app/(admin)/admin/users/page.tsx:127
+msgid "uC8/dv"
 msgstr ""
 
-#: app/(admin)/admin/users/page.tsx:168
-msgid "XfwFLQ"
-msgstr ""
-
-#: app/(admin)/admin/users/page.tsx:168
-msgid "KcVRf4"
-msgstr ""
-
-#: app/(admin)/admin/users/page.tsx:174
-msgid "MVyyJk"
-msgstr ""
-
-#: app/(admin)/admin/users/page.tsx:188
+#: app/(admin)/admin/centers/[id]/page.tsx:454
+#: app/(admin)/admin/users/page.tsx:218
 msgid "QdC2qc"
 msgstr ""
 
-#: app/(admin)/admin/users/page.tsx:218
+#: app/(admin)/admin/centers/[id]/page.tsx:482
+#: app/(admin)/admin/centers/[id]/page.tsx:562
+msgid "7a2L7R"
+msgstr ""
+
+#: app/(admin)/admin/centers/[id]/page.tsx:490
+#: app/(admin)/admin/centers/[id]/page.tsx:570
+#: app/(admin)/admin/centers/page.tsx:428
+#: app/(admin)/admin/users/page.tsx:457
+#: app/(dashboard)/medicines/new/page.tsx:263
+#: app/(dashboard)/suppliers/page.tsx:90
+#: app/(dashboard)/transactions/inward/page.tsx:232
+#: app/(dashboard)/transactions/outward/page.tsx:143
+#: app/(dashboard)/transactions/transfer/page.tsx:148
+msgid "U2JaWL"
+msgstr ""
+
+#: app/(admin)/admin/centers/[id]/page.tsx:490
+msgid "V3pb63"
+msgstr ""
+
+#: app/(admin)/admin/centers/[id]/page.tsx:570
+#: app/(admin)/admin/centers/page.tsx:428
+msgid "OsHKiv"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:96
+msgid "XF7gb3"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:99
+msgid "WMmxat"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:107
+msgid "ZZE1mD"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:121
+#: app/(dashboard)/suppliers/page.tsx:115
+msgid "YCdbKA"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:122
+#: app/(admin)/admin/centers/page.tsx:345
+msgid "GHubID"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:123
+#: app/(admin)/admin/centers/page.tsx:363
+#: app/(dashboard)/medicines/[id]/page.tsx:199
+#: app/(dashboard)/settings/page.tsx:44
+#: app/(dashboard)/transactions/page.tsx:116
+msgid "OTTdny"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:125
+msgid "Nb1cb0"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:183
+#: app/(admin)/admin/centers/page.tsx:248
+msgid "C4LUh1"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:195
+msgid "GPAY+b"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:212
+msgid "k+hNuI"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:212
+msgid "+1xoAq"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:216
+msgid "6X/Tp6"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:217
+msgid "9hHo43"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:235
+msgid "TrqL8/"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:237
+msgid "QSooDr"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:354
+#: app/(dashboard)/settings/page.tsx:40
+msgid "rj5XsP"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:370
+msgid "MC2nPD"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:389
+#: app/(dashboard)/suppliers/page.tsx:84
+msgid "R4zdpj"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:397
+#: app/(admin)/admin/users/page.tsx:435
+msgid "z6HcUv"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:414
+msgid "2ANUD0"
+msgstr ""
+
+#: app/(admin)/admin/centers/page.tsx:428
+#: app/(admin)/admin/users/page.tsx:457
+msgid "Cbn7Np"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:116
+msgid "9K8/4Q"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:119
+msgid "1RLAkW"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:146
+msgid "BmTasn"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:200
+msgid "XfwFLQ"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:200
+msgid "KcVRf4"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:248
 msgid "cLLhVD"
 msgstr ""
 
-#: app/(admin)/admin/users/page.tsx:223
+#: app/(admin)/admin/users/page.tsx:253
 #: app/(dashboard)/suppliers/page.tsx:68
 msgid "rhgPEy"
 msgstr ""
 
-#: app/(admin)/admin/users/page.tsx:229
+#: app/(admin)/admin/users/page.tsx:259
 msgid "D6h+3S"
 msgstr ""
 
-#: app/(admin)/admin/users/page.tsx:237
+#: app/(admin)/admin/users/page.tsx:267
 msgid "nDRWqo"
 msgstr ""
 
-#: app/(admin)/admin/users/page.tsx:260
+#: app/(admin)/admin/users/page.tsx:290
 msgid "CwkxFC"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:300
+msgid "RwjQzm"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:301
+msgid "xrbIhn"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:319
+msgid "k/5fPY"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:321
+msgid "MVyyJk"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:394
+msgid "4ShCVD"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:413
+#: app/(auth)/login/page.tsx:85
+#: app/(auth)/register/page.tsx:105
+msgid "w7y3kr"
+msgstr ""
+
+#: app/(admin)/admin/users/page.tsx:443
+msgid "8LN49D"
 msgstr ""
 
 #: app/(admin)/layout.tsx:21
@@ -261,11 +418,6 @@ msgstr ""
 
 #: app/(auth)/login/page.tsx:56
 msgid "+7BWoB"
-msgstr ""
-
-#: app/(auth)/login/page.tsx:85
-#: app/(auth)/register/page.tsx:105
-msgid "w7y3kr"
 msgstr ""
 
 #: app/(auth)/login/page.tsx:100
@@ -501,13 +653,6 @@ msgstr ""
 
 #: app/(dashboard)/medicines/[id]/page.tsx:125
 msgid "38l6Br"
-msgstr ""
-
-#: app/(dashboard)/medicines/[id]/page.tsx:126
-#: app/(dashboard)/medicines/[id]/page.tsx:130
-#: app/(dashboard)/medicines/[id]/page.tsx:134
-#: app/(dashboard)/medicines/[id]/page.tsx:138
-msgid "F1tk89"
 msgstr ""
 
 #: app/(dashboard)/medicines/[id]/page.tsx:129

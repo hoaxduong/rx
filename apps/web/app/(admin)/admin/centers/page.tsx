@@ -1,10 +1,29 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
 import { useExtracted } from "next-intl"
 import { Button } from "@workspace/ui/components/button"
-import { Plus, Search, Building, MapPin } from "lucide-react"
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@workspace/ui/components/dialog"
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@workspace/ui/components/alert-dialog"
+import { Plus, Search, Building, MapPin, Pencil, Archive } from "lucide-react"
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"
 
@@ -22,11 +41,13 @@ type Center = {
 }
 
 export default function AdminCentersPage() {
+  const router = useRouter()
   const queryClient = useQueryClient()
   const t = useExtracted()
   const [search, setSearch] = useState("")
-  const [showForm, setShowForm] = useState(false)
-  const [editingId, setEditingId] = useState<string | null>(null)
+  const [dialogOpen, setDialogOpen] = useState(false)
+  const [editingCenter, setEditingCenter] = useState<Center | null>(null)
+  const [archiveTarget, setArchiveTarget] = useState<Center | null>(null)
 
   const { data, isLoading } = useQuery({
     queryKey: ["admin", "centers", search],
@@ -39,7 +60,7 @@ export default function AdminCentersPage() {
     },
   })
 
-  const deleteMutation = useMutation({
+  const archiveMutation = useMutation({
     mutationFn: async (id: string) => {
       const res = await fetch(`${apiUrl}/api/admin/centers/${id}`, {
         method: "DELETE",
@@ -47,31 +68,37 @@ export default function AdminCentersPage() {
       })
       return res.json()
     },
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["admin", "centers"] }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["admin", "centers"] })
+      setArchiveTarget(null)
+    },
   })
+
+  function openAdd() {
+    setEditingCenter(null)
+    setDialogOpen(true)
+  }
+
+  function openEdit(center: Center) {
+    setEditingCenter(center)
+    setDialogOpen(true)
+  }
+
+  function handleFormSuccess() {
+    setDialogOpen(false)
+    setEditingCenter(null)
+    queryClient.invalidateQueries({ queryKey: ["admin", "centers"] })
+  }
 
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold">{t("Quản lý cơ sở y tế")}</h1>
-        <Button onClick={() => { setShowForm(true); setEditingId(null) }}>
+        <Button onClick={openAdd}>
           <Plus className="mr-1 h-4 w-4" />
           {t("Thêm cơ sở")}
         </Button>
       </div>
-
-      {showForm && (
-        <CenterForm
-          editingId={editingId}
-          onClose={() => { setShowForm(false); setEditingId(null) }}
-          onSuccess={() => {
-            setShowForm(false)
-            setEditingId(null)
-            queryClient.invalidateQueries({ queryKey: ["admin", "centers"] })
-          }}
-          centers={data?.items || []}
-        />
-      )}
 
       <div className="relative">
         <Search className="text-muted-foreground absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" />
@@ -101,7 +128,7 @@ export default function AdminCentersPage() {
             </thead>
             <tbody>
               {data?.items.map((center) => (
-                <tr key={center.id} className="border-b last:border-0">
+                <tr key={center.id} className="cursor-pointer border-b last:border-0 transition-colors hover:bg-muted/30" onClick={() => router.push(`/admin/centers/${center.id}`)}>
                   <td className="px-4 py-3 font-mono text-xs">{center.code}</td>
                   <td className="px-4 py-3">
                     <div className="flex items-center gap-2">
@@ -139,25 +166,25 @@ export default function AdminCentersPage() {
                     </span>
                   </td>
                   <td className="px-4 py-3 text-right">
-                    <div className="flex items-center justify-end gap-1">
+                    <div className="flex items-center justify-end gap-1" onClick={(e) => e.stopPropagation()}>
                       <Button
                         variant="ghost"
-                        size="sm"
-                        onClick={() => { setEditingId(center.id); setShowForm(true) }}
+                        size="icon-sm"
+                        onClick={() => openEdit(center)}
+                        title={t("Sửa")}
                       >
-                        {t("Sửa")}
+                        <Pencil className="h-4 w-4" />
                       </Button>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => {
-                          if (confirm(t('Ngưng hoạt động cơ sở "{centerName}"?', { centerName: center.name }))) {
-                            deleteMutation.mutate(center.id)
-                          }
-                        }}
-                      >
-                        {t("Ngưng")}
-                      </Button>
+                      {center.isActive && (
+                        <Button
+                          variant="ghost"
+                          size="icon-sm"
+                          onClick={() => setArchiveTarget(center)}
+                          title={t("Ngưng hoạt động")}
+                        >
+                          <Archive className="h-4 w-4" />
+                        </Button>
+                      )}
                     </div>
                   </td>
                 </tr>
@@ -173,19 +200,69 @@ export default function AdminCentersPage() {
           </table>
         </div>
       )}
+
+      {/* Add / Edit Dialog */}
+      <Dialog open={dialogOpen} onOpenChange={(open) => {
+        setDialogOpen(open)
+        if (!open) setEditingCenter(null)
+      }}>
+        <DialogContent className="max-w-2xl">
+          <DialogHeader>
+            <DialogTitle>
+              {editingCenter ? t("Cập nhật cơ sở") : t("Thêm cơ sở mới")}
+            </DialogTitle>
+            <DialogDescription>
+              {editingCenter
+                ? t("Chỉnh sửa thông tin cơ sở y tế")
+                : t("Nhập thông tin cơ sở y tế mới")}
+            </DialogDescription>
+          </DialogHeader>
+          <CenterForm
+            editingCenter={editingCenter}
+            onSuccess={handleFormSuccess}
+            onCancel={() => { setDialogOpen(false); setEditingCenter(null) }}
+            centers={data?.items || []}
+          />
+        </DialogContent>
+      </Dialog>
+
+      {/* Archive Confirmation */}
+      <AlertDialog open={!!archiveTarget} onOpenChange={(open) => {
+        if (!open) setArchiveTarget(null)
+      }}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>{t("Ngưng hoạt động cơ sở")}</AlertDialogTitle>
+            <AlertDialogDescription>
+              {t('Bạn có chắc muốn ngưng hoạt động cơ sở "{centerName}"? Cơ sở sẽ không còn hiển thị cho người dùng.', {
+                centerName: archiveTarget?.name ?? "",
+              })}
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>{t("Hủy")}</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={() => archiveTarget && archiveMutation.mutate(archiveTarget.id)}
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+            >
+              {archiveMutation.isPending ? t("Đang xử lý...") : t("Ngưng hoạt động")}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   )
 }
 
 function CenterForm({
-  editingId,
-  onClose,
+  editingCenter,
   onSuccess,
+  onCancel,
   centers,
 }: {
-  editingId: string | null
-  onClose: () => void
+  editingCenter: Center | null
   onSuccess: () => void
+  onCancel: () => void
   centers: Center[]
 }) {
   const t = useExtracted()
@@ -202,24 +279,31 @@ function CenterForm({
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
 
-  // Load existing data when editing
-  useState(() => {
-    if (editingId) {
-      const center = centers.find((c) => c.id === editingId)
-      if (center) {
-        setForm({
-          name: center.name,
-          code: center.code,
-          type: center.type,
-          parentId: center.parent?.id || "",
-          address: center.address || "",
-          phone: center.phone || "",
-          email: center.email || "",
-          licenseNumber: "",
-        })
-      }
+  useEffect(() => {
+    if (editingCenter) {
+      setForm({
+        name: editingCenter.name,
+        code: editingCenter.code,
+        type: editingCenter.type,
+        parentId: editingCenter.parent?.id || "",
+        address: editingCenter.address || "",
+        phone: editingCenter.phone || "",
+        email: editingCenter.email || "",
+        licenseNumber: "",
+      })
+    } else {
+      setForm({
+        name: "",
+        code: "",
+        type: "commune",
+        parentId: "",
+        address: "",
+        phone: "",
+        email: "",
+        licenseNumber: "",
+      })
     }
-  })
+  }, [editingCenter])
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -231,11 +315,11 @@ function CenterForm({
     if (!body.email) delete body.email
 
     try {
-      const url = editingId
-        ? `${apiUrl}/api/admin/centers/${editingId}`
+      const url = editingCenter
+        ? `${apiUrl}/api/admin/centers/${editingCenter.id}`
         : `${apiUrl}/api/admin/centers`
       const res = await fetch(url, {
-        method: editingId ? "PUT" : "POST",
+        method: editingCenter ? "PUT" : "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
         body: JSON.stringify(body),
@@ -253,12 +337,10 @@ function CenterForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-lg border p-4 space-y-4">
-      <h2 className="font-medium">{editingId ? t("Cập nhật cơ sở") : t("Thêm cơ sở mới")}</h2>
-
+    <form onSubmit={handleSubmit} className="space-y-4">
       {error && <div className="text-destructive text-sm">{error}</div>}
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label className="text-sm font-medium">{t("Tên cơ sở")} *</label>
           <input
@@ -297,7 +379,7 @@ function CenterForm({
           >
             <option value="">{t("Không")}</option>
             {centers
-              .filter((c) => c.id !== editingId && c.type === "commune")
+              .filter((c) => c.id !== editingCenter?.id && c.type === "commune")
               .map((c) => (
                 <option key={c.id} value={c.id}>{c.name}</option>
               ))}
@@ -338,14 +420,14 @@ function CenterForm({
         </div>
       </div>
 
-      <div className="flex gap-2">
-        <Button type="submit" disabled={loading}>
-          {loading ? t("Đang lưu...") : editingId ? t("Cập nhật") : t("Tạo mới")}
-        </Button>
-        <Button type="button" variant="outline" onClick={onClose}>
+      <DialogFooter>
+        <Button type="button" variant="outline" onClick={onCancel}>
           {t("Hủy")}
         </Button>
-      </div>
+        <Button type="submit" disabled={loading}>
+          {loading ? t("Đang lưu...") : editingCenter ? t("Cập nhật") : t("Tạo mới")}
+        </Button>
+      </DialogFooter>
     </form>
   )
 }
