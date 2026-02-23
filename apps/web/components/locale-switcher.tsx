@@ -1,6 +1,13 @@
 "use client"
 
 import { useLocale } from "next-intl"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@workspace/ui/components/select"
 
 const locales = [
   { code: "vi", label: "Tiếng Việt" },
@@ -16,16 +23,17 @@ export function LocaleSwitcher() {
   }
 
   return (
-    <select
-      value={locale}
-      onChange={(e) => switchLocale(e.target.value)}
-      className="border-input bg-background h-8 rounded-md border px-2 text-sm"
-    >
-      {locales.map((l) => (
-        <option key={l.code} value={l.code}>
-          {l.label}
-        </option>
-      ))}
-    </select>
+    <Select value={locale} onValueChange={switchLocale}>
+      <SelectTrigger className="h-8 text-sm">
+        <SelectValue />
+      </SelectTrigger>
+      <SelectContent>
+        {locales.map((l) => (
+          <SelectItem key={l.code} value={l.code}>
+            {l.label}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
   )
 }

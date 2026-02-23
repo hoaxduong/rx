@@ -6,6 +6,13 @@ import { useExtracted } from "next-intl"
 import { api } from "@/lib/api"
 import { useCenter } from "@/components/center-context"
 import { Button } from "@workspace/ui/components/button"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@workspace/ui/components/select"
 import { Plus, ArrowLeftRight } from "lucide-react"
 import Link from "next/link"
 
@@ -83,21 +90,25 @@ export default function TransactionsPage() {
 
       {/* Filters */}
       <div className="flex gap-4">
-        <select
-          value={typeFilter}
-          onChange={(e) => {
-            setTypeFilter(e.target.value)
+        <Select
+          value={typeFilter || "all"}
+          onValueChange={(value) => {
+            setTypeFilter(value === "all" ? "" : value)
             setPage(1)
           }}
-          className="border-input bg-background h-10 rounded-md border px-3 text-sm"
         >
-          <option value="">{t("Tất cả loại")}</option>
-          {Object.entries(typeLabels).map(([value, label]) => (
-            <option key={value} value={value}>
-              {label}
-            </option>
-          ))}
-        </select>
+          <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder={t("Tất cả loại")} />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">{t("Tất cả loại")}</SelectItem>
+            {Object.entries(typeLabels).map(([value, label]) => (
+              <SelectItem key={value} value={value}>
+                {label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
 
       {/* Transaction list */}

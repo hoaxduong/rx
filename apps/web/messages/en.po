@@ -18,6 +18,7 @@ msgstr ""
 #: app/(dashboard)/suppliers/page.tsx:109
 #: app/(dashboard)/transactions/page.tsx:107
 #: app/page.tsx:27
+#: components/dashboard/header.tsx:28
 msgid "ekm1jk"
 msgstr ""
 
@@ -36,13 +37,13 @@ msgstr ""
 #: app/(admin)/admin/centers/[id]/page.tsx:169
 #: app/(admin)/admin/centers/page.tsx:153
 #: app/(admin)/admin/centers/page.tsx:369
-#: components/dashboard/header.tsx:39
+#: components/dashboard/header.tsx:43
 msgid "X+EMsu"
 msgstr ""
 
 #: app/(admin)/admin/centers/[id]/page.tsx:169
 #: app/(admin)/admin/centers/page.tsx:153
-#: components/dashboard/header.tsx:39
+#: components/dashboard/header.tsx:43
 msgid "2VKr2I"
 msgstr ""
 
@@ -169,7 +170,7 @@ msgstr ""
 #: app/(admin)/admin/centers/[id]/page.tsx:414
 #: app/(admin)/admin/users/page.tsx:144
 #: app/(admin)/layout.tsx:22
-#: components/dashboard/header.tsx:51
+#: components/dashboard/header.tsx:55
 msgid "8Cg+nB"
 msgstr ""
 
@@ -384,7 +385,7 @@ msgid "lMnkqT"
 msgstr ""
 
 #: app/(admin)/layout.tsx:92
-#: components/dashboard/header.tsx:53
+#: components/dashboard/header.tsx:57
 msgid "BUTJBx"
 msgstr ""
 
@@ -496,7 +497,6 @@ msgstr ""
 #: app/(dashboard)/inventory/page.tsx:52
 #: app/(dashboard)/reports/page.tsx:73
 #: app/(dashboard)/transactions/page.tsx:50
-#: components/dashboard/header.tsx:36
 msgid "8BZ8aR"
 msgstr ""
 

@@ -23,6 +23,13 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@workspace/ui/components/alert-dialog"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@workspace/ui/components/select"
 import { Plus, Search, User, Shield, Trash2 } from "lucide-react"
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"
@@ -422,14 +429,15 @@ function UserForm({
         </div>
         <div>
           <label className="text-sm font-medium">{t("Vai trò")}</label>
-          <select
-            value={form.role}
-            onChange={(e) => setForm({ ...form, role: e.target.value as any })}
-            className="border-input bg-background mt-1 h-9 w-full rounded-md border px-3 text-sm"
-          >
-            <option value="user">User</option>
-            <option value="super_admin">Super Admin</option>
-          </select>
+          <Select value={form.role} onValueChange={(value) => setForm({ ...form, role: value as "user" | "super_admin" })}>
+            <SelectTrigger className="mt-1 w-full">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="user">User</SelectItem>
+              <SelectItem value="super_admin">Super Admin</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
         <div>
           <label className="text-sm font-medium">{t("Số điện thoại")}</label>

@@ -23,6 +23,13 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@workspace/ui/components/alert-dialog"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@workspace/ui/components/select"
 import { Plus, Search, Building, MapPin, Pencil, Archive } from "lucide-react"
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"
@@ -361,29 +368,31 @@ function CenterForm({
         </div>
         <div>
           <label className="text-sm font-medium">{t("Loại")}</label>
-          <select
-            value={form.type}
-            onChange={(e) => setForm({ ...form, type: e.target.value as any })}
-            className="border-input bg-background mt-1 h-9 w-full rounded-md border px-3 text-sm"
-          >
-            <option value="commune">{t("Xã")}</option>
-            <option value="satellite">{t("Trạm vệ tinh")}</option>
-          </select>
+          <Select value={form.type} onValueChange={(value) => setForm({ ...form, type: value as "commune" | "satellite" })}>
+            <SelectTrigger className="mt-1 w-full">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="commune">{t("Xã")}</SelectItem>
+              <SelectItem value="satellite">{t("Trạm vệ tinh")}</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
         <div>
           <label className="text-sm font-medium">{t("Trực thuộc")}</label>
-          <select
-            value={form.parentId}
-            onChange={(e) => setForm({ ...form, parentId: e.target.value })}
-            className="border-input bg-background mt-1 h-9 w-full rounded-md border px-3 text-sm"
-          >
-            <option value="">{t("Không")}</option>
-            {centers
-              .filter((c) => c.id !== editingCenter?.id && c.type === "commune")
-              .map((c) => (
-                <option key={c.id} value={c.id}>{c.name}</option>
-              ))}
-          </select>
+          <Select value={form.parentId || "none"} onValueChange={(value) => setForm({ ...form, parentId: value === "none" ? "" : value })}>
+            <SelectTrigger className="mt-1 w-full">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="none">{t("Không")}</SelectItem>
+              {centers
+                .filter((c) => c.id !== editingCenter?.id && c.type === "commune")
+                .map((c) => (
+                  <SelectItem key={c.id} value={c.id}>{c.name}</SelectItem>
+                ))}
+            </SelectContent>
+          </Select>
         </div>
         <div>
           <label className="text-sm font-medium">{t("Địa chỉ")}</label>

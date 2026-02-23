@@ -23,6 +23,13 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@workspace/ui/components/alert-dialog"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@workspace/ui/components/select"
 import { ArrowLeft, Plus, Search, Building, MapPin, Phone, Pencil, Trash2, Users } from "lucide-react"
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"
@@ -460,15 +467,16 @@ function AddMemberForm({
       {/* Role */}
       <div>
         <label className="text-sm font-medium">{t("Vai trò")} *</label>
-        <select
-          value={role}
-          onChange={(e) => setRole(e.target.value as CenterRole)}
-          className="border-input bg-background mt-1 h-9 w-full rounded-md border px-3 text-sm"
-        >
-          {ROLES.map((r) => (
-            <option key={r} value={r}>{ROLE_LABELS[r]}</option>
-          ))}
-        </select>
+        <Select value={role} onValueChange={(value) => setRole(value as CenterRole)}>
+          <SelectTrigger className="mt-1 w-full">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            {ROLES.map((r) => (
+              <SelectItem key={r} value={r}>{ROLE_LABELS[r]}</SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
 
       {/* canAccessChildren */}
@@ -541,15 +549,16 @@ function EditMemberForm({
 
       <div>
         <label className="text-sm font-medium">{t("Vai trò")}</label>
-        <select
-          value={role}
-          onChange={(e) => setRole(e.target.value as CenterRole)}
-          className="border-input bg-background mt-1 h-9 w-full rounded-md border px-3 text-sm"
-        >
-          {ROLES.map((r) => (
-            <option key={r} value={r}>{ROLE_LABELS[r]}</option>
-          ))}
-        </select>
+        <Select value={role} onValueChange={(value) => setRole(value as CenterRole)}>
+          <SelectTrigger className="mt-1 w-full">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            {ROLES.map((r) => (
+              <SelectItem key={r} value={r}>{ROLE_LABELS[r]}</SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
 
       <label className="flex items-center gap-2 text-sm">

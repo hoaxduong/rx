@@ -1,13 +1,20 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import { useForm } from "react-hook-form"
+import { useForm, Controller } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { useExtracted } from "next-intl"
 import { api } from "@/lib/api"
 import { Button } from "@workspace/ui/components/button"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@workspace/ui/components/select"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 
@@ -78,6 +85,7 @@ export default function NewMedicinePage() {
 
   const {
     register,
+    control,
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<MedicineForm>({
@@ -154,14 +162,24 @@ export default function NewMedicinePage() {
           <div className="grid gap-4 md:grid-cols-3">
             <div className="space-y-2">
               <label className="text-sm font-medium">{t("Dạng bào chế")}</label>
-              <select className={inputClass} {...register("dosageForm")}>
-                <option value="">{t("Chọn...")}</option>
-                {dosageForms.map((d) => (
-                  <option key={d.value} value={d.value}>
-                    {d.label}
-                  </option>
-                ))}
-              </select>
+              <Controller
+                name="dosageForm"
+                control={control}
+                render={({ field }) => (
+                  <Select value={field.value || ""} onValueChange={field.onChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder={t("Chọn...")} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {dosageForms.map((d) => (
+                        <SelectItem key={d.value} value={d.value}>
+                          {d.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                )}
+              />
             </div>
             <div className="space-y-2">
               <label className="text-sm font-medium">{t("Hàm lượng")}</label>
@@ -169,14 +187,24 @@ export default function NewMedicinePage() {
             </div>
             <div className="space-y-2">
               <label className="text-sm font-medium">{t("Đơn vị tính")}</label>
-              <select className={inputClass} {...register("unit")}>
-                <option value="">{t("Chọn...")}</option>
-                {units.map((u) => (
-                  <option key={u.value} value={u.value}>
-                    {u.label}
-                  </option>
-                ))}
-              </select>
+              <Controller
+                name="unit"
+                control={control}
+                render={({ field }) => (
+                  <Select value={field.value || ""} onValueChange={field.onChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder={t("Chọn...")} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {units.map((u) => (
+                        <SelectItem key={u.value} value={u.value}>
+                          {u.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                )}
+              />
             </div>
           </div>
           <div className="space-y-2">

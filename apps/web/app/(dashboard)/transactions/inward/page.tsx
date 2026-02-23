@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { useForm, useFieldArray } from "react-hook-form"
+import { useForm, useFieldArray, Controller } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
@@ -10,6 +10,13 @@ import { useExtracted } from "next-intl"
 import { api } from "@/lib/api"
 import { useCenter } from "@/components/center-context"
 import { Button } from "@workspace/ui/components/button"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@workspace/ui/components/select"
 import { ArrowLeft, Plus, Trash2 } from "lucide-react"
 import Link from "next/link"
 
@@ -135,15 +142,25 @@ export default function InwardPage() {
         <div className="grid gap-4 rounded-lg border p-4 md:grid-cols-3">
           <div className="space-y-2">
             <label className="text-sm font-medium">{t("Nhà cung cấp")} *</label>
-            <select className={inputClass} {...register("supplierId")}>
-              <option value="">{t("Chọn NCC...")}</option>
-              {Array.isArray(suppliers) &&
-                suppliers.map((s: any) => (
-                  <option key={s.id} value={s.id}>
-                    {s.name}
-                  </option>
-                ))}
-            </select>
+            <Controller
+              name="supplierId"
+              control={control}
+              render={({ field }) => (
+                <Select value={field.value || ""} onValueChange={field.onChange}>
+                  <SelectTrigger>
+                    <SelectValue placeholder={t("Chọn NCC...")} />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {Array.isArray(suppliers) &&
+                      suppliers.map((s: any) => (
+                        <SelectItem key={s.id} value={s.id}>
+                          {s.name}
+                        </SelectItem>
+                      ))}
+                  </SelectContent>
+                </Select>
+              )}
+            />
             {errors.supplierId && (
               <p className="text-destructive text-sm">{errors.supplierId.message}</p>
             )}
@@ -179,16 +196,26 @@ export default function InwardPage() {
             <div key={field.id} className="grid gap-3 border-b pb-4 last:border-0 md:grid-cols-6">
               <div className="space-y-1 md:col-span-2">
                 <label className="text-xs text-muted-foreground">{t("Thuốc")} *</label>
-                <select className={inputClass} {...register(`items.${index}.medicineId`)}>
-                  <option value="">{t("Chọn thuốc...")}</option>
-                  {medicines &&
-                    "data" in medicines &&
-                    medicines.data.map((m: any) => (
-                      <option key={m.id} value={m.id}>
-                        {m.nameVi || m.name}
-                      </option>
-                    ))}
-                </select>
+                <Controller
+                  name={`items.${index}.medicineId`}
+                  control={control}
+                  render={({ field }) => (
+                    <Select value={field.value || ""} onValueChange={field.onChange}>
+                      <SelectTrigger>
+                        <SelectValue placeholder={t("Chọn thuốc...")} />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {medicines &&
+                          "data" in medicines &&
+                          medicines.data.map((m: any) => (
+                            <SelectItem key={m.id} value={m.id}>
+                              {m.nameVi || m.name}
+                            </SelectItem>
+                          ))}
+                      </SelectContent>
+                    </Select>
+                  )}
+                />
               </div>
               <div className="space-y-1">
                 <label className="text-xs text-muted-foreground">{t("Số lô")} *</label>
