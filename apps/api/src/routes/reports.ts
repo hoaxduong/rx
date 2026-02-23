@@ -1,7 +1,7 @@
 import { Hono } from "hono"
 import { db } from "@workspace/db"
 import { transactions, transactionItems, inventoryBatches, medicines } from "@workspace/db/schema"
-import { eq, and, sql, gte, lte, desc, asc } from "@workspace/db"
+import { eq, and, sql, gte, lte, desc, asc, inArray } from "@workspace/db"
 import { requireAuth } from "../middleware/auth.ts"
 import { centerScope } from "../middleware/center-scope.ts"
 
@@ -15,7 +15,7 @@ export const reportsRoute = new Hono()
     const targetCenterIds = centerId ? [centerId] : authorizedCenterIds
 
     const conditions = [
-      sql`${transactions.centerId} = ANY(${targetCenterIds})`,
+      inArray(transactions.centerId, targetCenterIds),
       sql`${transactions.type} IN ('outward_prescription', 'outward_transfer', 'outward_disposal')`,
     ]
     if (from) conditions.push(gte(transactions.createdAt, new Date(from)))
@@ -69,7 +69,7 @@ export const reportsRoute = new Hono()
       .from(inventoryBatches)
       .where(
         and(
-          sql`${inventoryBatches.centerId} = ANY(${targetCenterIds})`,
+          inArray(inventoryBatches.centerId, targetCenterIds),
           lte(inventoryBatches.expiryDate, in90.toISOString().split("T")[0]!),
           sql`${inventoryBatches.quantity} > 0`
         )
@@ -95,7 +95,7 @@ export const reportsRoute = new Hono()
       .from(inventoryBatches)
       .where(
         and(
-          sql`${inventoryBatches.centerId} = ANY(${targetCenterIds})`,
+          inArray(inventoryBatches.centerId, targetCenterIds),
           sql`${inventoryBatches.quantity} > 0`
         )
       )

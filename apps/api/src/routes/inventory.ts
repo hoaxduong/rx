@@ -3,7 +3,7 @@ import { zValidator } from "@hono/zod-validator"
 import { z } from "zod"
 import { db } from "@workspace/db"
 import { inventoryBatches, stockThresholds, medicines } from "@workspace/db/schema"
-import { eq, and, lte, gte, sql, asc, gt } from "@workspace/db"
+import { eq, and, lte, gte, sql, asc, gt, inArray } from "@workspace/db"
 import { requireAuth } from "../middleware/auth.ts"
 import { requireRole } from "../middleware/rbac.ts"
 import { centerScope } from "../middleware/center-scope.ts"
@@ -39,7 +39,7 @@ export const inventoryRoute = new Hono()
       .from(inventoryBatches)
       .where(
         and(
-          sql`${inventoryBatches.centerId} = ANY(${targetCenterIds})`,
+          inArray(inventoryBatches.centerId, targetCenterIds),
           gt(inventoryBatches.quantity, 0)
         )
       )
@@ -59,7 +59,7 @@ export const inventoryRoute = new Hono()
 
     const expiring = await db.query.inventoryBatches.findMany({
       where: and(
-        sql`${inventoryBatches.centerId} = ANY(${targetCenterIds})`,
+        inArray(inventoryBatches.centerId, targetCenterIds),
         lte(inventoryBatches.expiryDate, futureDate.toISOString().split("T")[0]!),
         gt(inventoryBatches.quantity, 0)
       ),
@@ -90,7 +90,7 @@ export const inventoryRoute = new Hono()
           eq(stockThresholds.medicineId, inventoryBatches.medicineId)
         )
       )
-      .where(sql`${stockThresholds.centerId} = ANY(${targetCenterIds})`)
+      .where(inArray(stockThresholds.centerId, targetCenterIds))
       .groupBy(stockThresholds.id)
       .having(sql`COALESCE(sum(${inventoryBatches.quantity}), 0) < ${stockThresholds.minimumQuantity}`)
 

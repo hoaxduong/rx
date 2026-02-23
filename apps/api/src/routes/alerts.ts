@@ -3,7 +3,7 @@ import { zValidator } from "@hono/zod-validator"
 import { z } from "zod"
 import { db } from "@workspace/db"
 import { alerts } from "@workspace/db/schema"
-import { eq, and, sql, desc } from "@workspace/db"
+import { eq, and, sql, desc, inArray } from "@workspace/db"
 import { requireAuth } from "../middleware/auth.ts"
 import { centerScope } from "../middleware/center-scope.ts"
 
@@ -16,7 +16,7 @@ export const alertsRoute = new Hono()
     const targetCenterIds = centerId ? [centerId] : authorizedCenterIds
 
     const conditions = [
-      sql`${alerts.centerId} = ANY(${targetCenterIds})`,
+      inArray(alerts.centerId, targetCenterIds),
     ]
     if (status) conditions.push(eq(alerts.status, status as any))
     if (type) conditions.push(eq(alerts.type, type as any))

@@ -3,7 +3,7 @@ import { zValidator } from "@hono/zod-validator"
 import { z } from "zod"
 import { db } from "@workspace/db"
 import { transactions, transactionItems, inventoryBatches } from "@workspace/db/schema"
-import { eq, and, desc, sql, asc } from "@workspace/db"
+import { eq, and, desc, sql, asc, inArray } from "@workspace/db"
 import { requireAuth } from "../middleware/auth.ts"
 import { requireRole } from "../middleware/rbac.ts"
 import { centerScope } from "../middleware/center-scope.ts"
@@ -51,7 +51,7 @@ export const transactionsRoute = new Hono()
     const authorizedCenterIds = c.get("authorizedCenterIds")
     const offset = (Number(page) - 1) * Number(limit)
 
-    const conditions = [sql`${transactions.centerId} = ANY(${centerId ? [centerId] : authorizedCenterIds})`]
+    const conditions = [inArray(transactions.centerId, centerId ? [centerId] : authorizedCenterIds)]
     if (type) conditions.push(eq(transactions.type, type as any))
 
     const result = await db.query.transactions.findMany({
