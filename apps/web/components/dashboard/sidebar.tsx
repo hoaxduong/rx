@@ -39,7 +39,7 @@ export function Sidebar() {
     <aside className="bg-card flex h-screen w-60 shrink-0 flex-col border-r">
       <div className="flex h-14 items-center gap-2 border-b px-4">
         <Building2 className="text-primary h-5 w-5" />
-        <span className="font-semibold">RX Pharmacy</span>
+        <span className="font-semibold">RxStation</span>
       </div>
 
       <nav className="flex-1 overflow-y-auto p-2">

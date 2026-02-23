@@ -391,8 +391,8 @@ msgstr "Đăng xuất"
 #: app/(auth)/layout.tsx:22
 #: app/(auth)/register/page.tsx:60
 #: app/page.tsx:110
-msgid "ofeDSB"
-msgstr "Hệ thống quản lý dược phẩm"
+msgid "ayLM+d"
+msgstr "Hệ thống quản lý trạm y tế cơ sở"
 
 #: app/(auth)/login/page.tsx:19
 #: app/(auth)/register/page.tsx:21
@@ -1366,12 +1366,12 @@ msgid "1T6zqb"
 msgstr "Tạo phiếu chuyển"
 
 #: app/page.tsx:60
-msgid "ry6tip"
-msgstr "Quản lý dược phẩm"
+msgid "w2WfTj"
+msgstr "Quản lý trạm y tế cơ sở"
 
 #: app/page.tsx:62
-msgid "KqdpIf"
-msgstr "hiện đại & hiệu quả"
+msgid "nxDlmF"
+msgstr "thông minh"
 
 #: app/page.tsx:65
 msgid "aD7uQ7"

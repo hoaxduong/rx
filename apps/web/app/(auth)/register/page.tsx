@@ -57,7 +57,7 @@ export default function RegisterPage() {
         <div className="text-center">
           <h1 className="text-2xl font-bold">{t("Đăng ký tài khoản")}</h1>
           <p className="text-muted-foreground mt-2">
-            {t("Hệ thống quản lý dược phẩm")}
+            {t("Hệ thống quản lý trạm y tế cơ sở")}
           </p>
         </div>
 

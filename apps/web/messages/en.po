@@ -391,8 +391,8 @@ msgstr ""
 #: app/(auth)/layout.tsx:22
 #: app/(auth)/register/page.tsx:60
 #: app/page.tsx:110
-msgid "ofeDSB"
-msgstr ""
+msgid "ayLM+d"
+msgstr "Commune Health Station Management System"
 
 #: app/(auth)/login/page.tsx:19
 #: app/(auth)/register/page.tsx:21
@@ -1366,12 +1366,12 @@ msgid "1T6zqb"
 msgstr ""
 
 #: app/page.tsx:60
-msgid "ry6tip"
-msgstr ""
+msgid "w2WfTj"
+msgstr "Commune health station management"
 
 #: app/page.tsx:62
-msgid "KqdpIf"
-msgstr ""
+msgid "nxDlmF"
+msgstr "smart"
 
 #: app/page.tsx:65
 msgid "aD7uQ7"

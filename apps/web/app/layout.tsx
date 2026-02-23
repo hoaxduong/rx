@@ -18,10 +18,10 @@ const fontMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "RX Pharmacy",
-    template: "%s | RX Pharmacy",
+    default: "RxStation",
+    template: "%s | RxStation",
   },
-  description: "Hệ thống quản lý dược phẩm",
+  description: "Hệ thống quản lý trạm y tế cơ sở",
 }
 
 export default async function RootLayout({

@@ -39,7 +39,7 @@ export default function Page() {
         <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-6">
           <div className="flex items-center gap-2">
             <Building2 className="text-primary h-6 w-6" />
-            <span className="text-lg font-bold">RX Pharmacy</span>
+            <span className="text-lg font-bold">RxStation</span>
           </div>
           <div className="flex items-center gap-2">
             <Button variant="ghost" asChild>
@@ -57,9 +57,9 @@ export default function Page() {
         <section className="flex flex-1 items-center justify-center px-6 py-20">
           <div className="max-w-2xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              {t("Quản lý dược phẩm")}
+              {t("Quản lý trạm y tế cơ sở")}
               <br />
-              <span className="text-primary">{t("hiện đại & hiệu quả")}</span>
+              <span className="text-primary">{t("thông minh")}</span>
             </h1>
             <p className="text-muted-foreground mx-auto mt-4 max-w-lg text-lg">
               {t("Theo dõi tồn kho, quản lý giao dịch, kiểm soát hạn sử dụng và báo cáo thống kê cho hệ thống y tế cơ sở.")}
@@ -107,7 +107,7 @@ export default function Page() {
 
       {/* Footer */}
       <footer className="text-muted-foreground border-t px-6 py-6 text-center text-sm">
-        RX Pharmacy &mdash; {t("Hệ thống quản lý dược phẩm")}
+        RxStation &mdash; {t("Hệ thống quản lý trạm y tế cơ sở")}
       </footer>
     </div>
   )
